@@ -6,7 +6,7 @@
     <div class="col-6"><label for="pi_enable_additional_charges_cart_weight" class="mb-0 text-light">Enable additional charges by Cart Weight</label> <?php pisol_help::youtube('TriQypJAgYI','Know more about the Cart Weight based charge'); ?></div>
     <div class="col-6">
         <div class="custom-control custom-switch">
-            <input type="checkbox" value="1" <?php echo $data['pi_enable_additional_charges_cart_weight']; ?> class="custom-control-input" name="pi_enable_additional_charges_cart_weight" id="pi_enable_additional_charges_cart_weight">
+            <input type="checkbox" value="1" <?php echo esc_attr( $data['pi_enable_additional_charges_cart_weight']); ?> class="custom-control-input" name="pi_enable_additional_charges_cart_weight" id="pi_enable_additional_charges_cart_weight">
             <label class="custom-control-label" for="pi_enable_additional_charges_cart_weight"></label>
         </div>
     </div>

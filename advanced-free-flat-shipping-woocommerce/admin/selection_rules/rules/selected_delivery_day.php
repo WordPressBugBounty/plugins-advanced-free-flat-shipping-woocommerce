@@ -50,6 +50,7 @@ class Pi_efrs_selection_rule_selected_delivery_day{
            
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -72,8 +73,10 @@ class Pi_efrs_selection_rule_selected_delivery_day{
         }
         if(self::datePluginInstalled()){
             $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             echo Pi_efrs_selection_rule_main::createSelect($this->days(), $count,$this->condition,  "multiple",null,'static');
         }else{
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             echo self::msgNoDateTimePlugin();
         }
         die;

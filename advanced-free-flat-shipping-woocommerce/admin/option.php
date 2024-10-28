@@ -68,7 +68,7 @@ class pisol_affsw_options{
         $page = sanitize_text_field(filter_input( INPUT_GET, 'page'));
         $this->tab_name = __("Extra settings",'extended-flat-rate-shipping-woocommerce');
         ?>
-        <a class=" px-3 py-2 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo admin_url( 'admin.php?page='.$page.'&tab='.$this->this_tab ); ?>">
+        <a class=" px-3 py-2 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo esc_url( admin_url( 'admin.php?page='.$page.'&tab='.$this->this_tab ) ); ?>">
             <?php echo esc_html( $this->tab_name); ?> 
         </a>
         <?php
@@ -93,7 +93,7 @@ class pisol_affsw_options{
         $view_name = get_option('pisol_affsw_show_system_name', 0);
         $require_capability = Pi_Efrs_Menu::getCapability();
         if(current_user_can( $require_capability ) && !empty($view_name)){
-            echo '<small>System name: <strong>'.$method->get_id().'</strong></small>';
+            echo '<small>System name: <strong>'.esc_html( $method->get_id() ).'</strong></small>';
         }
     }
 }

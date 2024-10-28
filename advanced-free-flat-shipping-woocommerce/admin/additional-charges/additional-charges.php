@@ -36,7 +36,7 @@ class pisol_efrs_additional_charges_form{
     }
 
     static function tabName($name, $slug, $active = ""){
-        echo "<a href=\"javascript:void(0)\" class=\"bg-secondary p-2 d-block text-center text-light additional-charges-tab border-bottom {$active} \" id=\"add-charges-tab-{$slug}\" data-target=\"#add-charges-tab-content-{$slug}\">{$name}</a>";
+        echo "<a href=\"javascript:void(0)\" class=\"bg-secondary p-2 d-block text-center text-light additional-charges-tab border-bottom ".esc_attr($active)." \" id=\"add-charges-tab-".esc_attr($slug)."\" data-target=\"#add-charges-tab-content-".esc_attr($slug)."\">".wp_kses_post($name)."</a>";
     }
 
     static function additionalChargesEnabled($post_id){
@@ -48,10 +48,10 @@ class pisol_efrs_additional_charges_form{
     static function sumOfCharges($name, $data){
         $val = isset($data[$name]) ? $data[$name] : '';
         ?>
-        <select name="<?php echo $name; ?>" class="form-control">
-            <option value="all" <?php selected($val, 'all'); ?>>Sum of all matched charges</option>
-            <option value="largest" <?php selected($val, 'largest'); ?>>Largest of the matched charges</option>
-            <option value="smallest" <?php selected($val, 'smallest'); ?>>Smallest of the matched charges</option>
+        <select name="<?php echo esc_attr($name); ?>" class="form-control">
+            <option value="all" <?php selected($val, 'all'); ?>><?php esc_html_e( 'Sum of all matched charges', 'advanced-free-flat-shipping-woocommerce'); ?></option>
+            <option value="largest" <?php selected($val, 'largest'); ?>><?php esc_html_e( 'Largest of the matched charges', 'advanced-free-flat-shipping-woocommerce'); ?></option>
+            <option value="smallest" <?php selected($val, 'smallest'); ?>><?php esc_html_e( 'Smallest of the matched charges', 'advanced-free-flat-shipping-woocommerce'); ?></option>
         </select>
         <?php
     }
@@ -220,6 +220,7 @@ class pisol_efrs_additional_charges_form{
         $html .= '<option value="package" '.selected($val, "package", false).' title="Package is useful when you are using some 3rd party plugin to split ordered item in different shipping packages">'.__('In Package').'</option>';
         $html .= '<option value="cart" '.selected($val, "cart", false).'>'.__('In Cart').'</option>';
         $html .= '</select>';
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
 	}
     

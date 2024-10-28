@@ -6,7 +6,7 @@
     <div class="col-6"><label for="pi_enable_additional_charges_cart_subtotal" class="mb-0 text-light">Enable additional charges by Cart Subtotal</label> <?php pisol_help::youtube('30tS78nMk40','Know more about the Cart Subtotal based charge'); ?></div>
     <div class="col-6">
         <div class="custom-control custom-switch">
-            <input type="checkbox" value="1" <?php echo $data['pi_enable_additional_charges_cart_subtotal']; ?> class="custom-control-input" name="pi_enable_additional_charges_cart_subtotal" id="pi_enable_additional_charges_cart_subtotal">
+            <input type="checkbox" value="1" <?php echo esc_attr( $data['pi_enable_additional_charges_cart_subtotal'] ); ?> class="custom-control-input" name="pi_enable_additional_charges_cart_subtotal" id="pi_enable_additional_charges_cart_subtotal">
             <label class="custom-control-label" for="pi_enable_additional_charges_cart_subtotal"></label>
         </div>
     </div>

@@ -2,7 +2,7 @@
     <div class="col-6"><label for="pi_enable_additional_charges" class="text-light mb-0">Additional Charges</label> <?php pisol_help::tooltip('You can adjust the final shipping charge of this shipping method using this extra conditions'); ?><?php pisol_help::youtube('oGE6daMXrOk','Know more about the Additional Charges'); ?> </div>
     <div class="col-6">
         <div class="custom-control custom-switch">
-            <input type="checkbox" value="1" <?php echo $data['pi_enable_additional_charges']; ?> class="custom-control-input" name="pi_enable_additional_charges" id="pi_enable_additional_charges">
+            <input type="checkbox" value="1" <?php echo esc_attr( $data['pi_enable_additional_charges'] ); ?> class="custom-control-input" name="pi_enable_additional_charges" id="pi_enable_additional_charges">
             <label class="custom-control-label" for="pi_enable_additional_charges"></label>
         </div>
     </div>

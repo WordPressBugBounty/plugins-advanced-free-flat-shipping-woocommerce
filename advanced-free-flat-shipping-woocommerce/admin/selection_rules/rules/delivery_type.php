@@ -50,6 +50,7 @@ class Pi_efrs_selection_rule_delivery_type{
            
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -72,8 +73,10 @@ class Pi_efrs_selection_rule_delivery_type{
         }
         if(self::datePluginInstalled()){
             $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             echo Pi_efrs_selection_rule_main::createSelect($this->deliveryTypes(), $count,$this->condition,  "",null,'static');
         }else{
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             echo self::msgNoDateTimePlugin();
         }
         die;

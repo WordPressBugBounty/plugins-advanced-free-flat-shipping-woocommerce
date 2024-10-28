@@ -40,6 +40,7 @@ class Pi_efrs_selection_rule_stock_status{
 			$html .= '<option value=\'back-order-present\'>There is at least one product on back order</option>';
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -62,6 +63,7 @@ class Pi_efrs_selection_rule_stock_status{
         }
         $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
         echo '<span style="display:none !important">';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo Pi_efrs_selection_rule_main::createNumberField($count,$this->condition, null,'any');
         echo '</span>';
         die;

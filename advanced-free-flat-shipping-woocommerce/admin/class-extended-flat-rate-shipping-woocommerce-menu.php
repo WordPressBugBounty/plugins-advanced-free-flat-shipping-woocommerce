@@ -65,7 +65,7 @@ class Pi_Efrs_Menu{
                         <div class='bg-dark'>
                         <div class="pisol-row">
                             <div class="col-12 col-sm-2 py-2">
-                                    <a href="https://www.piwebsolution.com/" target="_blank"><img class="img-fluid ml-2" src="<?php echo plugin_dir_url( __FILE__ ); ?>img/pi-web-solution.png"></a>
+                                    <a href="https://www.piwebsolution.com/" target="_blank"><img class="img-fluid ml-2" src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ); ?>img/pi-web-solution.png"></a>
                             </div>
                             <div class="col-12 col-sm-10 d-flex text-center small">
                                 <?php do_action($this->plugin_name.'_tab'); ?>
@@ -102,7 +102,7 @@ class Pi_Efrs_Menu{
         <div class="col-12 col-sm-12 col-md-4 pt-3">
 
                 <div class="bg-dark text-light text-center mb-3">
-                    <a href="<?php echo PI_EFRS_BUY_URL; ?>&utm_ref=discount_banner" target="_blank">
+                    <a href="<?php echo esc_url( PI_EFRS_BUY_URL ); ?>&utm_ref=discount_banner" target="_blank">
                     <?php  new pisol_promotion("pi_efrs_installation_date"); ?>
                     </a>
                 </div>
@@ -156,7 +156,7 @@ class Pi_Efrs_Menu{
                         <li class="border-top font-weight-light h6"> <strong class="text-primary">Combine multiple shipping methods</strong> in to a single method</li>
                     </ul>
                     <div class="text-center pb-3 pt-2">
-                        <a class="btn btn-primary btn-md" href="<?php echo PI_EFRS_BUY_URL; ?>&utm_ref=bottom_link" target="_blank">BUY PRO VERSION</a>
+                        <a class="btn btn-primary btn-md" href="<?php echo esc_url( PI_EFRS_BUY_URL ); ?>&utm_ref=bottom_link" target="_blank">BUY PRO VERSION</a>
                     </div>
                 </div>
                 </div>

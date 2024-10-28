@@ -45,6 +45,7 @@ class Pi_efrs_selection_rule_zones{
            
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -67,6 +68,7 @@ class Pi_efrs_selection_rule_zones{
             die;
         }
         $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo Pi_efrs_selection_rule_main::createSelect($this->allZones(), $count,$this->condition,  "multiple",null,'static');
         echo '<p>When WooCommerce assigned shipping zone matches any of this zone</p>';
         die;

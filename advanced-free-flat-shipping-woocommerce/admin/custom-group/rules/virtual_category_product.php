@@ -44,6 +44,7 @@ class Pi_efrs_selection_rule_virtual_category_product{
            
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -68,9 +69,10 @@ class Pi_efrs_selection_rule_virtual_category_product{
         $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
         $virtual_cats = $this->allCategories();
         if(!empty($virtual_cats)){
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo Pi_efrs_selection_rule_main::createSelect($virtual_cats, $count, $this->condition,  "multiple", null,'static');
         }else{
-            echo '<p>You have not created any virtual category group</p><a href="'.admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group' ).'">Click to create Virtual category</a>';
+            echo '<p>You have not created any virtual category group</p><a href="'.esc_url( admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group' ) ).'">Click to create Virtual category</a>';
         }
         die;
     }
@@ -80,7 +82,7 @@ class Pi_efrs_selection_rule_virtual_category_product{
         if(!empty($virtual_cats)){
             $html = Pi_efrs_selection_rule_main::createSelect($virtual_cats, $count, $this->condition,  "multiple", $values,'static');
         }else{
-            $html = '<p>You have not created any virtual category group</p><a href="'.admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group' ).'">Click to create Virtual category</a>';
+            $html = '<p>You have not created any virtual category group</p><a href="'.esc_url( admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group' )).'">Click to create Virtual category</a>';
         }
         return $html;
     }

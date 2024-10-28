@@ -44,6 +44,7 @@ class Pi_efrs_selection_rule_country{
            
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -65,6 +66,7 @@ class Pi_efrs_selection_rule_country{
             die;
         }
         $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo Pi_efrs_selection_rule_main::createSelect($this->allCountries(), $count, $this->condition,  "multiple",null,'static');
         die;
     }

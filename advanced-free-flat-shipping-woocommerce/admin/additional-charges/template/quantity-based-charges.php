@@ -6,7 +6,7 @@
     <div class="col-6"><label for="pi_enable_additional_charges_cart_quantity" class="mb-0 text-light">Enable additional charges by Cart Quantity</label> <?php pisol_help::youtube('0CTSrfgaKvc','Know more about the Cart Quantity based charge'); ?></div>
     <div class="col-6">
         <div class="custom-control custom-switch">
-            <input type="checkbox" value="1" <?php echo $data['pi_enable_additional_charges_cart_quantity']; ?> class="custom-control-input" name="pi_enable_additional_charges_cart_quantity" id="pi_enable_additional_charges_cart_quantity">
+            <input type="checkbox" value="1" <?php echo esc_attr( $data['pi_enable_additional_charges_cart_quantity'] ); ?> class="custom-control-input" name="pi_enable_additional_charges_cart_quantity" id="pi_enable_additional_charges_cart_quantity">
             <label class="custom-control-label" for="pi_enable_additional_charges_cart_quantity"></label>
         </div>
     </div>

@@ -54,7 +54,7 @@ class Pi_efrs_selection_rule_category_product{
         $html .= '</select>';
 
         $html .= '<a href=\'https://www.piwebsolution.com/advance-flat-free-shipping-faq/#Cart_has_product_of_category\' target=\'_blank\'>Know more about this</a>";';
-
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -88,6 +88,7 @@ class Pi_efrs_selection_rule_category_product{
             die;
         }
         $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo Pi_efrs_selection_rule_main::createSelect($this->allCategories(),$count,$this->condition,  "multiple",null,'static');
         die;
     }

@@ -44,6 +44,7 @@ class Pi_efrs_selection_rule_quantity{
 			$html .= '<option value=\'not_equal_to\'>Not Equal to ( != )</option>';
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -69,6 +70,7 @@ class Pi_efrs_selection_rule_quantity{
             die;
         }
         $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo Pi_efrs_selection_rule_main::createNumberField($count, $this->condition, null,1);
         die;
     }

@@ -39,8 +39,8 @@ class Class_Pi_Efrs_Add_Edit{
     function tab(){
         $page =  sanitize_text_field(filter_input( INPUT_GET, 'page'));
         ?>
-        <a class=" px-3 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo admin_url( 'admin.php?page='.$page.'&tab='.$this->this_tab ); ?>">
-            <?php _e( $this->tab_name); ?> 
+        <a class=" px-3 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo esc_url( admin_url( 'admin.php?page='.$page.'&tab='.$this->this_tab ) ); ?>">
+            <?php echo esc_html( $this->tab_name); ?> 
         </a>
         <?php
     }
@@ -98,7 +98,7 @@ class Class_Pi_Efrs_Add_Edit{
 
             $data['post_id']                 = $id_value;
             $data['pi_status']               = get_post_meta( $data['post_id'], 'pi_status', true );
-            $data['pi_title']               = __( get_the_title( $data['post_id'] ), 'advanced-free-flat-shipping-woocommerce' );
+            $data['pi_title']               =  get_the_title( $data['post_id'] );
             $data['pi_cost']                 = get_post_meta( $data['post_id'], 'pi_cost', true );
             $data['pi_desc']        = get_post_meta( $data['post_id'], 'pi_desc', true );
             $data['pi_is_taxable']           = get_post_meta( $data['post_id'], 'pi_is_taxable', true );
@@ -323,7 +323,7 @@ class Class_Pi_Efrs_Add_Edit{
         $all_currencies = get_woocommerce_currencies();
         foreach($all_currencies as $currency => $name){
             $selected = in_array($currency, $saved_currency) ? 'selected' : '';
-            echo '<option value="'.$currency.'" '.$selected.'>'.$name.'</option>';
+            echo '<option value="'.esc_attr($currency).'" '.esc_attr($selected).'>'.esc_html($name).'</option>';
         }
     }
     

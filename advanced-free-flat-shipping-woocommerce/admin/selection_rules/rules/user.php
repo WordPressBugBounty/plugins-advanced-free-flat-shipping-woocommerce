@@ -40,6 +40,7 @@ class Pi_efrs_selection_rule_user{
        
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -62,6 +63,7 @@ class Pi_efrs_selection_rule_user{
             die;
         }
         $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo Pi_efrs_selection_rule_main::createSelect(array(), $count, $this->condition,  "multiple", null,'dynamic');
         die;
     }

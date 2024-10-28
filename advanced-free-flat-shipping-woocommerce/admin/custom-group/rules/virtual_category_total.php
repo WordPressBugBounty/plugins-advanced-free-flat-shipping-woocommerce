@@ -47,6 +47,7 @@ class Pi_efrs_selection_rule_virtual_category_total{
 			$html .= '<option value=\'not_equal_to\'>Not Equal to ( != )</option>';
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -77,9 +78,10 @@ class Pi_efrs_selection_rule_virtual_category_total{
         if(!empty($virtual_cats)){
             $html_class = self::createSelect($virtual_cats, $count,$this->condition,  "",null,'static');
             $html_total =  self::createNumberField($count, $this->condition, null);
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             echo self::bootstrapRow($html_class, $html_total);
         }else{
-            echo '<p>You have not created any virtual category group</p><a href="'.admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group' ).'">Click to create Virtual category</a>';
+            echo '<p>You have not created any virtual category group</p><a href="'.esc_url( admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group' ) ).'">Click to create Virtual category</a>';
         }
         die;
 
@@ -97,7 +99,7 @@ class Pi_efrs_selection_rule_virtual_category_total{
             $total = isset($values['total']) ? $values['total'] : '';
             $html_total = self::createNumberField($count, $this->condition,  $total);
         }else{
-            $html = '<p>You have not created any virtual category group</p><a href="'.admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group' ).'">Click to create Virtual category</a>';
+            $html = '<p>You have not created any virtual category group</p><a href="'.esc_url( admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group' ) ).'">Click to create Virtual category</a>';
             return $html;
         }
         return self::bootstrapRow($html_class, $html_total);
