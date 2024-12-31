@@ -28,14 +28,14 @@ foreach($custom_groups as $method){
     $shipping_title  = get_the_title( $method->ID ) ? get_the_title( $method->ID ) : 'Shipping Method';
     $description = get_post_meta( $method->ID, 'pi_desc', true );
     echo '<tr id="pisol_tr_container_'.esc_attr($method->ID).'">';
-    echo '<td class="pisol-aafsw-td-name text-left"><a href="'.esc_url( admin_url( '/admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group&action=edit&id='.$method->ID ) ).'">'.esc_html($shipping_title).'</a></td>';
+    echo '<td class="pisol-aafsw-td-name text-left"><a href="'.esc_url( admin_url( '/admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group&action=edit&id='.$method->ID ) ).'" target="_blank">'.esc_html($shipping_title).'</a></td>';
     
     echo '<td class="text-left">';
     echo esc_html($description);
     echo '</td>';
     echo '<td>';
     echo '<a href="'.esc_url( admin_url( '/admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group&action=edit&id='.$method->ID ) ).'" class="btn btn-primary btn-sm m-2" title="Edit virtual category"><span class="dashicons dashicons-edit-page"></span></a>';
-    echo '<form method="POST" class="d-inline"><input type="hidden" name="method_id" value="'.esc_attr( $method->ID ).'"><input type="hidden" name="action" value="efrs_custom_group_delete"><input type="hidden" name="nonce" value="'.esc_attr(wp_create_nonce('pisol-efrs-action-delete')).'"><button class="btn btn-warning btn-sm m-2 pisol-confirm"  title="Delete virtual category"><span class="dashicons dashicons-trash "></span> </button></form>';
+    echo '<form method="POST" class="d-inline"><input type="hidden" name="method_id" value="'.esc_attr( $method->ID ).'"><input type="hidden" name="action" value="efrs_custom_group_delete"><input type="hidden" name="nonce" value="'.esc_attr(wp_create_nonce('pisol-efrs-action-delete-'.$method->ID)).'"><button class="btn btn-warning btn-sm m-2 pisol-confirm"  title="Delete virtual category"><span class="dashicons dashicons-trash "></span> </button></form>';
     echo '</td>';
     echo '</tr>';
 }

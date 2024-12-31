@@ -228,14 +228,14 @@ class Pi_efrs_selection_rule_main{
             $multiple = '';
         }
 
-        $html = '<select class="form-control pi_condition_value pi_values_'.$dynamic.'" data-condition="'.$condition.'" name="pi_selection['.$count.'][pi_'.PI_EFRS_SELECTION_RULE_SLUG.'_condition_value][]" '.$multiple.' placeholder="Select">';
+        $html = '<select class="form-control pi_condition_value pi_values_'.esc_attr($dynamic).'" data-condition="'.esc_attr($condition).'" name="pi_selection['.esc_attr($count).'][pi_'.esc_attr(PI_EFRS_SELECTION_RULE_SLUG).'_condition_value][]" '.$multiple.' placeholder="Select">';
         foreach ($array as $key => $value){
                 $selected = "";
                 if(is_array($values) && in_array($key, $values)){
                     $selected = ' selected="selected" ';
                 }
                 $html .= '<option value="'.$key.'" '.$selected.'>';
-            $html .= $value;
+            $html .= esc_html($value);
             $html .= '</option>';
         }
         $html .= '</select>';
@@ -245,11 +245,22 @@ class Pi_efrs_selection_rule_main{
     static function createNumberField($count, $condition ="",  $values = array(), $step = 'any' ){
 
         if(is_array($values) && $values > 0){
-            $value = ' value="'.$values[0].'" ';
+            $value = ' value="'.esc_attr($values[0]).'" ';
         }else{
             $value = "";
         }
-        $html = '<input type="number" step="'.$step.'" class="form-control" data-condition="'.$condition.'" name="pi_selection['.$count.'][pi_'.PI_EFRS_SELECTION_RULE_SLUG.'_condition_value][]" '.$value.' >';
+        $html = '<input type="number" step="'.$step.'" class="form-control" data-condition="'.esc_attr($condition).'" name="pi_selection['.esc_attr($count).'][pi_'.esc_attr(PI_EFRS_SELECTION_RULE_SLUG).'_condition_value][]" '.$value.' >';
+        return $html;
+    }
+
+    static function createTextField($count, $condition ="",  $values = array()){
+
+        if(is_array($values) && $values > 0){
+            $value = ' value="'.esc_attr($values[0]).'" ';
+        }else{
+            $value = "";
+        }
+        $html = '<input required type="text" class="form-control" data-condition="'.esc_attr($condition).'" name="pi_selection['.esc_attr($count).'][pi_'.esc_attr(PI_EFRS_SELECTION_RULE_SLUG).'_condition_value][]" '.$value.' >';
         return $html;
     }
 

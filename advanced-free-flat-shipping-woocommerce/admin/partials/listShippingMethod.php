@@ -30,7 +30,7 @@ foreach($shipping_methods as $method){
     $shipping_title  = get_the_title( $method->ID ) ? get_the_title( $method->ID ) : 'Shipping Method';
     $shipping_status = get_post_meta( $method->ID, 'pi_status', true );
     echo '<tr id="pisol_tr_container_'.esc_attr($method->ID).'">';
-    echo '<td class="pisol-aafsw-td-name"><a href="'.esc_url( admin_url( '/admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_shipping&action=edit&id='.$method->ID ) ).'">'.esc_html( $shipping_title ).'</a></td>';
+    echo '<td class="pisol-aafsw-td-name"><a href="'.esc_url( admin_url( '/admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_shipping&action=edit&id='.$method->ID ) ).'" target="_blank">'.esc_html( $shipping_title ).'</a></td>';
     echo '<td>';
     
 								if ( $shipping_cost > 0 ) {
@@ -48,7 +48,7 @@ foreach($shipping_methods as $method){
     echo '</td>';
     echo '<td>';
     echo '<a href="'.esc_url(admin_url( '/admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_shipping&action=edit&id='.$method->ID )).'" class="btn btn-primary btn-sm m-2" title="'.esc_attr__('Edit shipping method','advanced-free-flat-shipping-woocommerce').'"><span class="dashicons dashicons-admin-customizer"></span></a>';
-    echo '<a href="'.esc_url(admin_url( '/admin.php?page=pisol-efrs-notification&action=efrs_delete&id='.$method->ID.'&nonce='.wp_create_nonce('pisol-efrs-action-delete') )).'" class="btn btn-warning btn-sm m-2"  title="'.esc_attr__('Delete shipping method','advanced-free-flat-shipping-woocommerce').'"><span class="dashicons dashicons-trash "></span></a>';
+    echo '<a href="'.esc_url(admin_url( '/admin.php?page=pisol-efrs-notification&action=efrs_delete&id='.$method->ID.'&nonce='.wp_create_nonce('pisol-efrs-action-delete-'.$method->ID) )).'" class="btn btn-warning btn-sm m-2 pi-efrs-delete"  title="'.esc_attr__('Delete shipping method','advanced-free-flat-shipping-woocommerce').'"><span class="dashicons dashicons-trash "></span></a>';
     echo '</td>';
     echo '</tr>';
 }

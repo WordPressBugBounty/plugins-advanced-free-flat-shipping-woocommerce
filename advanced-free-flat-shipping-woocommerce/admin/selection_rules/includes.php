@@ -12,4 +12,7 @@ require_once 'rules/delivery_type.php';
 require_once 'rules/quantity.php';
 require_once 'rules/user.php';
 require_once 'rules/stock-status.php';
+require_once 'rules/state.php';
+require_once 'rules/city.php';
+require_once 'rules/postcode.php';
 require_once 'rules/pro_rules.php';

@@ -3,8 +3,8 @@ Contributors: jyotsnasingh520
 Donate link: piwebsolution.com
 Tags: shipping rates,  flexible shipping,  table rate, Flat rate shipping, WooCommerce shipping, Shipping method, shipping,  Free shipping WooCommerce, Advanced free shipping, Advanced flat shipping, conditional shipping
 Requires at least: 3.0.1
-Tested up to: 6.7.0
-Stable Tag: 1.6.4.46
+Tested up to: 6.7.1
+Stable Tag: 1.6.4.47
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,6 +23,9 @@ This is highly flexible WooCommerce shipping plugin available, it even allows yo
 = You can apply specific custom shipping rates based on the below condition or combination of the below conditions: =
 Free rules
 <ul>
+	<li><strong>State-based shipping rates</strong>: Assign different flat-rate shipping method as per the State/County of your customer</li>
+ 	<li><strong>Postcode/Zip code based shipping rates</strong>: If the user comes from a specific postcode, you can even assign rage of postcode like 9011...9090, this will assign the shipping method to all the customer whose postcode falls in 9011 to 9090</li>
+	<li><strong>City/town</strong>: offer a shipping method based on the city/town selected by the customer. this does a string comparison to do the matching as city is a text field in the WooCommerce checkout process</li>
  	<li><strong>Country-based shipping rates</strong>: Assign a shipping rates for the customer of the specific country</li>
 	 <li><strong>Product-based shipping rates</strong>: Assign different shipping rates if the customer is purchasing a specific product, say if he is purchasing some very large item that needs different shipping rates then you can do that using this rule, this will even work with the variable product</li>
  	<li><strong>Category based shipping method</strong>: Assign different shipping rates if the customer is purchasing a product from a specific category, say if he is purchasing furniture category product you will need a shipping rates that allows large-item shipping large items, whereas if he is buying from mobile category he can be shipped by normal shipping</li>
@@ -56,9 +59,6 @@ https://www.youtube.com/watch?v=MVPPdukqLp0
 
 Pro rules:
 <ul>
- 	<li><strong>State-based shipping rates</strong>: Assign different flat-rate shipping method as per the State/County of your customer</li>
- 	<li><strong>Postcode/Zip code based shipping rates</strong>: If the user comes from a specific postcode, you can even assign rage of postcode like 9011...9090, this will assign the shipping method to all the customer whose postcode falls in 9011 to 9090</li>
-	<li><strong>City/town</strong>: offer a shipping method based on the city/town selected by the customer. this does a string comparison to do the matching as city is a text field in the WooCommerce checkout process</li>
  	<li><strong>Zone-based shipping rates</strong>: Assign different shipping method as per the Shipping zone of your customer</li>
  	<li><strong>Cart Sub Total (after discount) based shipping rates</strong>: Some time the user add discount coupon so their subtotal reduces and if you want to consider those reduced total while deciding the flat rate shipping method you can do that using this rule (you have option to exclude virtual product from this total)</li>
  	<li><strong>Weight-based shipping rates</strong>: If your want to offer different shipping rate based on the total weight of the product in the order or cart then you can do this using this rule, it calculates the total weight of the product in the cart and then based on the set value in the rule it assigns a shipping rates</li>
@@ -290,6 +290,10 @@ you can divide the products of an order to be delivered in multiple shipping pac
 checkout this video https://www.youtube.com/watch?v=MVPPdukqLp0
 
 == Changelog ==
+
+= 1.6.4.47 =
+* Tested for WP 6.7.1
+* confirm dialog box on deletion of shipping method
 
 = 1.6.4.46 =
 * Tested for WP 6.7.0

@@ -10,28 +10,10 @@ class pisol_efrs_pro_rules{
     }
 
     function addRule($rules){
-        $rules['state'] = array(
-            'name'=>__('State (Available in PRO Version)'),
-            'group'=>'location_related',
-            'condition'=>'state',
-            'pro'=>true
-        );
-        $rules['postcode'] = array(
-            'name'=>__('Postcode (Available in PRO Version)'),
-            'group'=>'location_related',
-            'condition'=>'postcode',
-            'pro'=>true
-        );
         $rules['all_zones'] = array(
             'name'=>__('User address matches with Zones (Available in PRO Version)'),
             'group'=>'location_related',
             'condition'=>'all_zones',
-            'pro'=>true
-        );
-        $rules['city'] = array(
-            'name'=>__('City/Town (Available in PRO Version)'),
-            'group'=>'location_related',
-            'condition'=>'zones',
             'pro'=>true
         );
         $rules['variable_product'] = array(

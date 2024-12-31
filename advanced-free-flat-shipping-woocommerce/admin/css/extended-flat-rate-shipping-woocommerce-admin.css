@@ -170,3 +170,11 @@
 .pi_rule_container{
     display:flex;
 }
+
+.btn .dashicons{
+    line-height:1.2;
+}
+
+table td:has(.btn) .dashicons{
+    line-height:1;
+}

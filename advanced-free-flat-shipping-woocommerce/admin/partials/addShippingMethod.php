@@ -109,6 +109,7 @@ wp_nonce_field( 'add_shipping_method', 'pisol_efrs_nonce');
     <option value="hide-all-non-plugin-methods-exclude-local-pickup" disabled><?php esc_html_e('Hide all methods except the one added by this plugin and WC Local pickup (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
     <option value="hide-all-non-plugin-methods" disabled><?php esc_html_e('Hide all methods except the one added by this plugin (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
     <option value="hide-all-plugin-method-with-lower-priority" disabled><?php esc_html_e('Hide all plugin methods with lower priority (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
+    <option value="hide-selected-method" disabled title="Insert system name of the shipping methods that should be hidden when this shipping method is available"><?php _e('Hide selected shipping method (PRO)','extended-flat-rate-shipping-woocommerce'); ?></option>
 </select>
 </div>
 </div>

@@ -60,6 +60,12 @@ class Class_Pi_Efrs_Package_manager_list{
     }
 
     function deletePost(){
+        $nonce = sanitize_text_field(filter_input(INPUT_POST, 'nonce'));
+        
+        if(!wp_verify_nonce($nonce,'pisol-efrs-package-delete-'.$this->post_id)){
+            wp_die('Security check failed');
+        }
+
         $cap = Pi_Efrs_Menu::getCapability();
         if(!current_user_can( $cap )) {
             wp_safe_redirect( esc_url( admin_url( '/admin.php?page=pisol-efrs-notification' ) ) );

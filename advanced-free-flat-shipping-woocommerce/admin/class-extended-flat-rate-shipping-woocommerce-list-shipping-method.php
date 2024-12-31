@@ -59,7 +59,7 @@ class Class_Pi_Efrs_List{
     function deletePost(){
         $nonce = sanitize_text_field(filter_input(INPUT_GET, 'nonce'));
 
-        if(!wp_verify_nonce($nonce,'pisol-efrs-action-delete')){
+        if(!wp_verify_nonce($nonce,'pisol-efrs-action-delete-'.$this->post_id)){
             wp_die('Security check failed');
         }
 

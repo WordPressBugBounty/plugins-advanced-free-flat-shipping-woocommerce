@@ -274,5 +274,13 @@
         }
         dynamicFields();
 
+        jQuery(document).on('click', '.pi-efrs-delete, .pisol-confirm', function (e) {
+			//show confirmation dialog
+			var choice = confirm("Are you sure you want to delete it ?");
+			if (!choice) {
+				e.preventDefault();
+			}
+		});
+
     });
 })(jQuery);
