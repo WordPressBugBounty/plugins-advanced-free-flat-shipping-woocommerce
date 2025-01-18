@@ -1,10 +1,10 @@
 === Conditional shipping & Advanced Flat rate shipping rates / Flexible shipping for WooCommerce shipping ===
-Contributors: jyotsnasingh520
+Contributors: jyotsnasingh520, rajeshsingh520
 Donate link: piwebsolution.com
 Tags: shipping rates,  flexible shipping,  table rate, Flat rate shipping, WooCommerce shipping, Shipping method, shipping,  Free shipping WooCommerce, Advanced free shipping, Advanced flat shipping, conditional shipping
 Requires at least: 3.0.1
 Tested up to: 6.7.1
-Stable Tag: 1.6.4.47
+Stable Tag: 1.6.4.49
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -290,6 +290,9 @@ you can divide the products of an order to be delivered in multiple shipping pac
 checkout this video https://www.youtube.com/watch?v=MVPPdukqLp0
 
 == Changelog ==
+
+= 1.6.4.49 =
+* UX improved
 
 = 1.6.4.47 =
 * Tested for WP 6.7.1
