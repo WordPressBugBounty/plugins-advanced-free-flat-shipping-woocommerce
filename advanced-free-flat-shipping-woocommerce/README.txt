@@ -4,7 +4,7 @@ Donate link: piwebsolution.com
 Tags: shipping rates,  flexible shipping,  table rate, Flat rate shipping, WooCommerce shipping, Shipping method, shipping,  Free shipping WooCommerce, Advanced free shipping, Advanced flat shipping, conditional shipping
 Requires at least: 3.0.1
 Tested up to: 6.7.1
-Stable Tag: 1.6.4.60
+Stable Tag: 1.6.4.61
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -291,8 +291,11 @@ checkout this video https://www.youtube.com/watch?v=MVPPdukqLp0
 
 == Changelog ==
 
+= 1.6.4.61 =
+* Tested for WC 9.7.0
+
 = 1.6.4.60 =
-* Tested for WP 9.6.0
+* Tested for WC 9.6.0
 
 = 1.6.4.49 =
 * UX improved
