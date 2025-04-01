@@ -131,9 +131,9 @@ class Pi_efrs_selection_rule_category_product{
            
             if ( $category->parent > 0 ) {
                 $parent_category = get_term_by( 'id', $category->parent, 'product_cat' );
-                $return_category[$category->term_id] = $parent_category->name.' -&gt; '.$category->name;
+                $return_category[$category->term_id] = $parent_category->name.' -&gt; '.$category->name.' (#'.$category->term_id.')';
             }else{
-                $return_category[$category->term_id] = $category->name;
+                $return_category[$category->term_id] = $category->name.' (#'.$category->term_id.')';
             }
         }
         return $return_category;

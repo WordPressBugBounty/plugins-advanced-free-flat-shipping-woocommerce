@@ -100,7 +100,7 @@ class Pi_efrs_selection_rule_product{
 
                 if(is_wp_error($product) || !is_object($product)) continue;
 
-                $saved_products[$value] = $product->get_title();
+                $saved_products[$value] = $product->get_title().' (#'.$value.')';
             }
         }
         
@@ -171,7 +171,7 @@ class Pi_efrs_selection_rule_product{
                     
 				} else {
 					$product_id    = get_the_ID();
-					$product_title = get_the_title();
+					$product_title = get_the_title().' (#'.$product_id.')';
 					$the_product   = new WC_Product( $product_id );
 					if ( ! $the_product->is_in_stock() ) {
 						$product_title .= ' (Out of stock)';

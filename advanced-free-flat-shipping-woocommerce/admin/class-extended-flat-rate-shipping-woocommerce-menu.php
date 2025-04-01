@@ -120,6 +120,7 @@ class Pi_Efrs_Menu{
                     <a class="btn btn-sm mb-2 btn-secondary text-uppercase" href="https://websitemaintenanceservice.in/flat_shipping/" target="_blank">Try Demo</a>
                 </div>
                 <h2 id="pi-banner-tagline" class="mb-0">Get Pro for <?php echo esc_html(PI_EFRS_PRICE); ?> Only</h2>
+                <h6 id="pi-banner-tagline" class="mb-0 bg-primary p-2 text-light text-center">Others charge $80+ but still lack our powerful features!</h6>
                 <div class="inside">
                     <ul class="text-left pisol-pro-feature-list">
                         <li class="border-top font-weight-light h6">If user is from a specific <strong class="text-primary">State / County</strong></li>
