@@ -20,7 +20,21 @@ class pisol_affsw_options{
     function __construct($plugin_name){
         $this->plugin_name = $plugin_name;
 
+        add_action( 'init', array($this,'init') );
+        
+        $this->tab = sanitize_text_field(filter_input( INPUT_GET, 'tab'));
+        $this->active_tab = $this->tab != "" ? $this->tab : 'default';
 
+        if($this->this_tab == $this->active_tab){
+            add_action($this->plugin_name.'_tab_content', array($this,'tab_content'));
+        }
+
+        add_action($this->plugin_name.'_tab', array($this,'tab'),10);
+
+        add_action('woocommerce_after_shipping_rate', array($this,'getMethodName'),9999,2);
+    }
+
+    function init(){
         $this->settings = array(
 
             array('field'=>'pi_efrs_show_only_one_method', 'label'=>__('Give only single shipping method option to customer'), 'desc'=>__('If you only want to show one shipping method so user dont have to choose from multiple option then use this setting'), 'type'=>'select', 'default'=>"", 'value' => ['' => "Select an option", 'lowest' => 'Minimum: Show the shipping method with lowest shipping charge', 'highest' => 'Maximum: Show the shipping method with highest shipping charge']),
@@ -32,21 +46,8 @@ class pisol_affsw_options{
             array('field'=>'pi_affsw_show_desc_on_front', 'label'=>__('Show shipping description'), 'desc'=>__('Show shipping method description below the shipping method name or as a tooltip on the checkout page '), 'type'=>'select', 'default'=>"0", 'value' => [0 => "Dont show", '1' => 'Show below shipping method name', 'tooltip' => 'Show as tooltip'], 'pro'=>true),
 
         );
-        
-        $this->tab = sanitize_text_field(filter_input( INPUT_GET, 'tab'));
-        $this->active_tab = $this->tab != "" ? $this->tab : 'default';
 
-        if($this->this_tab == $this->active_tab){
-            add_action($this->plugin_name.'_tab_content', array($this,'tab_content'));
-        }
-
-
-        add_action($this->plugin_name.'_tab', array($this,'tab'),10);
-
-       
         $this->register_settings();
-
-        add_action('woocommerce_after_shipping_rate', array($this,'getMethodName'),9999,2);
     }
 
     
