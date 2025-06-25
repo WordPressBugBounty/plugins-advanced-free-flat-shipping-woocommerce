@@ -1,29 +1,29 @@
-=== Conditional shipping & Advanced Flat rate shipping rates / Flexible shipping for WooCommerce shipping ===
+===  Flat rate shipping rates / Conditional shipping / Flexible shipping - WooCommerce shipping plugin ===
 Contributors: jyotsnasingh520, rajeshsingh520
 Donate link: piwebsolution.com
-Tags: shipping rates,  flexible shipping,  table rate, Flat rate shipping, WooCommerce shipping, Shipping method, shipping,  Free shipping WooCommerce, Advanced free shipping, Advanced flat shipping, conditional shipping
+Tags: shipping rates,  woocommerce shipping plugin,  table rate, Flat rate shipping, WooCommerce shipping, Shipping method, shipping,  Free shipping WooCommerce, Advanced free shipping, Advanced flat shipping, conditional shipping
 Requires at least: 3.0.1
-Tested up to: 6.8.1
-Stable Tag: 1.6.4.66
+Tested up to: 6.8
+Stable Tag: 1.6.4.67
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce conditional shipping & WooCommerce Advanced Flat rate flexible shipping rates plugin to Create Advanced Flat rate shipping or Free shipping method, with different advanced criteria to apply this shipping method, Table rate shipping for WooCommerce shipping plugin
+WooCommerce conditional shipping & WooCommerce Advanced Flat rate shipping rates plugin to Create Advanced Flat rate shipping or Free shipping method, Table rate shipping for WooCommerce shipping plugin
 
 == Description ==
 
-= Using WooCommerce conditional shipping rates =
-With this WooCommerce Advanced flexible shipping plugin you can setup your own advanced rules to determine when a free shipping rate should be available for the customer.
+With this Flat rate shipping plugin for WooCommerce, you can setup your own advanced rules to determine how much to charge to the customer for shipping, this is highly flexible WooCommerce shipping plugin available, it even allows you to offer table rate shipping through additional charge just like woocommerce table rate shipping plugin does. Combine it with the PRO version and it will become the only WooCommerce shipping plugin you’ll ever need.
 
 = Using Advanced Flat Rate Shipping for WooCommerce =
 With our Advanced Flat Rate Shipping Method for WooCommerce you can create your own rule. When this rules are satisfied the Advanced Flat rate shipping method will be available to the buyer
 
 This is highly flexible WooCommerce shipping plugin available, it even allows you to offer table rate shipping through additional charge just like woocommerce table rate shipping plugin does
 
-= You can apply specific custom shipping rates based on the below condition or combination of the below conditions: =
-Free rules
+= You can apply specific custom shipping rates using this WooCommerce shipping plugin, based on the below condition or combination of conditions: =
+
+**Following rules are available in the free version of the WooCommerce shipping plugin**:
 <ul>
-	<li><strong>State-based shipping rates</strong>: Assign different flat-rate shipping method as per the State/County of your customer</li>
+	<li><strong>State-based shipping rates</strong>: Assign different flat rate shipping method as per the State/County of your customer</li>
  	<li><strong>Postcode/Zip code based shipping rates</strong>: If the user comes from a specific postcode, you can even assign rage of postcode like 9011...9090, this will assign the shipping method to all the customer whose postcode falls in 9011 to 9090</li>
 	<li><strong>City/town</strong>: offer a shipping method based on the city/town selected by the customer. this does a string comparison to do the matching as city is a text field in the WooCommerce checkout process</li>
  	<li><strong>Country-based shipping rates</strong>: Assign a shipping rates for the customer of the specific country</li>
@@ -39,32 +39,35 @@ Free rules
 	<li>You can make a shipping method that will be shown for more then one shipping zone</li>
 </ul>
 
-== Package manager (Multiple shipping package for order) ==
-Ability to effortlessly break down your orders into multiple shipping packages!
-With our plugin you can create rule to group product in one shipping package based on there category or shipping class. This will allow you to easily manage your order and also allow you to offer a different shipping method for different shipping package and charge different shipping cost for each package separately with in same order. In pro version you can create the package based on product, category, shipping class, attribute (WooCommerce registered attribute), product cost, product stock status (if in stock or on back order). 
+== Package Manager (Multiple Shipping Packages per Order) ==
+Easily split orders into multiple shipping packages!
+With our plugin, you can group products into packages based on category or shipping class or Virtual category. This allows separate shipping methods and costs for each package within same order.
+
+In the pro version, you can also group by product, category, shipping class, attributes, price, or stock status.
 
 Example Scenario:
-You want to charge a flat 20$ for each unit of fragile items and flat 10$ for each unit of non fragile items. 
-So you will create a Package to group fragile items in a separate shipping package and non fragile items in a separate shipping package. 
-Then you will create a shipping method for fragile items and set the shipping cost to 20$ * quantity and then create a shipping method for non fragile items and set the shipping cost to 10$ * quantity.
-so if a customer adds 2 unit of fragile items 
-and 3 unit of non fragile items in the cart 
-then the customer will be shown 2 shipping package on his checkout page 
-with one package consisting of fragile items and shipping method with cost 20*3 = 60$ 
-and another shipping package for non fragile items with shipping method with cost 10*2 = 20$. 
+Charge $20 per unit for fragile items and $10 per unit for non-fragile items.
 
-Check out this video to know how to automatically split order in multiple shipping packages using package manager: 
+Create two packages: one for fragile items, one for non-fragile.
 
-https://www.youtube.com/watch?v=MVPPdukqLp0
+Set shipping for fragile items to $20 × quantity, and for non-fragile items to $10 × quantity.
 
-Pro rules:
+If a customer buys 2 fragile and 3 non-fragile items, they’ll see:
+
+Package 1: Fragile items → $20 × 2 = $40
+
+Package 2: Non-fragile items → $10 × 3 = $30
+
+[Check out this video to know how to automatically split order in multiple shipping packages using package manager](https://www.youtube.com/watch?v=MVPPdukqLp0)
+
+**Following rules are available in the PRO version of the WooCommerce shipping plugin**:
 <ul>
  	<li><strong>Zone-based shipping rates</strong>: Assign different shipping method as per the Shipping zone of your customer</li>
  	<li><strong>Cart Sub Total (after discount) based shipping rates</strong>: Some time the user add discount coupon so their subtotal reduces and if you want to consider those reduced total while deciding the flat rate shipping method you can do that using this rule (you have option to exclude virtual product from this total)</li>
  	<li><strong>Weight-based shipping rates</strong>: If your want to offer different shipping rate based on the total weight of the product in the order or cart then you can do this using this rule, it calculates the total weight of the product in the cart and then based on the set value in the rule it assigns a shipping rates</li>
  	<li><strong>Product Width based shipping rates</strong>: It finds the maximum width of the product in the cart and uses that as the width of the cart and compares with width value set by you in the rule and as per the logic set in the rule it assign a shipping method</li>
- 	<li><strong>Product Height based shipping method</strong>: It's working is same as the Width working</li>
- 	<li><strong>Product Length based shipping method</strong>: It's working is same as the Width working</li>
+ 	<li><strong>Product Height based shipping method</strong></li>
+ 	<li><strong>Product Length based shipping method</strong></li>
  	<li><strong>Coupon based shipping method</strong>: Using this you can show a shipping method if the customer has applied some specific coupon code</li>
  	<li><strong>Shipping class-based shipping method</strong>: Show a specific shipping method, if the user buys a product that belongs to some specific category of shipping class</li>
  	<li><strong>Payment method based shipping method</strong>: Show a specific shipping method, if the user buys select a specific payment gateway, E.g: If you have a shipping method that also collects a payment, then you can show that shipping method when user select cash on the delivery payment method</li>
@@ -72,7 +75,7 @@ Pro rules:
 	<li><strong>User city based method</strong>: You can offer method based on user city, it is string comparison or city name</li>
 	<li><strong>Shipping class total</strong> this rule applies when customer has purchased an x amount of product from specific shipping class</li> 
 	<li><strong>Shipping class total quantity of product in cart</strong> this rule applies when customer has added x unit of product from a specific shipping class in his cart</li> 
-	<li>Using our this flexible shipping method plugin you can have different <strong>Shipping method on specific time of the day:</strong> Show a shipping method on specif time of the day, <br>E.g: Show a shipping method between 10am to 1pm only</li> 
+	<li>Using Flexible shipping method plugin you can have different <strong>Shipping method on specific time of the day:</strong> Show a shipping method on specif time of the day, <br>E.g: Show a shipping method between 10am to 1pm only</li> 
 	<li><strong>Shipping method based on Day of the week:</strong> Offer a shipping method based on the day of the week. <br>E.g: show a shipping method on Saturday and Sunday only</li> 
 	<li><strong>Shipping method based on Selected delivery day:</strong> show a different shipping method based on the delivery day selected by the customer in Delivery date selector added by the plugin <a href="https://www.piwebsolution.com/product/order-delivery-date-time-and-pickup-locations-for-woocommerce/">Delivery date and time plugin</a><br> E.g: Show a shipping method when customer is option for sunday as delivery date</il>
 	<li><strong>Shipping method based on Attribute:</strong> Offer a shipping method based on the variation Attribute selected, so you can offer a specific shipping method when user select Large size of the attribute Size in the variable product</li> 
@@ -94,22 +97,18 @@ Pro rules:
 
 [Try Pro version Backend | Frontend demo](https://websitemaintenanceservice.in/flat_shipping/)
 
-= Custom charge in pro version = 
-The Cost field allows you to charge a flat rate per item, a percentage based cost or a minimum fee.
+= Custom charge in pro version of Flat rate Woocommerce shipping plugin = 
+The Cost field allows you to charge a flat rate shipping per item, a percentage based cost or a minimum fee.
 
 Available placeholders:
 [qty] – Number of products in the cart
 [fee] – An additional fee. This fee has two optional arguments.
-percent – A percentage based on total order cost.
-min_fee – A minimum amount. Useful when using percentages.
-max_fee – A maximum amount. Useful when using percentages.
-Examples
 10 + ( 2 * [qty] ) – A base shipping cost of $10 plus $2 for each item in the cart.
 20 + [fee percent="10" min_fee="4"] – A base shipping cost of $20 plus 10% of the order total, which is at least $4.
 
 similar To WooCommerce original flat rate shipping method 
 
-= Virtual category =
+= Virtual category for Flat rate Woocommerce shipping plugin =
 Virtual category allows you to create a group of product as per your shipping needs, this virtual category do not affect your site url structure this Virtual category is only used in our plugin shipping method.
 
 You can create a virtual category that is like a group of multiple category, and you can use this virtual category inside the Conditions of shipping method. This gives you fine control over the shipping method.
@@ -118,26 +117,26 @@ You can create a virtual category that is like a group of multiple category, and
 
 E.g: You create a virtual category that combines the category T-shirt and Caps, but you want to exclude T-shirt A from this Virtual category so you will add T-shirt A as excluded product, and say your want to make Jeans A as part of this group (although Jeans A do not belong to category T-shirt and cap) so you will add Jeans A as included product to be part of this Virtual category.
 
-== Additional charges (pro) ==
+== Additional charges in Flat rate Woocommerce shipping plugin  ==
 
 Using additional charges you can add/subtract charge from the base shipping charge, based on different conditions
 
 https://www.youtube.com/watch?v=oGE6daMXrOk
 
-This are the different conditions available:
+This are the different conditions available in Flat rate Woocommerce shipping plugin :
 
-* Cart Quantity: [Video](https://www.youtube.com/watch?v=0CTSrfgaKvc)
-* Cart Weight: [Video](https://www.youtube.com/watch?v=TriQypJAgYI)
-* Cart Subtotal: [Video](https://www.youtube.com/watch?v=30tS78nMk40)
-* Product Quantity: [Video](https://www.youtube.com/watch?v=lD7gm9PHkvE)
-* Category Quantity: [Video](https://www.youtube.com/watch?v=6S1eVLuR6b8)
-* Shipping Class Quantity: [Video](https://www.youtube.com/watch?v=DK04pdaB4u0)
-* Product Weight: [Video](https://www.youtube.com/watch?v=aOjKK5LfR04)
-* Category Weight: [Video](https://www.youtube.com/watch?v=gyhR2OvUDgw)
-* Shipping Class Weight: [Video](https://www.youtube.com/watch?v=qIZM7VUUy1c)
-* Product Subtotal: [Video](https://www.youtube.com/watch?v=sFdiwsoWvBw)
-* Category Subtotal: [Video](https://www.youtube.com/watch?v=XPNsq5U6FHA)
-* Shipping Class Subtotal: [Video](https://www.youtube.com/watch?v=GFuvQlEiELE)
+* [How to set up flat rate shipping based on cart quantity?](https://www.youtube.com/watch?v=0CTSrfgaKvc)
+* [How to configure flat rate shipping based on cart weight?](https://www.youtube.com/watch?v=TriQypJAgYI)
+* [Can I apply flat rate shipping based on cart subtotal in WooCommerce?](https://www.youtube.com/watch?v=30tS78nMk40)
+* [How to create flat rate shipping rules based on product quantity?](https://www.youtube.com/watch?v=lD7gm9PHkvE)
+* [Is it possible to apply flat rate shipping based on category quantity?](https://www.youtube.com/watch?v=6S1eVLuR6b8)
+* [How to define flat rate shipping using shipping class quantity?](https://www.youtube.com/watch?v=DK04pdaB4u0)
+* [Can flat rate shipping be calculated based on individual product weight?](https://www.youtube.com/watch?v=aOjKK5LfR04)
+* [How to apply flat rate shipping using total category weight?](https://www.youtube.com/watch?v=gyhR2OvUDgw)
+* [How to set flat rate shipping based on shipping class weight?](https://www.youtube.com/watch?v=qIZM7VUUy1c)
+* [Is there a way to use flat rate shipping based on product subtotal?](https://www.youtube.com/watch?v=sFdiwsoWvBw)
+* [How to calculate flat rate shipping using category subtotal in WooCommerce?](https://www.youtube.com/watch?v=XPNsq5U6FHA)
+* [How can I use flat rate shipping based on shipping class subtotal?](https://www.youtube.com/watch?v=GFuvQlEiELE)
 
 == Combine multiple shipping method in to single shipping method (PRO) ==
 Say your have shipping method A and B on the checkout page each shipping method costing 2 and 3 $ respectively and you want to combine them and show them as single shipping method then you can do that using our plugin so it will show combined shipping method as D whose shipping cost will be 5$ and if you want you can hide the method A and B when this combined method is been shown
@@ -145,9 +144,9 @@ Say your have shipping method A and B on the checkout page each shipping method 
 https://www.youtube.com/watch?v=xkL_YHwNcWo
 
 == Compatible with Multi currency plugin ==
-* [CURCY – Multi Currency for WooCommerce – The best free currency exchange plugin – Run smoothly on WooCommerce 6.x](https://wordpress.org/plugins/woo-multi-currency/)
-* [WOOCS – Currency Switcher for WooCommerce. Professional and Free multi currency plugin – Pay in selected currency](https://wordpress.org/plugins/woocommerce-currency-switcher/)
-* [WPML Multi-Currency Support for WooCommerce](https://wpml.org/documentation/related-projects/woocommerce-multilingual/multi-currency-support-woocommerce/)
+* [CURCY – Multi Currency for WooCommerce](https://wordpress.org/plugins/woo-multi-currency/)
+* [WOOCS – Currency Switcher for WooCommerce](https://wordpress.org/plugins/woocommerce-currency-switcher/)
+* [WPML Multi-Currency](https://wpml.org/documentation/related-projects/woocommerce-multilingual/multi-currency-support-woocommerce/)
 
 Key features:
 
@@ -163,6 +162,7 @@ Key features:
 * WooCommerce shipping plugin
 * WooCommerce table rate shipping.
 * Highly flexible shipping rates
+* Flat rate shipping plugin for WooCommerce
 * Per Product Shipping for WooCommerce
 * Conditional Payments
 * Conditional Country
@@ -204,6 +204,15 @@ Key features:
 * WooCommerce delivery plugin
 * combine shipping method into one shipping method
 * automatically split order in multiple shipping packages
+
+== Screenshots ==
+1. List of Flat rate shipping method created using the plugin
+2. Basic configuration of the Flat rate shipping method
+3. Conditions available in the Flat rate shipping method
+4. List of conditions available in the Flat rate shipping method
+5. Table rate shipping method configuraiton
+6. Additional charge configuration in the Flat rate shipping method
+7. Multiple shipping packages configuration in the Flat rate shipping method
 
 == Frequently Asked Questions ==
 = I want to offer flat rate shipping for specific county =
@@ -291,6 +300,9 @@ checkout this video https://www.youtube.com/watch?v=MVPPdukqLp0
 
 == Changelog ==
 
+= 1.6.4.67 =
+* WooCommerce shipping plugin Tested for WC 9.9.5
+
 = 1.6.4.66 =
 * Tested for WC 9.8.5
 
@@ -311,17 +323,17 @@ checkout this video https://www.youtube.com/watch?v=MVPPdukqLp0
 * Tested for WC 9.6.0
 
 = 1.6.4.49 =
-* UX improved
+* UX improved for WooCommerce shipping plugin interface
 
 = 1.6.4.47 =
 * Tested for WP 6.7.1
-* confirm dialog box on deletion of shipping method
+* confirm dialog box on deletion of flat rate shipping method
 
 = 1.6.4.46 =
 * Tested for WP 6.7.0
 
 = 1.6.4.44 =
-* code improvement
+* code improvement in WooCommerce shipping plugin
 
 = 1.6.4.43 =
 * Tested for WC 9.3.0
@@ -385,3 +397,15 @@ checkout this video https://www.youtube.com/watch?v=MVPPdukqLp0
 
 = 1.6.3.93 =
 * Compatible with HPOS database structure
+
+== Privacy ==
+
+If you choose to opt in from the plugin settings, or submit optional feedback during deactivation, this plugin may collect basic technical information, including:
+
+- Plugin version  
+- WordPress version  
+- WooCommerce version  
+- Site url
+- Deactivation reason (if submitted)
+
+This data is used solely to improve plugin quality, compatibility, and features. No personal or user-specific data is collected without consent.

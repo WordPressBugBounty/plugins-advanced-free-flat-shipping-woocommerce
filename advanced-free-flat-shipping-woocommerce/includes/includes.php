@@ -15,6 +15,7 @@ require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom-group/includ
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/combine-method.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/option.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/package-manager/includes.php';
+require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-analytics.php';
 
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-disable-shipping-method-cache.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-other-method-handling.php';
