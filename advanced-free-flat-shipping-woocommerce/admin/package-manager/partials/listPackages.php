@@ -66,7 +66,7 @@ foreach($custom_groups as $method){
     echo '</td>';
     echo '<td>';
     echo '<a href="'.esc_url( admin_url( '/admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_package&action=edit&id='.$method->ID ) ).'" class="btn btn-primary btn-sm m-2" title="Edit package"><span class="dashicons dashicons-edit-page"></span></a>';
-    echo '<form method="POST" class="d-inline"><input type="hidden" name="method_id" value="'.esc_attr( $method->ID ).'"><input type="hidden" name="action" value="efrs_package_delete"><input type="hidden" name="nonce" value="'.esc_attr(wp_create_nonce('pisol-efrs-package-delete-'.$method->ID)).'"><button class="btn btn-warning btn-sm m-2 pisol-confirm"  title="Delete package"><span class="dashicons dashicons-trash "></span> </button></form>';
+    echo '<form method="POST" class="d-inline"><input type="hidden" name="method_id" value="'.esc_attr( $method->ID ).'"><input type="hidden" name="action" value="efrs_package_delete"><input type="hidden" name="nonce" value="'.esc_attr(wp_create_nonce('pisol-efrs-package-delete-'.$method->ID)).'"><button class="btn btn-primary btn-sm m-2 pisol-confirm"  title="Delete package"><span class="dashicons dashicons-trash "></span> </button></form>';
     echo '</td>';
     echo '</tr>';
 }

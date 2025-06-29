@@ -10,7 +10,7 @@ class Class_Pi_Efrs_Custom_group_List{
 
     private $this_tab = 'custom-group';
 
-    private $tab_name = "Virtual category";
+    private $tab_name = "Virtual Categories";
 
     private $setting_key = 'pi_efrs_list_custom_group';
     
@@ -44,7 +44,7 @@ class Class_Pi_Efrs_Custom_group_List{
     function tab(){
         ?>
         <a class=" px-3 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo esc_url( admin_url( 'admin.php?page='.sanitize_text_field($_GET['page']).'&tab='.$this->this_tab ) ); ?>">
-            <?php echo esc_html( $this->tab_name); ?> 
+            <span class="dashicons dashicons-category"></span> <?php echo esc_html( $this->tab_name); ?> 
         </a>
         <?php
     }

@@ -10,7 +10,7 @@ class pisol_affsw_options{
 
     private $this_tab = 'extra_options';
 
-    private $tab_name = "Extra settings";
+    private $tab_name = "Advanced Settings";
 
     private $setting_key = 'affsw_extra_setting';
     
@@ -67,10 +67,10 @@ class pisol_affsw_options{
 
     function tab(){
         $page = sanitize_text_field(filter_input( INPUT_GET, 'page'));
-        $this->tab_name = __("Extra settings",'extended-flat-rate-shipping-woocommerce');
+        $this->tab_name = __("Advanced Settings",'extended-flat-rate-shipping-woocommerce');
         ?>
         <a class=" px-3 py-2 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo esc_url( admin_url( 'admin.php?page='.$page.'&tab='.$this->this_tab ) ); ?>">
-            <?php echo esc_html( $this->tab_name); ?> 
+           <span class="dashicons dashicons-admin-generic"></span> <?php echo esc_html( $this->tab_name); ?> 
         </a>
         <?php
     }
@@ -85,7 +85,7 @@ class pisol_affsw_options{
                 new pisol_class_form_affsw($setting, $this->setting_key);
             }
         ?>
-        <input type="submit" class="mt-3 btn btn-primary btn-sm" value="Save Option" />
+        <input type="submit" class="mt-3 btn btn-primary btn-md" value="Save Option" />
         </form>
        <?php
     }

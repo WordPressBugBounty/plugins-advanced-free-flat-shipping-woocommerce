@@ -178,3 +178,71 @@
 table td:has(.btn) .dashicons{
     line-height:1;
 }
+
+/* NEW NAVIGATION BAR */
+#pisol-navbar .navbar-nav{
+    background:transparent !important;
+    display:flex;
+    gap:10px;
+}
+
+#pisol-navbar a{
+    background:#fff !important;
+    color:var(--dark) !important;
+    border-radius:60px !important;
+    font-weight:600;
+    letter-spacing:1px;
+    transition: all 0.3s ease;
+}
+
+#pisol-navbar a .dashicons{
+    margin-right:4px;
+}
+
+#pisol-navbar a.bg-primary, #pisol-navbar a:hover{
+    background:#fff !important;
+    color:var(--primary) !important;
+    text-decoration:none;
+}
+
+@media(max-width:1400px){
+    #pisol-navbar a{
+        letter-spacing:inherit;
+        padding:7px 7px !important;
+    }
+}
+
+@media(max-width:1200px){
+    #pisol-navbar .navbar-nav{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-gap:10px;
+        & a{
+            width:100%;
+        }
+    }
+}
+
+@media(max-width:576px){
+    #pisol-navbar{
+        margin-left:auto !important;
+        margin-right:auto !important;
+    }
+    
+    #pisol-navbar .container-fluid{
+        width:100% !important;
+    }
+
+    #pi-logo{
+        width:90%;
+    }
+}
+
+
+.afrsm-head{
+    background-color: var(--dark) !important;
+    color:#FFF;
+    position:sticky;
+    top:32px;
+    z-index:10000
+}

@@ -64,14 +64,20 @@ class Pi_Efrs_Menu{
                     <div class="col-12">
                         <div class='bg-dark'>
                         <div class="pisol-row">
-                            <div class="col-12 col-sm-2 py-2">
-                                    <a href="https://www.piwebsolution.com/" target="_blank"><img class="img-fluid ml-2" src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ); ?>img/pi-web-solution.png"></a>
+                            <div class="col-12 col-sm-2 py-2 d-flex align-items-center justify-content-center">
+                                    <a href="https://www.piwebsolution.com/" target="_blank"><img id="pi-logo" class="img-fluid ml-2" src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ); ?>img/pi-web-solution.png"></a>
                             </div>
                             <div class="col-12 col-sm-10 d-flex text-center small">
-                                <?php do_action($this->plugin_name.'_tab'); ?>
-                                <a class=" px-3 text-light d-flex align-items-center  border-left border-right  bg-primary ml-auto mr-0" href="https://www.piwebsolution.com/advance-flat-rate-shipping/" target="_blank">
-                                Documentation 
-                                </a>
+                                <nav id="pisol-navbar" class="navbar navbar-expand-lg navbar-light mr-0 ml-auto">
+                                    <div>
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                            <?php do_action($this->plugin_name.'_tab'); ?>
+                                            <a class=" px-3 text-light d-flex align-items-center  border-left border-right  ml-auto mr-0" href="https://www.piwebsolution.com/advance-flat-rate-shipping/" target="_blank">
+                                            <span class="dashicons dashicons-editor-help"></span> Help & Docs
+                                            </a>
+                                        </ul>
+                                    </div>
+                                </nav>
                             </div>
                         </div>
                         </div>
@@ -80,7 +86,7 @@ class Pi_Efrs_Menu{
             <div class="pisol-row">
                 <div class="col-12">
                 <div id="pisol-efrs-notices"></div>
-                <div class="bg-light border pl-3 pr-3 pb-3 pt-0">
+                <div class="bg-light border pl-3 pr-3 pt-0">
                     <div class="row">
                         <div class="col">
                         <?php do_action($this->plugin_name.'_tab_content'); ?>
@@ -99,68 +105,48 @@ class Pi_Efrs_Menu{
     function promotion(){
         if(isset($_GET['tab']) && $_GET['tab'] == 'pi_efrs_add_shipping') return;
         ?>
-        <div class="col-12 col-sm-12 col-md-4 pt-3">
+        <div class="col-12 col-sm-12 col-md-4 pt-3 pb-3 border-left">
 
-                <div class="bg-dark text-light text-center mb-3">
+                <div class="pi-shadow rounded px-2 py-3">
+                    <h2 id="pi-banner-tagline" class="mb-0" style="color:#ccc !important;">
+                        <span class="d-block mb-2">⭐️⭐️⭐️⭐️⭐️</span>
+                        <span class="d-block mb-2">🚀 Trusted by <span style="color:#fff;">3,000+</span> WooCommerce Stores</span>
+                        <span class="d-block mb-2">Rated <span style="color:#fff;">4.9/5</span> – Users love it</span>
+                    </h2>
+                    <div class="inside">
+                        <ul class="text-left pisol-pro-feature-list">
+                            <li><b>✔ Location-based rules</b><br>
+                            <i>State, postcode, city, or zone</i></li>
+
+                            <li><b>✔ Product/cart conditions</b><br>
+                            <i>Subtotal, weight, dimensions, quantity</i></li>
+
+                            <li><b>✔ Customer-specific logic</b><br>
+                            <i>User roles, coupons, payment methods</i></li>
+
+                            <li><b>✔ Shipping method control</b><br>
+                            <i>Priorities, remove other methods, combine methods</i></li>
+
+                            <li><b>✔ Adjust shipping charge</b><br>
+                            <i>By product, category, or shipping class</i></li>
+
+                            <li><b>✔ Smart features</b><br>
+                            <i>Virtual categories, day-based rules, unlimited combinations</i></li>
+                        </ul>
+                        <h4 class="pi-bottom-banner">💰 Just <?php echo esc_html(PI_EFRS_PRICE); ?></h4>
+                        <h4 class="pi-bottom-banner">🔥 Unlock all 50+ features and grow your sales!</h4>
+                        <div class="text-center pb-3 pt-2">
+                            <a class="btn btn-primary btn-md" href="<?php echo esc_url( PI_EFRS_BUY_URL ); ?>&utm_ref=bottom_link" target="_blank">🔓 Unlock Pro Now – Limited Time Price!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-dark text-light text-center mt-3 rounded overflow-hidden">
                     <a href="<?php echo esc_url( PI_EFRS_BUY_URL ); ?>&utm_ref=discount_banner" target="_blank">
                     <?php  new pisol_promotion("pi_efrs_installation_date"); ?>
                     </a>
                 </div>
 
-                <div class="pi-shadow">
-                <div class="pisol-row justify-content-center">
-                    <div class="col-md-7 col-sm-12">
-                        <div class="p-2  text-center">
-                            <img class="img-fluid" src="<?php echo esc_url(plugin_dir_url( __FILE__ )); ?>img/bg.svg">
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center py-2">
-                    <a class="btn btn-success btn-sm text-uppercase mb-2 " href="<?php echo esc_url(PI_EFRS_BUY_URL); ?>&utm_ref=top_link" target="_blank">Buy Now !!</a>
-                    <a class="btn btn-sm mb-2 btn-secondary text-uppercase" href="https://websitemaintenanceservice.in/flat_shipping/" target="_blank">Try Demo</a>
-                </div>
-                <h2 id="pi-banner-tagline" class="mb-0">Get Pro for <?php echo esc_html(PI_EFRS_PRICE); ?> Only</h2>
-                <h6 id="pi-banner-tagline" class="mb-0 bg-primary p-2 text-light text-center">Trusted by 3000+ Websites</h6>
-                <div class="inside">
-                    <ul class="text-left pisol-pro-feature-list">
-                        <li class="border-top font-weight-light h6">If user is from a specific <strong class="text-primary">State / County</strong></li>
-                        <li class="border-top font-weight-light h6">When the user is from specific <strong class="text-primary">Postcode</strong></li>
-                        <li class="border-top font-weight-light h6">Allows you to specify <strong class="text-primary">Range of postal code</strong> E.g: 9001...9050</li>
-                        <li class="border-top font-weight-light h6">If customer is buying a specific <strong class="text-primary">Product (Support Variable Product)</strong></li>
-                        <li class="border-top font-weight-light h6">If the <strong class="text-primary">Cart Subtotal before discount / Cart Subtotal after discount</strong> is grater then, or less then or equal to specific value set by you</li>
-                        <li class="border-top font-weight-light h6">Based on <strong class="text-primary">User Role</strong></li>
-                        <li class="border-top font-weight-light h6">If user is from specific <strong class="text-primary">Shipping zone</strong></li>
-                        <li class="border-top font-weight-light h6">If the <strong class="text-primary">Total Weight of product</strong> in cart is grater, less or equal to specific value set by you</li>
-                        <li class="border-top font-weight-light h6">If the product with the max <strong class="text-primary">Width</strong> in the cart is grater then, less then or equal to your set value</li>
-                        <li class="border-top font-weight-light h6">If the product with the max <strong class="text-primary">Height</strong> in the cart is grater then, less then or equal to your set value</li>
-                        <li class="border-top font-weight-light h6">If the product with the max <strong class="text-primary">Length</strong> in the cart is grater then, less then or equal to your set value</li>
-                        <li class="border-top font-weight-light h6">When user apply some specific <strong class="text-primary">Coupon Code</strong></li>
-                        <li class="border-top font-weight-light h6">Apply shipping method when product with specific <strong class="text-primary">Shipping Class</strong> is present in the cart</li>
-                        <li class="border-top font-weight-light h6">When a specific <strong class="text-primary">Payment Method</strong> is selected by the customer</li>
-                        <li class="border-top font-weight-light h6">Create <strong class="text-primary">Unlimited method</strong> based on various combinations of the above rules</li>
-                        <li class="border-top font-weight-light h6"><strong class="text-primary">Set method priority</strong> so higher priority method will be above, and this priority is used in other things rules as well</li>
-                        <li class="border-top font-weight-light h6"><strong class="text-primary">Remove all other methods</strong> when a particular method is activated</li>
-                        <li class="border-top font-weight-light h6"><strong class="text-primary">Remove all other methods of this plugin</strong>, when a particular method is activated</li>
-                        <li class="border-top font-weight-light h6"><strong class="text-primary">Remove all other methods of low priority of this plugin</strong>, when a particular method is activated</li>
-                        <li class="border-top font-weight-light h6"><strong class="text-primary">Shipping class total</strong> this rule applies when customer has purchased an x amount of product from specific shipping class</li> 
-                        <li class="border-top font-weight-light h6"><strong class="text-primary">Shipping class total quantity of product in cart</strong> this rule applies when customer has added x unit of product from a specific shipping class in his cart</li>
-                        <li class="border-top font-weight-light h6"><strong class="text-primary">User city based method</strong>: You can offer method based on user city, it is string comparison</li> 
-                        <li class="border-top font-weight-light h6">Shipping method based on <strong class="text-primary">Day of the week</strong></li>
-                        <li class="border-top font-weight-light h6">Support for <strong class="text-primary">[qty] and [fee]</strong> short code in the Shipping charges field </li>
-                        <li class="border-top font-weight-light h6">Support for <strong class="text-primary">[qty]</strong> short code in the Shipping class charges field </li>
-                        <li class="border-top font-weight-light h6">Add extra charge based on <strong class="text-primary">Product quantity, Product subtotal, Product Weight</strong></li>
-                        <li class="border-top font-weight-light h6">Add extra charge based on <strong class="text-primary">Category quantity, Category subtotal, Category Weight</strong></li>
-                        <li class="border-top font-weight-light h6">Add extra charge based on <strong class="text-primary">Shipping class quantity, Shipping class subtotal, Shipping class Weight</strong></li>
-                        <li class="border-top font-weight-light h6"> <strong class="text-primary">Attribute</strong> based shipping method</li>
-                        <li class="border-top font-weight-light h6"> <strong class="text-primary">Add product or variation of product to Virtual category</strong></li>
-                        <li class="border-top font-weight-light h6"> <strong class="text-primary">Exclude product or variation of product from Virtual category</strong></li>
-                        <li class="border-top font-weight-light h6"> <strong class="text-primary">Combine multiple shipping methods</strong> in to a single method</li>
-                    </ul>
-                    <div class="text-center pb-3 pt-2">
-                        <a class="btn btn-primary btn-md" href="<?php echo esc_url( PI_EFRS_BUY_URL ); ?>&utm_ref=bottom_link" target="_blank">BUY PRO VERSION</a>
-                    </div>
-                </div>
-                </div>
         </div>
         <?php
     }

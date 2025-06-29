@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-12 py-3 text-right"><a class="btn btn-primary btn-sm mr-3" href="<?php echo esc_url( admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_shipping' ) ); ?>"><span class="dashicons dashicons-plus"></span> <?php esc_html_e('Add shipping method','advanced-free-flat-shipping-woocommerce'); ?></a>
+    <div class="col-12 py-3 pr-0 text-right"><a class="btn btn-primary btn-sm mr-3" href="<?php echo esc_url( admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_shipping' ) ); ?>"><span class="dashicons dashicons-plus"></span> <?php esc_html_e('Add shipping method','advanced-free-flat-shipping-woocommerce'); ?></a>
     </div>
 </div>
 <?php
@@ -48,7 +48,7 @@ foreach($shipping_methods as $method){
     echo '</td>';
     echo '<td>';
     echo '<a href="'.esc_url(admin_url( '/admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_shipping&action=edit&id='.$method->ID )).'" class="btn btn-primary btn-sm m-2" title="'.esc_attr__('Edit shipping method','advanced-free-flat-shipping-woocommerce').'"><span class="dashicons dashicons-admin-customizer"></span></a>';
-    echo '<a href="'.esc_url(admin_url( '/admin.php?page=pisol-efrs-notification&action=efrs_delete&id='.$method->ID.'&nonce='.wp_create_nonce('pisol-efrs-action-delete-'.$method->ID) )).'" class="btn btn-warning btn-sm m-2 pi-efrs-delete"  title="'.esc_attr__('Delete shipping method','advanced-free-flat-shipping-woocommerce').'"><span class="dashicons dashicons-trash "></span></a>';
+    echo '<a href="'.esc_url(admin_url( '/admin.php?page=pisol-efrs-notification&action=efrs_delete&id='.$method->ID.'&nonce='.wp_create_nonce('pisol-efrs-action-delete-'.$method->ID) )).'" class="btn btn-primary btn-sm m-2 pi-efrs-delete"  title="'.esc_attr__('Delete shipping method','advanced-free-flat-shipping-woocommerce').'"><span class="dashicons dashicons-trash "></span></a>';
     echo '</td>';
     echo '</tr>';
 }

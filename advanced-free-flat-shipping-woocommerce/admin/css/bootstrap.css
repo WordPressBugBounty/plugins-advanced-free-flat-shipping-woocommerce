@@ -1,24 +1,4 @@
-/**
- * All of the CSS for your admin-specific functionality should be
- * included in this file.
- */
- /*!
- * Bootstrap Grid Only (grid and responsive utilities extracted from Bootstrap 4.1.3)
- * GitHub: https://github.com/dmhendricks/bootstrap-grid-css
- * Bootstrap License: MIT (https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE)
- * Credits: Twitter, Inc. & The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
- */
- .bootstrap-wrapper {
-  /*!
- * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-  /*# sourceMappingURL=bootstrap.min.css.map */
-}
-
-.bootstrap-wrapper :root {
+:root {
 	--blue: #007bff;
 	--indigo: #6610f2;
 	--purple: #6f42c1;
@@ -11346,13 +11326,6 @@ svg{
 
 /* end tooltip */
 
-.bootstrap-wrapper .pi-shadow{
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-	position:relative;
-	z-index:1;
-	border-radius: 15px;
-}
-
 #pi-promotion-banner{
 	max-width:70%;
 	margin:auto;
@@ -11361,13 +11334,33 @@ svg{
 
 h2#pi-banner-tagline{
 padding:10px;
-background:#1a4562;
 color:#fff !important;
-font-size:1.5rem !important;
+font-size:1.2rem !important;
 text-align:center;
 }
 
 .pisol-pro-feature-list li{
 	list-style-type: none;
 	padding:10px 15px;
+}
+
+.bootstrap-wrapper .pi-shadow{
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	position:relative;
+	background: linear-gradient(135deg, #1a4562 0%, #2c6a89 50%, #163f59 100%);
+	z-index:1;
+}
+
+.bootstrap-wrapper .pi-shadow li, .bootstrap-wrapper .pi-shadow h6, .bootstrap-wrapper .pi-shadow h4{
+	color:#fff !important;
+}
+
+.bootstrap-wrapper .pi-shadow hr{
+	border-color:#1a4562 !important;
+}
+
+h4.pi-bottom-banner{
+	font-size: 18px;
+	margin-bottom:15px;
+	text-align: center;
 }
