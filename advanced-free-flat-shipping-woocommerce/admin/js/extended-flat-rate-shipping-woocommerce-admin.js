@@ -123,5 +123,24 @@
 		jQuery("#pi_currency").selectWoo();
 	});
 
+	jQuery(document).ready(function($) {
+		$('.pi-efrs-arrow-circle').on('click', function() {
+			$('#pi-efrs-sidebar-container').fadeToggle(); // Add CSS to handle visibility
+			$(this).toggleClass('open closed');
+		});
+
+		$(".pi-step-header").on('click', function() {
+			$(this).closest('.pi-step-container').toggleClass('pi-closed');
+		});
+
+		$("#open-all").on('click', function() {
+			$('.pi-step-container').removeClass('pi-closed');
+		});
+
+		$("#close-all").on('click', function() {
+			$('.pi-step-container').addClass('pi-closed');
+		});
+	});
+
 
 })(jQuery);

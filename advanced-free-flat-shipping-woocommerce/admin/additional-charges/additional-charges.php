@@ -22,7 +22,7 @@ class pisol_efrs_additional_charges_form{
             $data['pi_enable_additional_charges'] = get_post_meta( $data['post_id'], 'pi_enable_additional_charges', true );
             $data['pi_enable_additional_charges']       = isset($data['pi_enable_additional_charges']) && 'on' === $data['pi_enable_additional_charges'] ? 'checked' : '';
         }else{
-            $data['pi_enable_additional_charges']               = '';
+            $data['pi_enable_additional_charges']               = 'checked';
         }
         return $data;
     }
@@ -36,7 +36,7 @@ class pisol_efrs_additional_charges_form{
     }
 
     static function tabName($name, $slug, $active = ""){
-        echo "<a href=\"javascript:void(0)\" class=\"bg-secondary p-2 d-block text-center text-light additional-charges-tab border-bottom ".esc_attr($active)." \" id=\"add-charges-tab-".esc_attr($slug)."\" data-target=\"#add-charges-tab-content-".esc_attr($slug)."\">".wp_kses_post($name)."</a>";
+        echo "<a href=\"javascript:void(0)\" class=\"bg-dark2 py-3 px-2 d-block text-left text-light additional-charges-tab border-bottom ".esc_attr($active)." \" id=\"add-charges-tab-".esc_attr($slug)."\" data-target=\"#add-charges-tab-content-".esc_attr($slug)."\">".wp_kses_post($name)."</a>";
     }
 
     static function additionalChargesEnabled($post_id){

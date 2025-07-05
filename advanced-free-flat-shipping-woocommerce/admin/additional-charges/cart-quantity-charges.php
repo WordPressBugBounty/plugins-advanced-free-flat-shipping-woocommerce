@@ -17,7 +17,7 @@ class pisol_efrs_cart_quantity_extra_charges_setting{
     }
 
     function addTab($data){
-        pisol_efrs_additional_charges_form::tabName('Based on Cart Quantity', $this->slug, 'pi-active-tab');
+        pisol_efrs_additional_charges_form::tabName('Cart Quantity', $this->slug, 'pi-active-tab');
     }
 
     function addTabContent($data){

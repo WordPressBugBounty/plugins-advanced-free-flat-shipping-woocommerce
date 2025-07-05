@@ -16,7 +16,7 @@ class pisol_efrs_weight_based_extra_charges_setting{
     }
 
     function addTab($data){
-        pisol_efrs_additional_charges_form::tabName('Based on Cart Weight', $this->slug);
+        pisol_efrs_additional_charges_form::tabName('Cart Weight', $this->slug);
     }
 
     function addTabContent($data){

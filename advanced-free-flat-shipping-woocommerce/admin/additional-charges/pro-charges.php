@@ -11,20 +11,20 @@ class pisol_efrs_procharges_tab{
     function addTab($data){
         
 
-        pisol_efrs_additional_charges_form::tabName('Based on Product Quantity <br><span class="badge badge-success">Pro</span>', 'product-quantity');
-        pisol_efrs_additional_charges_form::tabName('Based on Category Quantity <br><span class="badge badge-success">Pro</span>', 'category-quantity');
-        pisol_efrs_additional_charges_form::tabName('Based on Shippingclass Quantity <br><span class="badge badge-success">Pro</span>', 'shippingclass-quantity');
+        pisol_efrs_additional_charges_form::tabName('Product Quantity <span class="badge badge-success">Pro</span>', 'product-quantity');
+        pisol_efrs_additional_charges_form::tabName('Category Quantity <span class="badge badge-success">Pro</span>', 'category-quantity');
+        pisol_efrs_additional_charges_form::tabName('Shippingclass Quantity <span class="badge badge-success">Pro</span>', 'shippingclass-quantity');
 
-        pisol_efrs_additional_charges_form::tabName('Based on Product Subtotal <br><span class="badge badge-success">Pro</span>', 'product-subtotal');
-        pisol_efrs_additional_charges_form::tabName('Based on Category Subtotal <br><span class="badge badge-success">Pro</span>', 'category-subtotal');
-        pisol_efrs_additional_charges_form::tabName('Based on Shippingclass Subtotal <br><span class="badge badge-success">Pro</span>', 'shippingclass-subtotal');
+        pisol_efrs_additional_charges_form::tabName('Product Subtotal <span class="badge badge-success">Pro</span>', 'product-subtotal');
+        pisol_efrs_additional_charges_form::tabName('Category Subtotal <span class="badge badge-success">Pro</span>', 'category-subtotal');
+        pisol_efrs_additional_charges_form::tabName('Shippingclass Subtotal <span class="badge badge-success">Pro</span>', 'shippingclass-subtotal');
 
-        pisol_efrs_additional_charges_form::tabName('Based on Product Weight <br><span class="badge badge-success">Pro</span>', 'product-weight');
-        pisol_efrs_additional_charges_form::tabName('Based on Category Weight <br><span class="badge badge-success">Pro</span>', 'category-weight');
-        pisol_efrs_additional_charges_form::tabName('Based on Shippingclass Weight <br><span class="badge badge-success">Pro</span>', 'shippingclass-weight');
+        pisol_efrs_additional_charges_form::tabName('Product Weight <span class="badge badge-success">Pro</span>', 'product-weight');
+        pisol_efrs_additional_charges_form::tabName('Category Weight <span class="badge badge-success">Pro</span>', 'category-weight');
+        pisol_efrs_additional_charges_form::tabName('Shippingclass Weight <span class="badge badge-success">Pro</span>', 'shippingclass-weight');
 
-        pisol_efrs_additional_charges_form::tabName('Based on Virtual Category Quantity <br><span class="badge badge-success">Pro</span>', 'virtual-category-quantity');
-        pisol_efrs_additional_charges_form::tabName('Based on Virtual Category Subtotal <br><span class="badge badge-success">Pro</span>', 'virtual-category-subtotal');
+        pisol_efrs_additional_charges_form::tabName('Virtual Category Quantity <span class="badge badge-success">Pro</span>', 'virtual-category-quantity');
+        pisol_efrs_additional_charges_form::tabName('Virtual Category Subtotal <span class="badge badge-success">Pro</span>', 'virtual-category-subtotal');
     }
 
     function addTabContent($data){

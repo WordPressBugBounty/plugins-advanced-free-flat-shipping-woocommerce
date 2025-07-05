@@ -18,7 +18,7 @@ class pisol_efrs_cart_subtotal_extra_charges_setting{
     }
 
     function addTab($data){
-        pisol_efrs_additional_charges_form::tabName('Based on Cart Subtotal', $this->slug);
+        pisol_efrs_additional_charges_form::tabName('Cart Subtotal', $this->slug);
     }
 
     function addTabContent($data){

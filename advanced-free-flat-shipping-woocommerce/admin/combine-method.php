@@ -67,30 +67,9 @@ class pisol_affsw_combine_methods{
 
     function tab_content(){
         ?>
-        <style>
-            .video-container {
-                overflow: hidden;
-                position: relative;
-                width:100%;
-            }
-
-            .video-container::after {
-                padding-top: 56.25%;
-                display: block;
-                content: '';
-            }
-
-            .video-container iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        </style>
-        <div class="alert alert-info my-3"><strong>Combine shipping method is available in PRO Version watch its working in below Video</strong></div>
+        <div class="alert alert-info my-3">Combine shipping method is available in PRO Version watch its working in below Video</div>
         <div class="video-container">
-        <iframe style="margin-top:20px;" src="https://www.youtube.com/embed/xkL_YHwNcWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/xkL_YHwNcWo?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
        <?php
     }

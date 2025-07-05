@@ -1,6 +1,6 @@
-<div class="row mt-3">
+<div class="row mt-3 align-items-center mb-3">
     <div class="col-12 col-md-7">
-        <div class="alert alert-info">
+        <div class="alert alert-info mb-0">
             <?php esc_html_e('Checkout this video to know more about Package manager','advanced-free-flat-shipping-woocommerce'); ?> <?php pisol_help::youtube('MVPPdukqLp0', esc_html__('Know more about the package manager','advanced-free-flat-shipping-woocommerce')); ?>
         </div>
     </div>

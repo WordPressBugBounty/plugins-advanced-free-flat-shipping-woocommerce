@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div class="row border-bottom align-items-center">
-    <div class="col-12 py-2 bg-primary">
+    <div class="col-12 py-2 bg-dark2">
         <strong class="h5 text-light"><?php echo isset($_GET['action']) && $_GET['action'] === 'edit' ?  esc_html__('Edit Package','advanced-free-flat-shipping-woocommerce') : esc_html__('Add New Package','advanced-free-flat-shipping-woocommerce'); ?></strong>
     </div>
 </div>
@@ -127,5 +127,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 <input type="hidden" name="post_type" value="pi_efrs_package">
 <input type="hidden" name="post_id" value="<?php echo esc_attr( $data['post_id'] ); ?>">
 <input type="hidden" name="action" value="pisol_efrs_save_package">
-<input type="submit" value="<?php esc_attr_e('Save Method','advanced-free-flat-shipping-woocommerce'); ?>" name="submit" class="m-2 mt-5 btn btn-primary btn-lg" id="pi-efrs-new-shipping-method-form">
+<input type="submit" value="<?php esc_attr_e('Save Package','advanced-free-flat-shipping-woocommerce'); ?>" name="submit" class="my-3 btn btn-primary btn-md" id="pi-efrs-new-shipping-method-form">
 </form>

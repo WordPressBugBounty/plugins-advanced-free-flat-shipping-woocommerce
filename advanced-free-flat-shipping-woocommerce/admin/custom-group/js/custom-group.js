@@ -54,9 +54,14 @@
             if (val == 'all') {
                 jQuery("#pi-exclude-product-group").css('order', 1);
                 jQuery("#pi-include-product-group").css('order', 2);
+                jQuery("#pi-include-step-no").text('3');
+                jQuery("#pi-exclude-step-no").text('2');
+                
             } else {
                 jQuery("#pi-exclude-product-group").css('order', 2);
                 jQuery("#pi-include-product-group").css('order', 1);
+                jQuery("#pi-include-step-no").text('2');
+                jQuery("#pi-exclude-step-no").text('3');
             }
         });
 

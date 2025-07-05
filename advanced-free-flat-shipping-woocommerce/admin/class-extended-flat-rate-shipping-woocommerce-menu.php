@@ -89,7 +89,15 @@ class Pi_Efrs_Menu{
                 <div class="bg-light border pl-3 pr-3 pt-0">
                     <div class="row">
                         <div class="col">
-                        <?php do_action($this->plugin_name.'_tab_content'); ?>
+                            <div class="pi-efrs-arrow-circle closed" title="Open / Close sidebar">
+                                <svg class="pi-efrs-arrow-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- First arrow -->
+                                    <path d="M13 6l-6 6 6 6" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <!-- Second arrow (slightly right-shifted) -->
+                                    <path d="M17 6l-6 6 6 6" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <?php do_action($this->plugin_name.'_tab_content'); ?>
                         </div>
                         <?php do_action($this->plugin_name.'_promotion'); ?>
                     </div>
@@ -103,13 +111,12 @@ class Pi_Efrs_Menu{
     }
 
     function promotion(){
-        if(isset($_GET['tab']) && $_GET['tab'] == 'pi_efrs_add_shipping') return;
         ?>
-        <div class="col-12 col-sm-12 col-md-4 pt-3 pb-3 border-left">
+        <div class="col-12 col-sm-12 col-md-4 pt-3 pb-3 border-left" id="pi-efrs-sidebar-container">
 
                 <div class="pi-shadow rounded px-2 py-3">
                     <h2 id="pi-banner-tagline" class="mb-0" style="color:#ccc !important;">
-                        <span class="d-block mb-2">⭐️⭐️⭐️⭐️⭐️</span>
+                        <span class="d-block mb-4">⭐️⭐️⭐️⭐️⭐️</span>
                         <span class="d-block mb-2">🚀 Trusted by <span style="color:#fff;">3,000+</span> WooCommerce Stores</span>
                         <span class="d-block mb-2">Rated <span style="color:#fff;">4.9/5</span> – Users love it</span>
                     </h2>

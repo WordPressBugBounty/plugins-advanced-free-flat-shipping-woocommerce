@@ -1,4 +1,4 @@
-<div class="row py-4 bg-secondary">
+<div class="row py-4 bg-dark2">
     <div class="col-6"><label for="pi_enable_additional_charges" class="text-light mb-0">Additional Charges</label> <?php pisol_help::tooltip('You can adjust the final shipping charge of this shipping method using this extra conditions'); ?><?php pisol_help::youtube('oGE6daMXrOk','Know more about the Additional Charges'); ?> </div>
     <div class="col-6">
         <div class="custom-control custom-switch">
@@ -9,10 +9,10 @@
 </div>
 <div id="additional-charges-container"  style="margin:0 -15px;">
     <div class="row no-gutters">
-        <div class="col-2">
+        <div class="col-3">
             <?php do_action('pi_efrs_additional_charges_tab', $data); ?>
         </div>
-        <div class="col-10">
+        <div class="col-9">
             <?php do_action('pi_efrs_additional_charges_tab_content', $data); ?>
         </div>
     </div>
