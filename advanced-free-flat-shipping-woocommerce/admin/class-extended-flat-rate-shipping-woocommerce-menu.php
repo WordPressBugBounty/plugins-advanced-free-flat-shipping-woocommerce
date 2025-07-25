@@ -64,7 +64,7 @@ class Pi_Efrs_Menu{
                     <div class="col-12">
                         <div class='bg-dark'>
                         <div class="pisol-row">
-                            <div class="col-12 col-sm-2 py-2 d-flex align-items-center justify-content-center">
+                            <div class="col-12 col-sm-2 py-3 d-flex align-items-center justify-content-center">
                                     <a href="https://www.piwebsolution.com/" target="_blank"><img id="pi-logo" class="img-fluid ml-2" src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ); ?>img/pi-web-solution.png"></a>
                             </div>
                             <div class="col-12 col-sm-10 d-flex text-center small">
@@ -122,22 +122,22 @@ class Pi_Efrs_Menu{
                     </h2>
                     <div class="inside">
                         <ul class="text-left pisol-pro-feature-list">
-                            <li><b>✔ Location-based rules</b><br>
+                            <li><b><span style="color:white;">&#10003;</span> Location-based rules</b><br>
                             <i>State, postcode, city, or zone</i></li>
 
-                            <li><b>✔ Product/cart conditions</b><br>
+                            <li><b><span style="color:white;">&#10003;</span> Product/cart conditions</b><br>
                             <i>Subtotal, weight, dimensions, quantity</i></li>
 
-                            <li><b>✔ Customer-specific logic</b><br>
+                            <li><b><span style="color:white;">&#10003;</span> Customer-specific logic</b><br>
                             <i>User roles, coupons, payment methods</i></li>
 
-                            <li><b>✔ Shipping method control</b><br>
+                            <li><b><span style="color:white;">&#10003;</span> Shipping method control</b><br>
                             <i>Priorities, remove other methods, combine methods</i></li>
 
-                            <li><b>✔ Adjust shipping charge</b><br>
+                            <li><b><span style="color:white;">&#10003;</span> Adjust shipping charge</b><br>
                             <i>By product, category, or shipping class</i></li>
 
-                            <li><b>✔ Smart features</b><br>
+                            <li><b><span style="color:white;">&#10003;</span> Smart features</b><br>
                             <i>Virtual categories, day-based rules, unlimited combinations</i></li>
                         </ul>
                         <h4 class="pi-bottom-banner">💰 Just <?php echo esc_html(PI_EFRS_PRICE); ?></h4>

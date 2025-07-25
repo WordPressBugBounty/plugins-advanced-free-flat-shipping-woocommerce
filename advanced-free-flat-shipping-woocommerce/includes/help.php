@@ -13,6 +13,14 @@ class pisol_help{
         return $msg;
     }
 
+    static function inline_txt($id, $title="", $text = '', $width= 150, $height = 400, $echo = true){
+        $msg = sprintf('<a name="%s" href="#TB_inline?width=%s&height=%s&inlineId=%s" class="thickbox">%s</a>', esc_attr($title), esc_attr($width), esc_attr($height), $id, $text);
+
+        if($echo) echo $msg;
+
+        return $msg;
+    }
+
     static function tooltip($msg, $echo = true){
         $msg = '<p class="pisol-tooltip" tooltip="'.esc_html($msg).'"><span class="dashicons dashicons-editor-help"></span></p>';
         // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
