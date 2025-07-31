@@ -66,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <div class="pi-step-header bg-dark2 text-light">
                                 <div>
                                 <strong class="pi-step-title"><?php echo __('Other Basic settings','extended-flat-rate-shipping-woocommerce'); ?><small>(Non required)</small></strong>
-                                <p>This setting are not required but can help you fine-tune the shipping method.</p>
+                                <p>These setting are not required but can help you fine-tune the shipping method.</p>
                                 </div>
                                 <div>
                                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -182,7 +182,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="pi-step-header bg-dark text-light">
                 <div>
                 <strong class="pi-step-title"><?php echo __('Step 4: Other settings','extended-flat-rate-shipping-woocommerce'); ?><small>(optional)</small></strong>
-                <p>Hide other shipping metod, or shipping class based charges</p>
+                <p>Hide other shipping methods, or shipping class based charges</p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
