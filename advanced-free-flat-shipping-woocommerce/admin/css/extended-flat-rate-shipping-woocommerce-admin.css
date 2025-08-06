@@ -277,7 +277,7 @@ table td:has(.btn) .dashicons{
 
 .pisol-form-element-row small{
 	color:#1a4562;
-	opacity:0.7;
+	font-style: italic;
 	margin-top:10px;
 	display:block;
 }

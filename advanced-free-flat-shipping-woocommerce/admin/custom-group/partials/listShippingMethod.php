@@ -1,5 +1,8 @@
-<div class="row">
-    <div class="col-12 py-3 text-right"><a class="btn btn-primary btn-sm mr-3" href="<?php echo esc_url( admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group' ) ); ?>"><span class="dashicons dashicons-plus"></span> <?php esc_html_e('Add virtual category','advanced-free-flat-shipping-woocommerce'); ?></a>
+<div class="row align-items-center">
+    <div class="col-6 py-3">
+        <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#What_is_a_Virtual_Category" target="_blank">Know more about Virtual category ?</a>
+    </div>
+    <div class="col-6 py-3 text-right"><a class="btn btn-primary btn-sm mr-3" href="<?php echo esc_url( admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_custom_group' ) ); ?>"><span class="dashicons dashicons-plus"></span> <?php esc_html_e('Add virtual category','advanced-free-flat-shipping-woocommerce'); ?></a>
     </div>
 </div>
 <?php

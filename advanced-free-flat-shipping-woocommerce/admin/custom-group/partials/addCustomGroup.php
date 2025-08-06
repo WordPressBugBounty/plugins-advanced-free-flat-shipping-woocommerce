@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="pi-step-header bg-primary text-light">
                 <div>
                 <strong class="pi-step-title"><?php echo __('Step 1: Choose Product Scope','extended-flat-rate-shipping-woocommerce'); ?><small></small></strong>
-                <p>Use filters below to include or exclude products</p>
+                <p class="font-italic text-light mb-0">Use filters below to include or exclude products  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_1_Choose_Product_Scope" target="_blank" class="text-light">(Know more about this ?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -72,7 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="pi-step-header bg-dark text-light">
                 <div>
                 <strong class="pi-step-title">Step <span id="pi-include-step-no">2</span>: <?php echo __('Add Products to This Virtual Category','extended-flat-rate-shipping-woocommerce'); ?><small></small></strong>
-                <p>Include product to this virtual category using the given conditions</p>
+                <p class="font-italic text-light mb-0">Include product to this virtual category using the given conditions  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_2_Add_Products_to_This_Virtual_Category" target="_blank" class="text-light">(Know more about this ?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -116,7 +116,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="row py-4 border-bottom align-items-center free-version">
                         <div class="col-12 col-sm-5">
-                            <label for="pi_products" class="h6"><?php echo esc_html__('Products to include','advanced-free-flat-shipping-woocommerce'); ?></label><p><?php esc_html_e('Product that you want to be part of this virtual category, you can even include a variation of a product','advanced-free-flat-shipping-woocommerce'); ?></p>
+                            <label for="pi_products" class="h6"><?php echo esc_html__('Products to include','advanced-free-flat-shipping-woocommerce'); ?></label><p class="font-italic"><?php esc_html_e('Product that you want to be part of this virtual category, you can even include a variation of a product','advanced-free-flat-shipping-woocommerce'); ?></p>
                         </div>
                         <div class="col-12 col-sm">
                             <select type="text" class="pi_efrs_custom_group_search_product form-control" name="pi_products[]" multiple="multiple">
@@ -126,7 +126,69 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="row py-4 border-bottom align-items-center free-version">
                         <div class="col-12 col-sm-5">
-                            <label for="pi_stock_status" class="h6"><?php echo esc_html__('Include product with Stock status','advanced-free-flat-shipping-woocommerce'); ?></label><?php pisol_help::tooltip(esc_html__('Product stock status will decide if product can be part of this virtual category or not','advanced-free-flat-shipping-woocommerce')); ?>
+                            <label for="pi_product_tags" class="h6"><?php echo __('Product tags to include','extended-flat-rate-shipping-woocommerce'); ?></label><p class="font-italic"><?php esc_html_e('Product with this tags will be part of this virtual category','advanced-free-flat-shipping-woocommerce'); ?></p>
+                        </div>
+                        <div class="col-12 col-sm">
+                            <select type="text" class="pi_efrs_custom_group_search_tag form-control" name="pi_product_tags[]" multiple="multiple">
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row py-4 border-bottom align-items-center free-version">
+                        <div class="col-12 col-sm-5">
+                            <label for="pi_product_dimension" class="h6">Product dimension</label>
+                            <p class="font-italic"><?php esc_html_e('Product with this similar dimension will be considered','advanced-free-flat-shipping-woocommerce'); ?></p>
+                        </div>
+                        <div class="col-12 col-sm-2">
+                            <input type="number" class="form-control" step="0.01" min="0" name="pi_product_length" placeholder="Length" value="">
+                        </div>
+                        <div class="col-12 col-sm-2">
+                            <input type="number" class="form-control" step="0.01" min="0" name="pi_product_width" placeholder="Width" value="">
+                        </div>
+                        <div class="col-12 col-sm-2">
+                            <input type="number" class="form-control" step="0.01" min="0" name="pi_product_height" placeholder="Height" value="">
+                        </div>
+                    </div>
+
+                    <div class="row py-4 border-bottom align-items-center free-version">
+                        <div class="col-12 col-sm-5">
+                            <label for="pi_product_volume" class="h6">Product with volume</label>
+                            <p class="font-italic"><?php esc_html_e('Product with volume matching the logic will be selected, volume of a product is length x width x height','advanced-free-flat-shipping-woocommerce'); ?></p>                    
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <select type="text" class="form-control" name="pi_product_volume_logic">
+                                <option value="" selected="selected">Don't consider this rule</option>
+                                <option value="equal_to">Equal to</option>
+                                <option value="less_equal_to">Less then equal to</option>
+                                <option value="less_then">Less then</option>
+                                <option value="greater_equal_to">Grater then equal to</option>
+                                <option value="greater_then">Grater then</option>
+                                <option value="not_equal_to">Not equal to</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-3">
+                            <input type="number" class="form-control" step="0.01" min="0" name="pi_product_volume" placeholder="Volume" value="">
+                        </div>
+                    </div>
+
+                    <div class="row py-4 border-bottom align-items-center free-version">
+                        <div class="col-12 col-sm-4">
+                            <label class="h6">Product attribute to include</label>
+                            <p class="font-italic"><?php esc_html_e('Products having this attribute will be part of this virtual category','advanced-free-flat-shipping-woocommerce'); ?></p>                    
+                        </div>
+                        <div class="col-12 col-sm">
+                            <div class="row">
+                                <div class="col-12 text-right">
+                                    <a href="javascript:void(0)" id="pi_product_attributes_add_attribute" class=" btn btn-md btn-dark" data-type="pi_product_attributes">Add Attribute</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row py-4 border-bottom align-items-center free-version">
+                        <div class="col-12 col-sm-5">
+                            <label for="pi_stock_status" class="h6"><?php echo esc_html__('Include product with Stock status','advanced-free-flat-shipping-woocommerce'); ?></label>
+                            <p class="font-italic"><?php esc_html_e('Product stock status will decide if product can be part of this virtual category or not','advanced-free-flat-shipping-woocommerce'); ?></p>
                         </div>
                         <div class="col-12 col-sm">
                             <select type="text" class="form-control" name="pi_stock_status" id="pi_stock_status">
@@ -148,7 +210,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="row py-4 border-bottom align-items-center free-version">
                         <div class="col-12 col-sm-5">
-                            <label for="pi_product_subtotal" class="h6"><?php echo esc_html__('Include Product with subtotal','advanced-free-flat-shipping-woocommerce'); ?></label><?php pisol_help::tooltip(esc_html__('Product with subtotal matching the logic will be excluded from the group','advanced-free-flat-shipping-woocommerce')); ?>
+                            <label for="pi_product_subtotal" class="h6"><?php echo esc_html__('Include Product with subtotal','advanced-free-flat-shipping-woocommerce'); ?></label>
+                            <p class="font-italic"><?php esc_html_e('Product with subtotal matching the logic will be excluded from the group','advanced-free-flat-shipping-woocommerce'); ?></p>
                         </div>
                         <div class="col-12 col-sm-4">
                             <select type="text" class="form-control" name="pi_product_subtotal_logic">
@@ -175,7 +238,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="pi-step-header bg-dark text-light">
                 <div>
                 <strong class="pi-step-title">Step <span id="pi-exclude-step-no">3</span>: <?php echo __('Exclude Products from This Category','extended-flat-rate-shipping-woocommerce'); ?><small></small></strong>
-                <p>Exclude product from this virtual category using the given conditions</p>
+                <p class="font-italic text-light mb-0">Exclude product from this virtual category using the given conditions  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_3_Exclude_Products_from_This_Category" target="_blank" class="text-light">(Know more about this ?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -218,17 +281,82 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="row py-4 border-bottom align-items-center free-version">
                         <div class="col-12 col-sm-5">
-                            <label for="pi_excluded_products" class="h6"><?php echo esc_html__('Products to exclude','advanced-free-flat-shipping-woocommerce'); ?></label><p><?php echo esc_html__('Product that you want to be excluded from this virtual category, you can even include a variation of a product','advanced-free-flat-shipping-woocommerce'); ?></p>
+                            <label for="pi_excluded_products" class="h6"><?php echo esc_html__('Products to exclude','advanced-free-flat-shipping-woocommerce'); ?></label>
+                            <p class="font-italic"><?php esc_html_e('Product that you want to be excluded from this virtual category, you can even include a variation of a product','advanced-free-flat-shipping-woocommerce'); ?></p>
                         </div>
                         <div class="col-12 col-sm">
                             <select type="text" class="pi_efrs_custom_group_search_product form-control" name="pi_excluded_products[]" multiple="multiple">
                             </select>
                         </div>
                     </div>
+                    
+                    <div class="row py-4 border-bottom align-items-center free-version">
+                        <div class="col-12 col-sm-5">
+                            <label for="pi_excluded_product_vir_down" class="h6">Downloadable product to exclude</label>
+                            <p class="font-italic"><?php esc_html_e('Downloadable product not be part of this virtual category','advanced-free-flat-shipping-woocommerce'); ?></p>                 
+                        </div>
+                        <div class="col-12 col-sm">
+                            <select type="text" class="pi-efrs-custom-group-simple-select form-control select2-hidden-accessible" name="pi_excluded_product_vir_down[]" multiple="" tabindex="-1" aria-hidden="true">
+                                <option value="downloadable">Downloadable</option>                        
+                            </select>
+                        </div>
+                    </div>
 
                     <div class="row py-4 border-bottom align-items-center free-version">
                         <div class="col-12 col-sm-5">
-                            <label for="pi_excluded_stock_status" class="h6"><?php echo esc_html__('Exclude product with Stock status','advanced-free-flat-shipping-woocommerce'); ?></label><?php pisol_help::tooltip(esc_html__('Product stock status will decide if product can be part of this virtual category or not','advanced-free-flat-shipping-woocommerce')); ?>
+                            <label for="pi_excluded_product_dimension" class="h6">Product dimension</label>
+                            <p class="font-italic"><?php esc_html_e('Product with this similar dimension will be considered','advanced-free-flat-shipping-woocommerce'); ?></p>                     
+                        </div>
+                        <div class="col-12 col-sm-2">
+                            <input type="number" class="form-control" step="0.01" min="0" name="pi_excluded_product_length" placeholder="Length" value="">
+                        </div>
+                        <div class="col-12 col-sm-2">
+                            <input type="number" class="form-control" step="0.01" min="0" name="pi_excluded_product_width" placeholder="Width" value="">
+                        </div>
+                        <div class="col-12 col-sm-2">
+                            <input type="number" class="form-control" step="0.01" min="0" name="pi_excluded_product_height" placeholder="Height" value="">
+                        </div>
+                    </div>
+
+                    <div class="row py-4 border-bottom align-items-center free-version">
+                        <div class="col-12 col-sm-5">
+                            <label for="pi_product_excluded_volume" class="h6">Product with volume</label>
+                            <p class="font-italic"><?php esc_html_e('Product with volume matching the logic will be selected, volume of a product is length x width x height','advanced-free-flat-shipping-woocommerce'); ?></p>                     
+                        </div>
+                        <div class="col-12 col-sm-4">
+                            <select type="text" class="form-control" name="pi_excluded_product_volume_logic">
+                                <option value="" selected="selected">Don't consider this rule</option>
+                                <option value="equal_to">Equal to</option>
+                                <option value="less_equal_to">Less then equal to</option>
+                                <option value="less_then">Less then</option>
+                                <option value="greater_equal_to">Grater then equal to</option>
+                                <option value="greater_then">Grater then</option>
+                                <option value="not_equal_to">Not equal to</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-3">
+                            <input type="number" class="form-control" step="0.01" min="0" name="pi_excluded_product_volume" placeholder="Volume" value="">
+                        </div>
+                    </div>
+
+                    <div class="row py-4 border-bottom align-items-center free-version">
+                        <div class="col-12 col-sm-4">
+                            <label class="h6">Product attribute to exclude</label> 
+                            <p class="font-italic"><?php esc_html_e('Products having this attribute will be excluded from virtual category','advanced-free-flat-shipping-woocommerce'); ?></p>                    
+                        </div>
+                        <div class="col-12 col-sm">
+                            <div class="row">
+                                <div class="col-12 text-right">
+                                    <a href="javascript:void(0)" id="pi_excluded_product_attributes_add_attribute" class=" btn btn-md btn-dark" data-type="pi_excluded_product_attributes">Add Attribute</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row py-4 border-bottom align-items-center free-version">
+                        <div class="col-12 col-sm-5">
+                            <label for="pi_excluded_stock_status" class="h6"><?php echo esc_html__('Exclude product with Stock status','advanced-free-flat-shipping-woocommerce'); ?></label>
+                            <p class="font-italic"><?php esc_html_e('Product stock status will decide if product can be part of this virtual category or not','advanced-free-flat-shipping-woocommerce'); ?></p> 
                         </div>
                         <div class="col-12 col-sm">
                             <select type="text" class="form-control" name="pi_excluded_stock_status" id="pi_excluded_stock_status">
@@ -250,7 +378,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="row py-4 border-bottom align-items-center free-version">
                         <div class="col-12 col-sm-5">
-                            <label for="pi_excluded_product_subtotal" class="h6"><?php echo esc_html__('Exclude Product with subtotal','advanced-free-flat-shipping-woocommerce'); ?></label><?php pisol_help::tooltip(esc_html__('Product with subtotal matching the logic will be excluded from the group','advanced-free-flat-shipping-woocommerce')); ?>
+                            <label for="pi_excluded_product_subtotal" class="h6"><?php echo esc_html__('Exclude Product with subtotal','advanced-free-flat-shipping-woocommerce'); ?></label>
+                            <p class="font-italic"><?php esc_html_e('Product with subtotal matching the logic will be excluded from the group','advanced-free-flat-shipping-woocommerce'); ?></p> 
                         </div>
                         <div class="col-12 col-sm-4">
                             <select type="text" class="form-control" name="pi_excluded_product_subtotal_logic">
@@ -266,7 +395,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <div class="col-12 col-sm-3">
                             <input type="number" class="form-control" step="0.01" min="0" name="pi_excluded_product_subtotal" placeholder="<?php echo esc_attr__('Insert subtotal','advanced-free-flat-shipping-woocommerce'); ?>">
                         </div>
-                    </div>                 
+                    </div>
                 <!-- end include rule -->
             </div>
         </div>
