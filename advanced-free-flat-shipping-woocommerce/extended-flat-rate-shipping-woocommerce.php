@@ -9,21 +9,21 @@
  * that starts the plugin.
  *
  * @link              piwebsolution.com
- * @since             1.6.4.74
+ * @since             1.6.4.76
  * @package           Extended_Flat_Rate_Shipping_Woocommerce
  *
  * @wordpress-plugin
  * Plugin Name:       Advanced Free - Flat shipping WooCommerce
  * Plugin URI:        piwebsolution.com/advanced-free-flat-shipping-woocommerce
  * Description:       WooCommerce conditional shipping & WooCommerce Advanced Flat rate shipping plugin to Create Advanced Flat rate shipping or Free shipping method, with different advanced criteria to apply this shipping method
- * Version:           1.6.4.74
+ * Version:           1.6.4.76
  * Author:            PI Websolution
  * Author URI:        piwebsolution.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       advanced-free-flat-shipping-woocommerce
  * Domain Path:       /languages
- * WC tested up to: 10.1.0
+ * WC tested up to: 10.1.2
  */
 
 // If this file is called directly, abort.
@@ -60,10 +60,10 @@ if(is_plugin_active( 'advanced-free-flat-shipping-woocommerce-pro/extended-flat-
 
 /**
  * Currently plugin version.
- * Start at version 1.6.4.74 and use SemVer - https://semver.org
+ * Start at version 1.6.4.76 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'EXTENDED_FLAT_RATE_SHIPPING_WOOCOMMERCE_VERSION', '1.6.4.74' );
+define( 'EXTENDED_FLAT_RATE_SHIPPING_WOOCOMMERCE_VERSION', '1.6.4.76' );
 define('PI_EFRS_BUY_URL', 'https://www.piwebsolution.com/cart/?add-to-cart=2804&variation_id=2810&utm_campaign=advance-shipping&utm_source=website&utm_medium=direct-buy');
 define('PI_EFRS_PRICE', '$34');
 define('PI_EFRS_DELETE_SETTING', false);
@@ -146,7 +146,7 @@ add_action('admin_init', function (){
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.6.4.74
+ * @since    1.6.4.76
  */
 function run_extended_flat_rate_shipping_woocommerce() {
 
