@@ -37,13 +37,13 @@ class pisol_affsw_options{
     function init(){
         $this->settings = array(
 
-            array('field'=>'pi_efrs_show_only_one_method', 'label'=>__('Give only single shipping method option to customer'), 'desc'=>__('If you only want to show one shipping method so user dont have to choose from multiple option then use this setting'), 'type'=>'select', 'default'=>"", 'value' => ['' => "Select an option", 'lowest' => 'Minimum: Show the shipping method with lowest shipping charge', 'highest' => 'Maximum: Show the shipping method with highest shipping charge']),
+            array('field'=>'pi_efrs_show_only_one_method', 'label'=>__('Give only single shipping method option to customer','advanced-free-flat-shipping-woocommerce'), 'desc'=>__('If you only want to show one shipping method so user dont have to choose from multiple option then use this setting','advanced-free-flat-shipping-woocommerce'), 'type'=>'select', 'default'=>"", 'value' => ['' => "Select an option", 'lowest' => 'Minimum: Show the shipping method with lowest shipping charge', 'highest' => 'Maximum: Show the shipping method with highest shipping charge']),
 
-            array('field'=>'pisol_affsw_show_zero_cost', 'label'=>__('Show zero charge for shipping method'), 'desc'=>__('When shipping method is free woocommerce will not show the charge, once this is enabled it will show $0 charge next to the shipping method that are free'), 'type'=>'switch', 'default'=>"0"),
+            array('field'=>'pisol_affsw_show_zero_cost', 'label'=>__('Show zero charge for shipping method','advanced-free-flat-shipping-woocommerce'), 'desc'=>__('When shipping method is free woocommerce will not show the charge, once this is enabled it will show $0 charge next to the shipping method that are free','advanced-free-flat-shipping-woocommerce'), 'type'=>'switch', 'default'=>"0"),
 
-            array('field'=>'pi_affsw_moveto_top', 'label'=>__('Move the plugin methods to top'), 'desc'=>__('When enabled it will move the plugin added shipping method to the top of the list of the shipping method '), 'type'=>'switch', 'default'=>"1", 'pro'=>true),
+            array('field'=>'pi_affsw_moveto_top', 'label'=>__('Move the plugin methods to top','advanced-free-flat-shipping-woocommerce'), 'desc'=>__('When enabled it will move the plugin added shipping method to the top of the list of the shipping method ','advanced-free-flat-shipping-woocommerce'), 'type'=>'switch', 'default'=>"1", 'pro'=>true),
 
-            array('field'=>'pi_affsw_show_desc_on_front', 'label'=>__('Show shipping description'), 'desc'=>__('Show shipping method description below the shipping method name or as a tooltip on the checkout page '), 'type'=>'select', 'default'=>"0", 'value' => [0 => "Dont show", '1' => 'Show below shipping method name', 'tooltip' => 'Show as tooltip'], 'pro'=>true),
+            array('field'=>'pi_affsw_show_desc_on_front', 'label'=>__('Show shipping description','advanced-free-flat-shipping-woocommerce'), 'desc'=>__('Show shipping method description below the shipping method name or as a tooltip on the checkout page','advanced-free-flat-shipping-woocommerce'), 'type'=>'select', 'default'=>"0", 'value' => [0 => "Dont show", '1' => 'Show below shipping method name', 'tooltip' => 'Show as tooltip'], 'pro'=>true),
 
         );
 
@@ -67,7 +67,7 @@ class pisol_affsw_options{
 
     function tab(){
         $page = sanitize_text_field(filter_input( INPUT_GET, 'page'));
-        $this->tab_name = __("Advanced Settings",'extended-flat-rate-shipping-woocommerce');
+        $this->tab_name = __("Advanced Settings",'advanced-free-flat-shipping-woocommerce');
         ?>
         <a class=" px-3 py-2 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo esc_url( admin_url( 'admin.php?page='.$page.'&tab='.$this->this_tab ) ); ?>">
            <span class="dashicons dashicons-admin-generic"></span> <?php echo esc_html( $this->tab_name); ?> 

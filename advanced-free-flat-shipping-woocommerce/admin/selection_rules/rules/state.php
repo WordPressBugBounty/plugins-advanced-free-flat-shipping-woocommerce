@@ -29,7 +29,7 @@ class Pi_efrs_selection_rule_state{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('State', 'extended-flat-rate-shipping-woocommerce'),
+            'name'=>__('State', 'advanced-free-flat-shipping-woocommerce'),
             'group'=>'location_related',
             'condition'=>$this->condition
         );
@@ -45,6 +45,7 @@ class Pi_efrs_selection_rule_state{
            
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -67,6 +68,7 @@ class Pi_efrs_selection_rule_state{
             die;
         }
         $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo Pi_efrs_selection_rule_main::createSelect($this->allCountries(), $count, $this->condition,  "multiple",null,'static');
         die;
     }

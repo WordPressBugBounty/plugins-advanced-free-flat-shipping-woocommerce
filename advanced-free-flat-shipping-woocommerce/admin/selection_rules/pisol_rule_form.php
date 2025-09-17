@@ -1,6 +1,6 @@
 <div class="row py-3 border-bottom align-items-center bg-dark2">
     <div class="col-12 col-md-5">
-        <strong class="h6 text-light"><?php echo esc_html( $this->title ); ?> <span class="text-primary">*</span></strong><p class="font-italic mb-0 text-light"><?php echo __('When a customer satisfies this set of conditions, then only this shipping method will be available to them','extended-flat-rate-shipping-woocommerce'); ?></p>
+        <strong class="h6 text-light"><?php echo esc_html( $this->title ); ?> <span class="text-primary">*</span></strong><p class="font-italic mb-0 text-light"><?php echo esc_html__('When a customer satisfies this set of conditions, then only this shipping method will be available to them','advanced-free-flat-shipping-woocommerce'); ?></p>
     </div>
     <div class="col-12 col-md-5">
         <select class="form-control" name="pi_condition_logic">

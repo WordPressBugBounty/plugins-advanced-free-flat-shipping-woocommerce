@@ -8,8 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <strong class="h5 text-light"><?php echo isset($_GET['action']) && $_GET['action'] === 'edit' ?  esc_html__('Edit shipping method','advanced-free-flat-shipping-woocommerce') : esc_html__('Add new shipping method','advanced-free-flat-shipping-woocommerce'); ?></strong>
     </div>
     <div class="col-6 text-right py-2">
-        <a href="javascript:void(0)" id="open-all" class="text-light mr-4 small"><?php echo __('Open All ▼','extended-flat-rate-shipping-woocommerce'); ?></a>
-        <a href="javascript:void(0)" id="close-all" class="text-light small"><?php echo __('Close All ▲','extended-flat-rate-shipping-woocommerce'); ?></a>
+        <a href="javascript:void(0)" id="open-all" class="text-light mr-4 small"><?php echo esc_html__('Open All ▼','advanced-free-flat-shipping-woocommerce'); ?></a>
+        <a href="javascript:void(0)" id="close-all" class="text-light small"><?php echo esc_html__('Close All ▲','advanced-free-flat-shipping-woocommerce'); ?></a>
     </div>
 </div>
 
@@ -18,8 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pi-step-content">
             <div class="pi-step-header bg-primary text-light">
                 <div>
-                <strong class="pi-step-title"><?php echo __('Step 1: Basic Settings','extended-flat-rate-shipping-woocommerce'); ?><small>(Required)</small></strong>
-                <p class="font-italic mb-0 text-light"><?php echo __('Basic setting of the shipping method','extended-flat-rate-shipping-woocommerce'); ?>  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_1_Basic_Settings_Required" target="_blank" class="text-light">(Know more about this ?)</a></p>
+                <strong class="pi-step-title"><?php echo esc_html__('Step 1: Basic Settings','advanced-free-flat-shipping-woocommerce'); ?><small>(Required)</small></strong>
+                <p class="font-italic mb-0 text-light"><?php echo esc_html__('Basic setting of the shipping method','advanced-free-flat-shipping-woocommerce'); ?>  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_1_Basic_Settings_Required" target="_blank" class="text-light">(Know more about this ?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -65,8 +65,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <div class="pi-step-content">
                             <div class="pi-step-header bg-dark2 text-light">
                                 <div>
-                                <strong class="pi-step-title"><?php echo __('Other Basic settings','extended-flat-rate-shipping-woocommerce'); ?><small>(Non required)</small></strong>
-                                <p class="font-italic mb-0 text-light"><?php echo __('These setting are not required but can help you fine-tune the shipping method.','extended-flat-rate-shipping-woocommerce'); ?></p>
+                                <strong class="pi-step-title"><?php echo esc_html__('Other Basic settings','advanced-free-flat-shipping-woocommerce'); ?><small>(Non required)</small></strong>
+                                <p class="font-italic mb-0 text-light"><?php echo esc_html__('These setting are not required but can help you fine-tune the shipping method.','advanced-free-flat-shipping-woocommerce'); ?></p>
                                 </div>
                                 <div>
                                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -132,8 +132,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pi-step-content">
             <div class="pi-step-header bg-primary text-light">
                 <div>
-                <strong class="pi-step-title"><?php echo __('Step 2: Set Availability Conditions','extended-flat-rate-shipping-woocommerce'); ?><small>(Required)</small></strong>
-                <p class="font-italic mb-0 text-light"><?php echo __('Define when this shipping method should be visible at checkout. All selected conditions must be met.','extended-flat-rate-shipping-woocommerce'); ?>  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_2_Set_Availability_Conditions_Required" target="_blank" class="text-light">(Know more about this ?)</a></p>
+                <strong class="pi-step-title"><?php echo esc_html__('Step 2: Set Availability Conditions','advanced-free-flat-shipping-woocommerce'); ?><small>(Required)</small></strong>
+                <p class="font-italic mb-0 text-light"><?php echo esc_html__('Define when this shipping method should be visible at checkout. All selected conditions must be met.','advanced-free-flat-shipping-woocommerce'); ?>  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_2_Set_Availability_Conditions_Required" target="_blank" class="text-light">(Know more about this ?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -160,7 +160,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pi-step-content">
             <div class="pi-step-header bg-dark text-light">
                 <div>
-                <strong class="pi-step-title"><?php echo __('Step 3: Adjust shipping charge','extended-flat-rate-shipping-woocommerce'); ?><small>(optional)</small></strong>
+                <strong class="pi-step-title"><?php echo esc_html__('Step 3: Adjust shipping charge','advanced-free-flat-shipping-woocommerce'); ?><small>(optional)</small></strong>
                 <p class="font-italic mb-0 text-light">Increment shipping charge by weight, quantity, subtotal etc. ranges. <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_3_Adjust_Shipping_Charge_Optional" target="_blank" class="text-light">(Know more about this ?)</a></p>
                 </div>
                 <div>
@@ -181,7 +181,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pi-step-content">
             <div class="pi-step-header bg-dark text-light">
                 <div>
-                <strong class="pi-step-title"><?php echo __('Step 4: Other settings','extended-flat-rate-shipping-woocommerce'); ?><small>(optional)</small></strong>
+                <strong class="pi-step-title"><?php echo esc_html__('Step 4: Other settings','advanced-free-flat-shipping-woocommerce'); ?><small>(optional)</small></strong>
                 <p class="font-italic mb-0 text-light">Hide other shipping methods, or shipping class based charges  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_4_Other_Settings_Optional" target="_blank" class="text-light">(Know more about this ?)</a></p>
                 </div>
                 <div>
@@ -206,7 +206,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <option value="hide-all-non-plugin-methods-exclude-local-pickup" disabled><?php esc_html_e('Hide all methods except the one added by this plugin and WC Local pickup (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
                             <option value="hide-all-non-plugin-methods" disabled><?php esc_html_e('Hide all methods except the one added by this plugin (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
                             <option value="hide-all-plugin-method-with-lower-priority" disabled><?php esc_html_e('Hide all plugin methods with lower priority (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
-                            <option value="hide-selected-method" disabled title="Insert system name of the shipping methods that should be hidden when this shipping method is available"><?php _e('Hide selected shipping method (PRO)','extended-flat-rate-shipping-woocommerce'); ?></option>
+                            <option value="hide-selected-method" disabled title="Insert system name of the shipping methods that should be hidden when this shipping method is available"><?php esc_html_e('Hide selected shipping method (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
                         </select>
                         </div>
                         </div>

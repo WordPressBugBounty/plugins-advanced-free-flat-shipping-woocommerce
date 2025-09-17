@@ -67,7 +67,7 @@ class Pi_Efrs_Analytics{
         
         $notice .= '</p>';
         $notice .= '</div>';
-        echo $notice;
+        echo wp_kses_post($notice);
         
     }
 
@@ -213,7 +213,7 @@ class Pi_Efrs_Analytics{
 
     public function handle_deactivation_form() {
         if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'pi_deactivate_nonce_' . $this->plugin_slug)) {
-            wp_die(__('Security check failed', 'advanced-free-flat-shipping-woocommerce'));
+            wp_die(esc_html__('Security check failed', 'advanced-free-flat-shipping-woocommerce'));
         }
 
         $plugin_slug = sanitize_text_field($_POST['plugin_slug'] ?? '');
@@ -232,7 +232,7 @@ class Pi_Efrs_Analytics{
             if (is_super_admin()) {
                 deactivate_plugins($this->plugin_path, false, true); // network-wide
             } else {
-                wp_die(__('You do not have permission to deactivate a network plugin.', 'advanced-free-flat-shipping-woocommerce'));
+                wp_die(esc_html__('You do not have permission to deactivate a network plugin.', 'advanced-free-flat-shipping-woocommerce'));
             }
         } else {
             deactivate_plugins($this->plugin_path); // normal

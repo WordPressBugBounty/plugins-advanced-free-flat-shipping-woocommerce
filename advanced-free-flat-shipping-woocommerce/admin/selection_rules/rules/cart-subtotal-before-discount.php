@@ -25,7 +25,7 @@ class Pi_efrs_selection_rule_cart_subtotal_before_discount{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('Cart Subtotal (Before Discount)'),
+            'name'=>__('Cart Subtotal (Before Discount)','advanced-free-flat-shipping-woocommerce'),
             'group'=>'cart_related',
             'condition'=>$this->condition
         );

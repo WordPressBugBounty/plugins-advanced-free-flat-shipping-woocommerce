@@ -158,8 +158,8 @@ class Pi_efrs_selection_rule_main{
 
         $html = "";
         $html .= '<select class="form-control package_dropdown" name="pi_selection['.$count.'][pi_'.$this->slug.'_package_support]">';
-        $html .= '<option value="package" '.selected($package_val, "package", false).' title="Package is useful when you are using some 3rd party plugin to split ordered item in different shipping packages">'.__('In Package').'</option>';
-        $html .= '<option value="cart" '.selected($package_val, "cart", false).'>'.__('In Cart').'</option>';
+        $html .= '<option value="package" '.selected($package_val, "package", false).' title="Package is useful when you are using some 3rd party plugin to split ordered item in different shipping packages">'.__('In Package','advanced-free-flat-shipping-woocommerce').'</option>';
+        $html .= '<option value="cart" '.selected($package_val, "cart", false).'>'.__('In Cart','advanced-free-flat-shipping-woocommerce').'</option>';
         $html .= '</select>';
         return $html;
     }

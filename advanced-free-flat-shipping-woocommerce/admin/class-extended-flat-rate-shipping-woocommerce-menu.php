@@ -15,8 +15,8 @@ class Pi_Efrs_Menu{
     function plugin_menu(){
         
         $this->menu = add_menu_page(
-            __( 'Flat Rate Shipping'),
-            __( 'Flat Rate Shipping'),
+            __( 'Flat Rate Shipping','advanced-free-flat-shipping-woocommerce'),
+            __( 'Flat Rate Shipping','advanced-free-flat-shipping-woocommerce'),
             'manage_options',
             'pisol-efrs-notification',
             array($this, 'menu_option_page'),
@@ -65,7 +65,7 @@ class Pi_Efrs_Menu{
                         <div class='bg-dark'>
                         <div class="pisol-row">
                             <div class="col-12 col-sm-2 py-3 d-flex align-items-center justify-content-center">
-                                    <a href="https://www.piwebsolution.com/" target="_blank"><img id="pi-logo" class="img-fluid ml-2" src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ); ?>img/pi-web-solution.png"></a>
+                                    <a href="https://www.piwebsolution.com/" target="_blank"><img id="pi-logo" class="img-fluid ml-2" src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ); ?>img/pi-web-solution.svg"></a>
                             </div>
                             <div class="col-12 col-sm-10 d-flex text-center small">
                                 <nav id="pisol-navbar" class="navbar navbar-expand-lg navbar-light mr-0 ml-auto">
@@ -113,7 +113,7 @@ class Pi_Efrs_Menu{
 
     function promotion(){
         ?>
-        <div class="col-12 col-sm-12 col-md-4 pt-3 pb-3 border-left" id="pi-efrs-sidebar-container">
+        <div class="col-12 col-sm-12 col-md-3 pt-3 pb-3 border-left" id="pi-efrs-sidebar-container">
 
                 <div class="pi-shadow rounded px-2 py-3">
                     <h2 id="pi-banner-tagline" class="mb-0" style="color:#ccc !important;">
@@ -157,10 +157,6 @@ class Pi_Efrs_Menu{
 
         </div>
         <?php
-    }
-
-    function isWeekend() {
-        return (date('N', strtotime(date('Y/m/d'))) >= 6);
     }
 
     function support(){

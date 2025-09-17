@@ -25,7 +25,7 @@ class Pi_efrs_selection_rule_stock_status{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('Stock status of product in cart'),
+            'name'=>__('Stock status of product in cart','advanced-free-flat-shipping-woocommerce'),
             'group'=>'cart_related',
             'condition'=>$this->condition
         );

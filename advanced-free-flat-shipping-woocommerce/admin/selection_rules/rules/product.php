@@ -24,7 +24,7 @@ class Pi_efrs_selection_rule_product{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('Cart has Product'),
+            'name'=>__('Cart has Product','advanced-free-flat-shipping-woocommerce'),
             'group'=>'product_related',
             'condition'=>$this->condition      
         );

@@ -26,7 +26,7 @@ class Pi_efrs_selection_rule_postcode{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('Postcode', 'extended-flat-rate-shipping-woocommerce'),
+            'name'=>__('Postcode', 'advanced-free-flat-shipping-woocommerce'),
             'group'=>'location_related',
             'condition'=>$this->condition
         );
@@ -41,6 +41,7 @@ class Pi_efrs_selection_rule_postcode{
 			$html .= '<option value=\'not_equal_to\'>Not Equal to ( != )</option>';
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -63,7 +64,9 @@ class Pi_efrs_selection_rule_postcode{
             die;
         }
         $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo Pi_efrs_selection_rule_main::createTextField($count, $this->condition, null);
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $this->description();
         die;
     }

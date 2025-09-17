@@ -24,7 +24,7 @@ class Pi_efrs_selection_rule_user{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('User'),
+            'name'=>__('User','advanced-free-flat-shipping-woocommerce'),
             'group' => "user_related",
             'condition'=>$this->condition       
         );

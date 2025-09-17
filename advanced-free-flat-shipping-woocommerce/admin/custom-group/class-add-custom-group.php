@@ -366,7 +366,7 @@ class Class_Pi_Efrs_Add_Edit_Custom_Group{
                     /** This is for the variable product */
                     $found_products[] = array(
                         'id'   => get_the_ID(),
-                        'text' => strip_tags($prd->get_formatted_name())
+                        'text' => wp_strip_all_tags($prd->get_formatted_name())
                     );;
 					$product_children = $prd->get_children();
 					if ( count( $product_children ) ) {
@@ -375,7 +375,7 @@ class Class_Pi_Efrs_Add_Edit_Custom_Group{
                             $child_wc  = wc_get_product( $product_child );
                             $product   = array(
                                 'id'   => $product_child,
-                                'text' => strip_tags($child_wc->get_formatted_name())
+                                'text' => wp_strip_all_tags($child_wc->get_formatted_name())
                             );
 
 							
@@ -387,7 +387,7 @@ class Class_Pi_Efrs_Add_Edit_Custom_Group{
                     
 				} else {
 					$product_id    = get_the_ID();
-					$product_title = strip_tags($prd->get_formatted_name());
+					$product_title = wp_strip_all_tags($prd->get_formatted_name());
 					$product          = array( 'id' => $product_id, 'text' => $product_title );
 					$found_products[] = $product;
 				}
@@ -410,7 +410,7 @@ class Class_Pi_Efrs_Add_Edit_Custom_Group{
 		foreach($product_ids as $product_id){
 			$child_wc  = wc_get_product( $product_id );
 			if(!is_object($child_wc)) continue;
-			$product_names[$product_id]   = strip_tags($child_wc->get_formatted_name());
+			$product_names[$product_id]   = wp_strip_all_tags($child_wc->get_formatted_name());
 		}
 
 		foreach($product_names as $key => $name){

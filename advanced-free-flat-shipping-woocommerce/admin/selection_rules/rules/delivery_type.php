@@ -34,7 +34,7 @@ class Pi_efrs_selection_rule_delivery_type{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('Delivery type (Delivery/Pickup/Dining)'),
+            'name'=>__('Delivery type (Delivery/Pickup/Dining)','advanced-free-flat-shipping-woocommerce'),
             'group'=>'order_date_time_plugin',
             'condition'=>$this->condition
         );
@@ -113,7 +113,7 @@ class Pi_efrs_selection_rule_delivery_type{
     }
 
     function deliveryTypes(){
-        return array('delivery'=> __('Delivery','conditional-discount-rule-woocommerce'), 'pickup'=>__('Pickup','conditional-discount-rule-woocommerce'), 'dining'=>__('Dining','conditional-discount-rule-woocommerce'));
+        return array('delivery'=> __('Delivery','advanced-free-flat-shipping-woocommerce'), 'pickup'=>__('Pickup','advanced-free-flat-shipping-woocommerce'), 'dining'=>__('Dining','advanced-free-flat-shipping-woocommerce'));
     }
 
     function conditionCheck($result, $package, $logic, $values){

@@ -90,7 +90,7 @@ class Class_Pi_Efrs_Add_Edit{
 
         $data['present_shipping_classes'] = !empty($present_shipping_classes) ? $present_shipping_classes : array();
 
-        $data['present_shipping_classes'][] = (object)['term_id' => 'pi-no-shipping-class', 'name'=> __('No shipping class')];
+        $data['present_shipping_classes'][] = (object)['term_id' => 'pi-no-shipping-class', 'name'=> __('No shipping class','advanced-free-flat-shipping-woocommerce')];
         
         if ( isset( $action_value ) && 'edit' === $action_value ) {
 

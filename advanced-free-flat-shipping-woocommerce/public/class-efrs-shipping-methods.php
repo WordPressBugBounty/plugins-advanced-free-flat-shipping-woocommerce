@@ -13,7 +13,7 @@ if ( ! class_exists( 'Efrs_Shipping_Method' ) ) {
 			$method_title = ! empty( $post_title ) ? $post_title : 'Extended Flat Rate Shipping';
 			
 			$this->id                 = $method_id;
-			$this->method_title       = __( $method_title, 'advanced-free-flat-shipping-woocommerce' ); 
+			$this->method_title       =  $method_title; 
 			$this->enabled            = "yes"; 
 			$this->title              = __('Extended Flat Rate Shipping', 'advanced-free-flat-shipping-woocommerce'); 
 

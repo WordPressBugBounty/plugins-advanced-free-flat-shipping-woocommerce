@@ -29,7 +29,7 @@ class Pi_efrs_selection_rule_zones{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('WooCommerce Assigned Zone', 'extended-flat-rate-shipping-woocommerce'),
+            'name'=>__('WooCommerce Assigned Zone', 'advanced-free-flat-shipping-woocommerce'),
             'group'=>'location_related',
             'condition'=>$this->condition
         );

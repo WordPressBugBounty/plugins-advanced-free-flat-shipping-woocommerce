@@ -16,7 +16,7 @@ class pisol_help{
     static function inline_txt($id, $title="", $text = '', $width= 150, $height = 400, $echo = true){
         $msg = sprintf('<a name="%s" href="#TB_inline?width=%s&height=%s&inlineId=%s" class="thickbox">%s</a>', esc_attr($title), esc_attr($width), esc_attr($height), $id, $text);
 
-        if($echo) echo $msg;
+        if($echo) echo wp_kses_post($msg);
 
         return $msg;
     }

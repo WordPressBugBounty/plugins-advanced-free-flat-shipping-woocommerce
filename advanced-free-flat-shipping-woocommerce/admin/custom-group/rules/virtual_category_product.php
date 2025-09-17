@@ -28,7 +28,7 @@ class Pi_efrs_selection_rule_virtual_category_product{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('Has product of Virtual category'),
+            'name'=>__('Has product of Virtual category','advanced-free-flat-shipping-woocommerce'),
             'group'=>'virtual_category',
             'condition'=>$this->condition
         );

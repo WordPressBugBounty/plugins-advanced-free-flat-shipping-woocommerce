@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pi-step-content">
             <div class="pi-step-header bg-primary text-light">
                 <div>
-                <strong class="pi-step-title"><?php echo __('Step 1: Choose Product Scope','extended-flat-rate-shipping-woocommerce'); ?><small></small></strong>
+                <strong class="pi-step-title"><?php echo esc_html__('Step 1: Choose Product Scope','advanced-free-flat-shipping-woocommerce'); ?><small></small></strong>
                 <p class="font-italic text-light mb-0">Use filters below to include or exclude products  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_1_Choose_Product_Scope" target="_blank" class="text-light">(Know more about this ?)</a></p>
                 </div>
                 <div>
@@ -71,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pi-step-content">
             <div class="pi-step-header bg-dark text-light">
                 <div>
-                <strong class="pi-step-title">Step <span id="pi-include-step-no">2</span>: <?php echo __('Add Products to This Virtual Category','extended-flat-rate-shipping-woocommerce'); ?><small></small></strong>
+                <strong class="pi-step-title">Step <span id="pi-include-step-no">2</span>: <?php echo esc_html__('Add Products to This Virtual Category','advanced-free-flat-shipping-woocommerce'); ?><small></small></strong>
                 <p class="font-italic text-light mb-0">Include product to this virtual category using the given conditions  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_2_Add_Products_to_This_Virtual_Category" target="_blank" class="text-light">(Know more about this ?)</a></p>
                 </div>
                 <div>
@@ -126,7 +126,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="row py-4 border-bottom align-items-center free-version">
                         <div class="col-12 col-sm-5">
-                            <label for="pi_product_tags" class="h6"><?php echo __('Product tags to include','extended-flat-rate-shipping-woocommerce'); ?></label><p class="font-italic"><?php esc_html_e('Product with this tags will be part of this virtual category','advanced-free-flat-shipping-woocommerce'); ?></p>
+                            <label for="pi_product_tags" class="h6"><?php echo esc_html__('Product tags to include','advanced-free-flat-shipping-woocommerce'); ?></label><p class="font-italic"><?php esc_html_e('Product with this tags will be part of this virtual category','advanced-free-flat-shipping-woocommerce'); ?></p>
                         </div>
                         <div class="col-12 col-sm">
                             <select type="text" class="pi_efrs_custom_group_search_tag form-control" name="pi_product_tags[]" multiple="multiple">
@@ -237,7 +237,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="pi-step-content">
             <div class="pi-step-header bg-dark text-light">
                 <div>
-                <strong class="pi-step-title">Step <span id="pi-exclude-step-no">3</span>: <?php echo __('Exclude Products from This Category','extended-flat-rate-shipping-woocommerce'); ?><small></small></strong>
+                <strong class="pi-step-title">Step <span id="pi-exclude-step-no">3</span>: <?php echo esc_html__('Exclude Products from This Category','advanced-free-flat-shipping-woocommerce'); ?><small></small></strong>
                 <p class="font-italic text-light mb-0">Exclude product from this virtual category using the given conditions  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_3_Exclude_Products_from_This_Category" target="_blank" class="text-light">(Know more about this ?)</a></p>
                 </div>
                 <div>

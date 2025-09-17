@@ -284,11 +284,11 @@ table td:has(.btn) .dashicons{
 
 /* close side bar */
 .pi-efrs-arrow-circle {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: var(--primary);
   border-radius: 50%;
-  border:2px solid #fff;
+  border:3px solid #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -296,7 +296,7 @@ table td:has(.btn) .dashicons{
   transition: background-color 0.3s ease;
   z-index:1000;
   position:absolute;
-  top: -16px;
+  top: -21px;
   right: -15px;
   transform: rotate(180deg);
 }

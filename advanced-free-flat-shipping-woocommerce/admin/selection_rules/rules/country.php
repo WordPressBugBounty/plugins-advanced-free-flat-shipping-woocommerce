@@ -28,7 +28,7 @@ class Pi_efrs_selection_rule_country{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('Country/Continent','pi-efrs'),
+            'name'=>__('Country/Continent','advanced-free-flat-shipping-woocommerce'),
             'group'=>'location_related',
             'condition'=>$this->condition
         );

@@ -25,7 +25,7 @@ class Pi_efrs_selection_rule_quantity{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('Quantity'),
+            'name'=>__('Quantity','advanced-free-flat-shipping-woocommerce'),
             'group'=>'cart_related',
             'condition'=>$this->condition
         );

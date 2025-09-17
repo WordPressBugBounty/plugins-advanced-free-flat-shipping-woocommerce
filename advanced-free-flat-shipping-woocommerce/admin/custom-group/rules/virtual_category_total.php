@@ -28,7 +28,7 @@ class Pi_efrs_selection_rule_virtual_category_total{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('Virtual category total'),
+            'name'=>__('Virtual category total','advanced-free-flat-shipping-woocommerce'),
             'group'=>'virtual_category',
             'condition'=>$this->condition
         );
@@ -130,7 +130,7 @@ class Pi_efrs_selection_rule_virtual_category_total{
     static function createNumberField($count, $condition ="", $value = "", $step = 'any'){
 
         
-        $html = '<input type="number" step="'.$step.'" class="form-control" data-condition="'.$condition.'" name="pi_selection['.$count.'][pi_'.PI_EFRS_SELECTION_RULE_SLUG.'_condition_value][total]" value="'.$value.'" placeholder="'.__('Total').'" >';
+        $html = '<input type="number" step="'.$step.'" class="form-control" data-condition="'.$condition.'" name="pi_selection['.$count.'][pi_'.PI_EFRS_SELECTION_RULE_SLUG.'_condition_value][total]" value="'.esc_attr($value).'" placeholder="'.esc_attr__('Total','advanced-free-flat-shipping-woocommerce').'" >';
         return $html;
     }
 

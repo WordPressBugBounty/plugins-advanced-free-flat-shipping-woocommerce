@@ -43,7 +43,7 @@ class Class_Pi_Efrs_Package_manager_list{
 
     
     function tab(){
-        $this->tab_name = __("Split Orders",'extended-flat-rate-shipping-woocommerce');
+        $this->tab_name = __("Split Orders",'advanced-free-flat-shipping-woocommerce');
         ?>
         <a class=" px-3 text-light d-flex align-items-center  border-left border-right  <?php echo ($this->active_tab == $this->this_tab ? 'bg-primary' : 'bg-secondary'); ?>" href="<?php echo esc_url( admin_url( 'admin.php?page='.sanitize_text_field($_GET['page']).'&tab='.$this->this_tab ) ); ?>" title="this allows you to divide your order into multiple shipping packages and you can give multiple shipping option for each shipping package.">
             <span class="dashicons dashicons-networking"></span> <?php echo esc_html( $this->tab_name); ?>

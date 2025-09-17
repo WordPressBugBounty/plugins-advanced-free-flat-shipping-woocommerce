@@ -217,8 +217,8 @@ class pisol_efrs_additional_charges_form{
 		$val = isset($data[$name]) ? $data[$name] : '';
 		$html = "";
         $html .= '<select class="form-control" name="'.$name.'">';
-        $html .= '<option value="package" '.selected($val, "package", false).' title="Package is useful when you are using some 3rd party plugin to split ordered item in different shipping packages">'.__('In Package').'</option>';
-        $html .= '<option value="cart" '.selected($val, "cart", false).'>'.__('In Cart').'</option>';
+        $html .= '<option value="package" '.selected($val, "package", false).' title="Package is useful when you are using some 3rd party plugin to split ordered item in different shipping packages">'.__('In Package','advanced-free-flat-shipping-woocommerce').'</option>';
+        $html .= '<option value="cart" '.selected($val, "cart", false).'>'.__('In Cart','advanced-free-flat-shipping-woocommerce').'</option>';
         $html .= '</select>';
 		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;

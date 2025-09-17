@@ -26,7 +26,7 @@ class Pi_efrs_selection_rule_city{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('City/Town', 'extended-flat-rate-shipping-woocommerce'),
+            'name'=>__('City/Town', 'advanced-free-flat-shipping-woocommerce'),
             'group'=>'location_related',
             'condition'=>$this->condition
         );
@@ -41,6 +41,7 @@ class Pi_efrs_selection_rule_city{
 			$html .= '<option value=\'not_equal_to\'>Not Equal to ( != )</option>';
         
         $html .= '</select>";';
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo $html;
     }
 
@@ -63,6 +64,7 @@ class Pi_efrs_selection_rule_city{
             die;
         }
         $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
+        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo Pi_efrs_selection_rule_main::createTextField($count, $this->condition, null);
         die;
     }
