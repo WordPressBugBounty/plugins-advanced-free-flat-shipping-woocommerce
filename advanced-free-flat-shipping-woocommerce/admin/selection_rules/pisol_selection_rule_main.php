@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 class Pi_efrs_selection_rule_main{
     public $title;
@@ -49,7 +52,9 @@ class Pi_efrs_selection_rule_main{
             'other' => 'Other',
             'order_date_time_plugin' => 'Deliver date time plugin dependent rules',
             'virtual_category'=> 'Virtual Category',
-            'purchase_history' => 'Purchase History'
+            'purchase_history' => 'Purchase History',
+            'woo_subscription' => 'Woo Subscription',
+            'woo_membership' => 'Woo Membership',
         );
         $group_name = isset($group_names[$key]) ? $group_names[$key] : $key;
 

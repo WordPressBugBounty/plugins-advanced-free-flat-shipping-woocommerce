@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 require_once 'class-custom-groups-list.php';
 require_once 'class-add-custom-group.php';
 require_once 'class-common.php';

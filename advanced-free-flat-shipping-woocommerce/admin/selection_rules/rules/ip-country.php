@@ -3,14 +3,14 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-class Pi_efrs_selection_rule_state{
-    
+class Pi_efrs_selection_rule_ip_country{
+
     public $slug;
     public $condition;
-
+    
     function __construct($slug){
         $this->slug = $slug;
-        $this->condition = 'state';
+        $this->condition = 'ip_country';
         /* this adds the condition in set of rules dropdown */
         add_filter("pi_".$this->slug."_condition", array($this, 'addRule'));
         
@@ -32,7 +32,7 @@ class Pi_efrs_selection_rule_state{
 
     function addRule($rules){
         $rules[$this->condition] = array(
-            'name'=>__('State', 'advanced-free-flat-shipping-woocommerce'),
+            'name'=>__('Customer IP address based country','advanced-free-flat-shipping-woocommerce'),
             'group'=>'location_related',
             'condition'=>$this->condition
         );
@@ -48,8 +48,21 @@ class Pi_efrs_selection_rule_state{
            
         
         $html .= '</select>";';
-        // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-        echo $html;
+        echo wp_kses($html,
+                array( 'select'=> array(
+                        'name'=>array(), 
+                        'class' => array()
+                        )
+                    ,
+                    'option' => array(
+                        'value' => array(),
+                        'selected' => array()
+                    ),
+                    'optgroup' => array(
+                        'label' => array()
+                    )
+                )
+            );
     }
 
     function savedLogic($html_in, $saved_logic, $count){
@@ -65,12 +78,11 @@ class Pi_efrs_selection_rule_state{
     }
 
     function ajaxCall(){
-        $cap = Pi_Efrs_Menu::getCapability();
-        if(!current_user_can( $cap )) {
+        if(!current_user_can( 'manage_options' )) {
             return;
             die;
         }
-        $count = sanitize_text_field(filter_input(INPUT_POST,'count'));
+        $count = filter_input(INPUT_POST,'count',FILTER_VALIDATE_INT);
         // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         echo Pi_efrs_selection_rule_main::createSelect($this->allCountries(), $count, $this->condition,  "multiple",null,'static');
         die;
@@ -83,35 +95,23 @@ class Pi_efrs_selection_rule_state{
 
     function allCountries(){
         $countries_obj = new WC_Countries();
-       $states_array =  $countries_obj->get_states();
-        $states = $this->getStates($states_array);
-       return $states;
-    }
-
-    function getStates($states_array){
-        $final = array();
-        foreach($states_array as $country_code => $states){
-            $country_name = WC()->countries->countries[$country_code];
-            foreach($states as $state_code => $state_name){
-                $final[$country_code.":".$state_code] = $country_name.' &gt; '.$state_name;
-            }
-        }
-        return $final;
+       $countries =  $countries_obj->get_countries();
+       return $countries;
     }
 
     function conditionCheck($result, $package, $logic, $values){
         
                     $or_result = false;
-                    $user_state = PISOL\EFRS\Package::get_state($package);
-                    $rule_states = $this->separateState($values);
+                    $user_country = $this->getIPCountry( $package );
+                    $rule_countries = $values;
                     if($logic == 'equal_to'){
-                        if(in_array($user_state, $rule_states)){
+                        if(in_array($user_country, $rule_countries)){
                             $or_result = true;
                         }else{
                             $or_result = false;
                         }
                     }else{
-                        if(in_array($user_state, $rule_states)){
+                        if(in_array($user_country, $rule_countries)){
                             $or_result = false;
                         }else{
                             $or_result = true;
@@ -121,16 +121,24 @@ class Pi_efrs_selection_rule_state{
         return  $or_result;
     }
 
-    function separateState($countries_states){
-        $value = array();
-        if(is_array($countries_states)){
-        foreach($countries_states as $countries_state){
-            $array = explode(":",$countries_state);
-            $value[] = $array[1];
+    function getIPCountry( $package ) {
+        $geo = new WC_Geolocation();
+        $user_ip_data = $geo->geolocate_ip();
+
+        $country = '';
+        if ( isset( $user_ip_data['country'] ) && ! empty( $user_ip_data['country'] ) ) {
+            $country = $user_ip_data['country'];
         }
+
+        // Fallback to Cloudflare header if WooCommerce gives blank
+        if ( empty( $country ) && isset( $_SERVER['HTTP_CF_IPCOUNTRY'] ) && ! empty( $_SERVER['HTTP_CF_IPCOUNTRY'] ) ) {
+            $country = sanitize_text_field( $_SERVER['HTTP_CF_IPCOUNTRY'] );
         }
-        return $value;
+
+        return apply_filters( 'pi_efrs_get_ip_country', $country );
     }
+
+
 }
 
-new Pi_efrs_selection_rule_state(PI_EFRS_SELECTION_RULE_SLUG);
+new Pi_efrs_selection_rule_ip_country(PI_EFRS_SELECTION_RULE_SLUG);

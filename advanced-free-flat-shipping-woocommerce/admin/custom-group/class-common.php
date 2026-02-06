@@ -1,5 +1,7 @@
 <?php
-
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 class pisol_efrs_custom_group_common{
 
     static function getAllVirtualCategory(){

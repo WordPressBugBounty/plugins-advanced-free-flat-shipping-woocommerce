@@ -1,3 +1,8 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
 <div class="row py-4 bg-dark2">
     <div class="col-6"><label for="pi_enable_additional_charges" class="text-light mb-0">Additional Charges</label> <?php pisol_help::tooltip('You can adjust the final shipping charge of this shipping method using this extra conditions'); ?><?php pisol_help::youtube('oGE6daMXrOk','Know more about the Additional Charges'); ?> </div>
     <div class="col-6">

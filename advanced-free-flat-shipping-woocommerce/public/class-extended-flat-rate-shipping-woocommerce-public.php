@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 class Extended_Flat_Rate_Shipping_Woocommerce_Public {
 
 	private $plugin_name;

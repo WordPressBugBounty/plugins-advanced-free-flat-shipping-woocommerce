@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 if(!function_exists('pisol_wpml_affsw_object')){
 function pisol_wpml_affsw_object( $object_id, $type ) {

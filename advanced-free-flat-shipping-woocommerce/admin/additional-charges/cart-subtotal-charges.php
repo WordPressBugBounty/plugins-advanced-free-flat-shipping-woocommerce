@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
  
 class pisol_efrs_cart_subtotal_extra_charges_setting{
     public $slug;

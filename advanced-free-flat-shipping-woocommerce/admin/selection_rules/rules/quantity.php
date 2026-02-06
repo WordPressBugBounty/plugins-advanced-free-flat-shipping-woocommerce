@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 class Pi_efrs_selection_rule_quantity{
     public $slug;

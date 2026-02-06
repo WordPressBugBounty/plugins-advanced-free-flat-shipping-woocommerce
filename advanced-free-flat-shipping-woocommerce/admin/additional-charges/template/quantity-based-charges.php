@@ -1,3 +1,8 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
 <script>
     var pi_cart_quantity_charges_count = <?php echo count(!empty($data['pi_cart_quantity_charges']) && is_array($data['pi_cart_quantity_charges'])? $data['pi_cart_quantity_charges'] : array()) ; ?>
 </script>

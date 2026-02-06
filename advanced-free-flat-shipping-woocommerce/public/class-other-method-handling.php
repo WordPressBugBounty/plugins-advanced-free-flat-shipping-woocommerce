@@ -1,5 +1,7 @@
 <?php
-
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 class pisol_efrs_handle_other_methods{
    function __construct(){
         add_filter( 'woocommerce_package_rates', array($this, 'shippingMethodFilter'), PHP_INT_MAX );

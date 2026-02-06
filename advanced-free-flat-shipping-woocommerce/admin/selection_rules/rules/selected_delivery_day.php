@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 class Pi_efrs_selection_rule_selected_delivery_day{
     public $slug;

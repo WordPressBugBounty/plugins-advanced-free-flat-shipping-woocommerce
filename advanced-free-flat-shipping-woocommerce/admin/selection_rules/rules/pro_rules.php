@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 class pisol_efrs_pro_rules{
     public $slug;
@@ -167,16 +170,38 @@ class pisol_efrs_pro_rules{
         $rules['number_of_order'] = array(
             'name'=>__('Number of orders during a period (Available in PRO Version) 🔒','advanced-free-flat-shipping-woocommerce'),
             'group'=>'purchase_history',
-            'condition'=>'first_order',
+            'condition'=>'number_of_order',
             'pro'=>true
         );
 
         $rules['total_of_orders'] = array(
             'name'=>__('Total amount spend during a period (Available in PRO Version) 🔒','advanced-free-flat-shipping-woocommerce'),
             'group'=>'purchase_history',
-            'condition'=>'last_order',
+            'condition'=>'total_of_orders',
             'pro'=>true
         );
+
+        $rules['woo_membership'] = array(
+            'name'=>__('Membership plan (Available in PRO Version) 🔒','advanced-free-flat-shipping-woocommerce'),
+            'group'=>'woo_membership',
+            'condition'=>'woo_membership',
+            'pro'=>true
+        );
+
+        $rules['woo_subs_product_present'] = array(
+            'name'=>__('Subscription product present in cart (Available in PRO Version) 🔒','advanced-free-flat-shipping-woocommerce'),
+            'group'=>'woo_subscription',
+            'condition'=>'woo_subs_product_present',
+            'pro'=>true
+        );
+
+        $rules['woo_subs_status'] = array(
+            'name'=>__('Has Subscription with status (Available in PRO Version) 🔒','advanced-free-flat-shipping-woocommerce'),
+            'group'=>'woo_subscription',
+            'condition'=>'woo_subs_status',
+            'pro'=>true
+        );
+
 
         if(function_exists('wc_get_attribute_taxonomies')){
             $attributes = wc_get_attribute_taxonomies();

@@ -1,3 +1,8 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
 <div id="weight_short_code_help" style="display:none;">
     <div class="bootstrap-wrapper">
     <div class="alert alert-info mt-2"><strong>Free version</strong> You can add charge as positive number or negative number</div>

@@ -1,3 +1,8 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
 <div class="row align-items-center">
     <div class="col-6 py-3">
         <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#What_is_a_Virtual_Category" target="_blank">Know more about Virtual category ?</a>

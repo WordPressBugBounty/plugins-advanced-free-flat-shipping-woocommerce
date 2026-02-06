@@ -1,5 +1,8 @@
 <?php
- 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 class pisol_efrs_weight_based_extra_charges_setting{
     private $slug;
     function __construct(){

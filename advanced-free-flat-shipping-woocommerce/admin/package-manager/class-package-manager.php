@@ -1,6 +1,9 @@
-<?php 
-
+<?php
 namespace PISOL\EFRS\Package;
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 class PackageManager{
 

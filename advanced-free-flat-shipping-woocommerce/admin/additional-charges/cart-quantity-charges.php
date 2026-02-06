@@ -1,5 +1,7 @@
 <?php
- 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 class pisol_efrs_cart_quantity_extra_charges_setting{
     public $slug;
     function __construct(){

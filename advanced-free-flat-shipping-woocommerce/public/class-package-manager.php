@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 use PISOL\EFRS\Package\PackageManager;
 
 class pisol_efrs_package_manager{

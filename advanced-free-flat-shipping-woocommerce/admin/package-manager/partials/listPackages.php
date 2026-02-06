@@ -1,3 +1,8 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
 <div class="row mt-3 align-items-center mb-3">
     <div class="col-12 col-md-7">
         <div class="alert alert-info mb-0">

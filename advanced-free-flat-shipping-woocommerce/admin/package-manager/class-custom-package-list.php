@@ -1,5 +1,7 @@
 <?php
-
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 class Class_Pi_Efrs_Package_manager_list{
 
     public $plugin_name;

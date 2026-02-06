@@ -1,3 +1,8 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
 <div class="row">
     <div class="col-12 py-3 pr-0 text-right"><a class="btn btn-primary btn-sm mr-3" href="<?php echo esc_url( admin_url( 'admin.php?page=pisol-efrs-notification&tab=pi_efrs_add_shipping' ) ); ?>"><span class="dashicons dashicons-plus"></span> <?php esc_html_e('Add shipping method','advanced-free-flat-shipping-woocommerce'); ?></a>
     </div>

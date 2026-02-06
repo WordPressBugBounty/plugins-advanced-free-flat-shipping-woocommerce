@@ -67,7 +67,8 @@ class Pi_Efrs_Analytics{
         
         $notice .= '</p>';
         $notice .= '</div>';
-        echo wp_kses_post($notice);
+        //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        echo $notice;
         
     }
 

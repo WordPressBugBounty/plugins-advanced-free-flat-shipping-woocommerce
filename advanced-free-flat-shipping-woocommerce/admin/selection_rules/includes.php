@@ -1,8 +1,12 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 define("PI_EFRS_SELECTION_RULE_SLUG", 'efrs');
 require_once 'pisol_selection_rule_main.php';
 require_once 'pisol_method.php';
 require_once 'rules/country.php';
+require_once 'rules/ip-country.php';
 require_once 'rules/zone.php';
 require_once 'rules/product.php';
 require_once 'rules/category_product.php';
