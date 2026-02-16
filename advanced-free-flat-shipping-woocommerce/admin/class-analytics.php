@@ -76,7 +76,7 @@ class Pi_Efrs_Analytics{
         if (isset($_GET['enable']) && in_array($_GET['enable'], array('1', '0'))) {
             $enable = $_GET['enable'] === '1' ? 'enable' : 'disable';
             update_option($this->enable_tracking, $enable);
-            $redirect_url = isset($_SERVER['HTTP_REFERER']) ? esc_url_raw($_SERVER['HTTP_REFERER']) : admin_url();
+            $redirect_url = isset($_SERVER['HTTP_REFERER']) ? esc_url_raw(wp_unslash($_SERVER['HTTP_REFERER'])) : admin_url();
 
             if ($enable === 'enable') {
                 $this->send_activation_data('enable');
@@ -213,13 +213,13 @@ class Pi_Efrs_Analytics{
     }
 
     public function handle_deactivation_form() {
-        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'pi_deactivate_nonce_' . $this->plugin_slug)) {
+        if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'])), 'pi_deactivate_nonce_' . $this->plugin_slug)) {
             wp_die(esc_html__('Security check failed', 'advanced-free-flat-shipping-woocommerce'));
         }
 
-        $plugin_slug = sanitize_text_field($_POST['plugin_slug'] ?? '');
-        $message = sanitize_textarea_field($_POST['message'] ?? '');
-        $reason = sanitize_text_field($_POST['reason_radio'] ?? '');
+        $plugin_slug = sanitize_text_field(wp_unslash($_POST['plugin_slug'] ?? ''));
+        $message = sanitize_textarea_field(wp_unslash($_POST['message'] ?? ''));
+        $reason = sanitize_text_field(wp_unslash($_POST['reason_radio'] ?? ''));
         // Combine reason and message, prioritizing reason if message is empty
         if (!empty($reason) && !empty($message)) {
             $message = $reason . ': ' . $message;
@@ -227,7 +227,7 @@ class Pi_Efrs_Analytics{
             $message = $reason;
         }
 
-        $action_type = sanitize_text_field($_POST['action_type'] ?? '');
+        $action_type = sanitize_text_field(wp_unslash($_POST['action_type'] ?? ''));
 
         if (is_multisite() && is_plugin_active_for_network($this->plugin_path)) {
             if (is_super_admin()) {

@@ -37,8 +37,8 @@ class pisol_efrs_cart_subtotal_extra_charges_setting{
         ?>
         <tr>
         <td>Cart subtotal</td>
-        <td class="pi-min-col"><input type="number" required name="pi_cart_subtotal_charges[<?php echo esc_attr($count); ?>][min]" value="<?php echo esc_attr(self::value($row,'min')); ?>"  min="1" class="form-control"></td>
-        <td class="pi-max-col"><input type="number" name="pi_cart_subtotal_charges[<?php echo esc_attr($count); ?>][max]" value="<?php echo esc_attr(self::value($row,'max')); ?>"  min="1" class="form-control"></td>
+        <td class="pi-min-col"><input type="number" required name="pi_cart_subtotal_charges[<?php echo esc_attr($count); ?>][min]" value="<?php echo esc_attr(self::value($row,'min')); ?>"  min="0.0001" class="form-control" step="0.0001"></td>
+        <td class="pi-max-col"><input type="number" name="pi_cart_subtotal_charges[<?php echo esc_attr($count); ?>][max]" value="<?php echo esc_attr(self::value($row,'max')); ?>"  min="0.0001" class="form-control" step="0.0001"></td>
         <td class="pi-fee-col"><input type="text" required name="pi_cart_subtotal_charges[<?php echo esc_attr($count); ?>][charge]" value="<?php echo esc_attr(self::value($row,'charge')); ?>" class="form-control"></td>
         <td><button class="delete-additional-charges btn btn-danger btn-sm"><span class="dashicons dashicons-trash"></span></button></td>
         </tr>
@@ -93,13 +93,13 @@ class pisol_efrs_cart_subtotal_extra_charges_setting{
         }
 
         if ( isset( $_POST['pi_cart_subtotal_charges'] ) && is_array($_POST['pi_cart_subtotal_charges']) ) {
-            update_post_meta( $post_id, 'pi_cart_subtotal_charges', $_POST['pi_cart_subtotal_charges'] );
+            update_post_meta( $post_id, 'pi_cart_subtotal_charges', map_deep(wp_unslash($_POST['pi_cart_subtotal_charges']), 'sanitize_text_field') );
         } else {
             update_post_meta( $post_id, 'pi_cart_subtotal_charges', array());
         }
 
         if ( isset( $_POST['pi_efrs_cart_subtotal_sum_of_charges'] )) {
-            update_post_meta( $post_id, 'pi_efrs_cart_subtotal_sum_of_charges', $_POST['pi_efrs_cart_subtotal_sum_of_charges'] );
+            update_post_meta( $post_id, 'pi_efrs_cart_subtotal_sum_of_charges', sanitize_text_field(wp_unslash($_POST['pi_efrs_cart_subtotal_sum_of_charges'])) );
         } else {
             update_post_meta( $post_id, 'pi_efrs_cart_subtotal_sum_of_charges', 'all');
         }

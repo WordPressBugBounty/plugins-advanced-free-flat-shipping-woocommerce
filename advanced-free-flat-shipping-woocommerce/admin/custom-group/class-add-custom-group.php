@@ -146,7 +146,7 @@ class Class_Pi_Efrs_Add_Edit_Custom_Group{
             $error->add( 'access', 'You are not authorized to make this changes ' );
         } 
 
-        if ( ! isset( $_POST['pisol_efrs_nonce'] ) || ! wp_verify_nonce( $_POST['pisol_efrs_nonce'], 'add_custom_group' ) 
+        if ( ! isset( $_POST['pisol_efrs_nonce'] ) || ! wp_verify_nonce( sanitize_text_field(wp_unslash($_POST['pisol_efrs_nonce'])), 'add_custom_group' ) 
         ) {
             $error->add( 'invalid-nonce', 'Form has expired Reload the page and try again ' );
         } 
@@ -177,7 +177,7 @@ class Class_Pi_Efrs_Add_Edit_Custom_Group{
 
         $redirect_url = "";
 
-        if ( ! isset( $_POST['pisol_efrs_nonce'] ) || ! wp_verify_nonce( $_POST['pisol_efrs_nonce'], 'add_custom_group' ) 
+        if ( ! isset( $_POST['pisol_efrs_nonce'] ) || ! wp_verify_nonce( sanitize_text_field(wp_unslash($_POST['pisol_efrs_nonce'])), 'add_custom_group' ) 
         ) {
 
         return false;
@@ -342,7 +342,7 @@ class Class_Pi_Efrs_Add_Edit_Custom_Group{
         
         if(!isset($_GET['keyword'])) die;
 
-		$keyword = isset($_GET['keyword']) ? sanitize_text_field($_GET['keyword']) : "";
+		$keyword = isset($_GET['keyword']) ? sanitize_text_field(wp_unslash($_GET['keyword'])) : "";
 
 		if ( empty( $keyword ) ) {
 			die();

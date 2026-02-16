@@ -144,7 +144,7 @@ class Pi_Efrs_Menu{
                             <li><b><span style="color:white;">&#10003;</span> Smart features</b><br>
                             <i>Virtual categories, day-based rules, unlimited combinations</i></li>
                         </ul>
-                        <h4 class="pi-bottom-banner">💰 <?php echo esc_html(PI_EFRS_PRICE); ?> <small>Billed yearly</small></h4>
+                        <h5 class="pi-bottom-banner text-light text-center">💰 <?php echo esc_html(PI_EFRS_PRICE); ?> <small>Billed yearly</small></h5>
                         <div class="text-center pb-3 pt-2">
                             <a class="btn btn-primary btn-md" href="<?php echo esc_url( PI_EFRS_BUY_URL ); ?>&utm_ref=bottom_link" target="_blank">🔓 Unlock Pro Now – Limited Time Price!</a>
                         </div>

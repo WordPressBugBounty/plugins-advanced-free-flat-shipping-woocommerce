@@ -88,13 +88,13 @@ class pisol_efrs_weight_based_extra_charges_setting{
         }
 
         if ( isset( $_POST['pi_cart_weight_charges'] ) && is_array($_POST['pi_cart_weight_charges']) ) {
-            update_post_meta( $post_id, 'pi_cart_weight_charges', $_POST['pi_cart_weight_charges'] );
+            update_post_meta( $post_id, 'pi_cart_weight_charges', map_deep(wp_unslash($_POST['pi_cart_weight_charges']), 'sanitize_text_field') );
         } else {
             update_post_meta( $post_id, 'pi_cart_weight_charges', array());
         }
 
         if ( isset( $_POST['pi_efrs_cart_weight_sum_of_charges'] )) {
-            update_post_meta( $post_id, 'pi_efrs_cart_weight_sum_of_charges', $_POST['pi_efrs_cart_weight_sum_of_charges'] );
+            update_post_meta( $post_id, 'pi_efrs_cart_weight_sum_of_charges', sanitize_text_field(wp_unslash($_POST['pi_efrs_cart_weight_sum_of_charges'])) );
         } else {
             update_post_meta( $post_id, 'pi_efrs_cart_weight_sum_of_charges', 'all');
         }

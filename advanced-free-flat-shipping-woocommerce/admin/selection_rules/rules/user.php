@@ -98,7 +98,7 @@ class Pi_efrs_selection_rule_user{
         
         if(!isset($_GET['keyword'])) die;
 
-		$keyword = isset($_GET['keyword']) ? sanitize_text_field($_GET['keyword']) : "";
+		$keyword = isset($_GET['keyword']) ? sanitize_text_field(wp_unslash($_GET['keyword'])) : "";
 
 		if ( empty( $keyword ) ) {
 			die();

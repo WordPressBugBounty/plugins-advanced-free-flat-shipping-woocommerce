@@ -29,8 +29,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <template id="cart_subtotal_charges_template" >
     <tr>
         <td>Cart Subtotal</td>
-        <td class="pi-min-col"><input type="number" required name="pi_cart_subtotal_charges[{{count}}][min]" min="1" class="form-control"></td>
-        <td class="pi-max-col"><input type="number" name="pi_cart_subtotal_charges[{{count}}][max]" min="1" class="form-control"></td>
+        <td class="pi-min-col"><input type="number" required name="pi_cart_subtotal_charges[{{count}}][min]" min="0.0001" class="form-control" step="0.0001"></td>
+        <td class="pi-max-col"><input type="number" name="pi_cart_subtotal_charges[{{count}}][max]" min="0.0001" class="form-control" step="0.0001"></td>
         <td class="pi-fee-col"><input type="text" required name="pi_cart_subtotal_charges[{{count}}][charge]" class="form-control"></td>
         <td><button class="delete-additional-charges btn btn-danger btn-sm"><span class="dashicons dashicons-trash"></span></button></td>
     </tr>

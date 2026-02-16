@@ -143,7 +143,7 @@ class Class_Pi_Efrs_Add_Edit_Package{
             $error->add( 'access', 'You are not authorized to make this changes ' );
         } 
 
-        if ( ! isset( $_POST['pisol_efrs_nonce'] ) || ! wp_verify_nonce( $_POST['pisol_efrs_nonce'], 'add_package' ) 
+        if ( ! isset( $_POST['pisol_efrs_nonce'] ) || ! wp_verify_nonce( sanitize_text_field(wp_unslash($_POST['pisol_efrs_nonce'])), 'add_package' ) 
         ) {
             $error->add( 'invalid-nonce', 'Form has expired Reload the page and try again ' );
         } 
@@ -178,7 +178,7 @@ class Class_Pi_Efrs_Add_Edit_Package{
 
         $redirect_url = "";
 
-        if ( ! isset( $_POST['pisol_efrs_nonce'] ) || ! wp_verify_nonce( $_POST['pisol_efrs_nonce'], 'add_package' ) 
+        if ( ! isset( $_POST['pisol_efrs_nonce'] ) || ! wp_verify_nonce( sanitize_text_field(wp_unslash($_POST['pisol_efrs_nonce'])), 'add_package' ) 
         ) {
 
         return false;

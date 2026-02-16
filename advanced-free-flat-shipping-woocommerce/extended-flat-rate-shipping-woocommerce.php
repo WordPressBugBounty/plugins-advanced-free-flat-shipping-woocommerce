@@ -9,21 +9,21 @@
  * that starts the plugin.
  *
  * @link              piwebsolution.com
- * @since             1.6.4.99
+ * @since             1.6.6.0
  * @package           Extended_Flat_Rate_Shipping_Woocommerce
  *
  * @wordpress-plugin
- * Plugin Name:       Flat rate / Conditional shipping for WooCommerce
+ * Plugin Name:       PiWeb Flat rate / Conditional shipping for WooCommerce
  * Plugin URI:        https://www.piwebsolution.com/advanced-free-flat-shipping-woocommerce
  * Description:       WooCommerce conditional shipping & WooCommerce Advanced Flat rate shipping plugin to Create Advanced Flat rate shipping or Free shipping method, with different advanced criteria to apply this shipping method
- * Version:           1.6.4.99
+ * Version:           1.6.6.0
  * Author:            PI Websolution
  * Author URI:        https://www.piwebsolution.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       advanced-free-flat-shipping-woocommerce
  * Domain Path:       /languages
- * WC tested up to: 10.4.3
+ * WC tested up to: 10.5
  */
 
 // If this file is called directly, abort.
@@ -60,10 +60,10 @@ if(is_plugin_active( 'advanced-free-flat-shipping-woocommerce-pro/extended-flat-
 
 /**
  * Currently plugin version.
- * Start at version 1.6.4.99 and use SemVer - https://semver.org
+ * Start at version 1.6.6.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'EXTENDED_FLAT_RATE_SHIPPING_WOOCOMMERCE_VERSION', '1.6.4.99' );
+define( 'EXTENDED_FLAT_RATE_SHIPPING_WOOCOMMERCE_VERSION', '1.6.6.0' );
 define('PI_EFRS_BUY_URL', 'https://www.piwebsolution.com/cart/?add-to-cart=2804&variation_id=2810&utm_campaign=advance-shipping&utm_source=website&utm_medium=direct-buy');
 define('PI_EFRS_PRICE', '$2.8 / month');
 define('PI_EFRS_DELETE_SETTING', false);
@@ -133,7 +133,8 @@ add_action('admin_init', function (){
         delete_option('pi_efrs_do_activation_redirect');
         if(!isset($_GET['activate-multi']))
         {
-            wp_redirect("admin.php?page=pisol-efrs-notification");
+            wp_safe_redirect(admin_url("admin.php?page=pisol-efrs-notification"));
+            exit;
         }
     }
 });
@@ -146,7 +147,7 @@ add_action('admin_init', function (){
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.6.4.99
+ * @since    1.6.6.0
  */
 function run_extended_flat_rate_shipping_woocommerce() {
 
