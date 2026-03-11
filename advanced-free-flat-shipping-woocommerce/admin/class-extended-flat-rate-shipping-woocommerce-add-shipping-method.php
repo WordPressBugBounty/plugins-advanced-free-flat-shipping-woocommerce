@@ -236,6 +236,9 @@ class Class_Pi_Efrs_Add_Edit{
 			if ( isset( $post['pi_cost'] ) ) {
 				update_post_meta( $post_id, 'pi_cost', sanitize_text_field( $post['pi_cost'] ) );
 			}
+
+			update_post_meta( $post_id, 'pi_priority', 1 );
+
 			if ( isset( $post['pi_desc'] ) ) {
 				update_post_meta( $post_id, 'pi_desc', sanitize_textarea_field( $post['pi_desc'] ) );
 			}
