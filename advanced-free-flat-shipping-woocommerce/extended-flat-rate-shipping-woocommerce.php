@@ -9,21 +9,21 @@
  * that starts the plugin.
  *
  * @link              piwebsolution.com
- * @since             1.6.6.1
+ * @since             1.6.6.2
  * @package           Extended_Flat_Rate_Shipping_Woocommerce
  *
  * @wordpress-plugin
  * Plugin Name:       PiWeb Flat rate / Conditional shipping for WooCommerce
  * Plugin URI:        https://www.piwebsolution.com/advanced-free-flat-shipping-woocommerce
  * Description:       WooCommerce conditional shipping & WooCommerce Advanced Flat rate shipping plugin to Create Advanced Flat rate shipping or Free shipping method, with different advanced criteria to apply this shipping method
- * Version:           1.6.6.1
+ * Version:           1.6.6.2
  * Author:            PI Websolution
  * Author URI:        https://www.piwebsolution.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       advanced-free-flat-shipping-woocommerce
  * Domain Path:       /languages
- * WC tested up to: 10.5.2
+ * WC tested up to: 10.6
  */
 
 // If this file is called directly, abort.
@@ -45,6 +45,26 @@ if(!is_plugin_active( 'woocommerce/woocommerce.php')){
     return;
 }
 
+add_action('after_plugin_row_advanced-free-flat-shipping-woocommerce-pro/extended-flat-rate-shipping-woocommerce.php', function ($plugin_file, $plugin_data) {
+    $url = wp_nonce_url(
+        self_admin_url( 'plugins.php?action=deactivate&plugin=advanced-free-flat-shipping-woocommerce/extended-flat-rate-shipping-woocommerce.php' ),
+        'deactivate-plugin_advanced-free-flat-shipping-woocommerce/extended-flat-rate-shipping-woocommerce.php'
+    );
+    ?>
+    <tr class="plugin-update-tr">
+        <td colspan="13" class="plugin-update" style="background:rgba(255,0,0,0.5);">
+            <div style="margin: 10px;">
+                <p style="color:#FFF;"><?php echo wp_kses_post( '⚠️ Deactivate the free version of <b>Advanced Free - Flat Shipping WooCommerce</b>, then only the PRO version will work', 'advanced-free-flat-shipping-woocommerce' ); ?>
+                    <a href="<?php echo esc_url( $url ); ?>" class="button button-secondary">
+                        <?php esc_html_e( 'Deactivate Free Version', 'advanced-free-flat-shipping-woocommerce' ); ?>
+                    </a>
+                </p>
+            </div>
+        </td>
+    </tr>
+    <?php
+}, 10, 2);
+
 if(is_plugin_active( 'advanced-free-flat-shipping-woocommerce-pro/extended-flat-rate-shipping-woocommerce.php')){
     function pi_efrs_my_pro_notice() {
         ?>
@@ -60,10 +80,10 @@ if(is_plugin_active( 'advanced-free-flat-shipping-woocommerce-pro/extended-flat-
 
 /**
  * Currently plugin version.
- * Start at version 1.6.6.1 and use SemVer - https://semver.org
+ * Start at version 1.6.6.2 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'EXTENDED_FLAT_RATE_SHIPPING_WOOCOMMERCE_VERSION', '1.6.6.1' );
+define( 'EXTENDED_FLAT_RATE_SHIPPING_WOOCOMMERCE_VERSION', '1.6.6.2' );
 define('PI_EFRS_BUY_URL', 'https://www.piwebsolution.com/cart/?add-to-cart=2804&variation_id=2810&utm_campaign=advance-shipping&utm_source=website&utm_medium=direct-buy');
 define('PI_EFRS_PRICE', '$2.8 / month');
 define('PI_EFRS_DELETE_SETTING', false);
@@ -147,7 +167,7 @@ add_action('admin_init', function (){
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.6.6.1
+ * @since    1.6.6.2
  */
 function run_extended_flat_rate_shipping_woocommerce() {
 
