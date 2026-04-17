@@ -19,6 +19,8 @@ class Class_Pi_Efrs_List{
     
     public $tab;
 
+    public $post_id;
+
     function __construct($plugin_name){
         $this->plugin_name = $plugin_name;
 
