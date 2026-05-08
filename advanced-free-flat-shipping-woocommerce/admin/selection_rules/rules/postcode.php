@@ -141,7 +141,7 @@ class Pi_efrs_selection_rule_postcode{
     }
 
     function postCodeMatched( $post_code, $rules){
-        
+        $country = apply_filters('pisol_efrs_postcode_country', function_exists('WC') && is_object(WC()->customer) ? WC()->customer->get_shipping_country() : '');
         foreach($rules as $rule){
 
             $object[] = (object)array(
@@ -149,7 +149,7 @@ class Pi_efrs_selection_rule_postcode{
                 'location_code'=> $rule
             );
 
-            $country = apply_filters('pisol_efrs_postcode_country',WC()->customer->get_shipping_country());
+            
             /**
              * this is woocommerce location matcher function
              */
