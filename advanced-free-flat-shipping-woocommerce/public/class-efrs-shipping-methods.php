@@ -21,7 +21,6 @@ if ( ! class_exists( 'Efrs_Shipping_Method' ) ) {
 			
 			$this->init();
 
-			add_action( 'woocommerce_update_options_shipping_' . $this->id, array( $this, 'process_admin_options' ) );
 		}
 
 		function init() {
@@ -69,6 +68,8 @@ if ( ! class_exists( 'Efrs_Shipping_Method' ) ) {
 					'taxes' => $taxable,
 					'package' => $package
 				);
+
+				$this->instance_id = $method->ID;
 
 				// Register the rate
 				$this->add_rate( $rate );
