@@ -8,6 +8,7 @@ require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/review.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/common.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/help.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-package.php';
+require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/conflict-fixer.php';
 
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-extended-flat-rate-shipping-woocommerce-menu.php';
 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-extended-flat-rate-shipping-woocommerce-add-shipping-method.php';

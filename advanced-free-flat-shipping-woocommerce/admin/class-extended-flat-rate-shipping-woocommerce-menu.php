@@ -16,16 +16,27 @@ class Pi_Efrs_Menu{
     }
 
     function plugin_menu(){
-        
-        $this->menu = add_menu_page(
-            __( 'Flat Rate Shipping','advanced-free-flat-shipping-woocommerce'),
-            __( 'Flat Rate Shipping','advanced-free-flat-shipping-woocommerce'),
-            'manage_options',
-            'pisol-efrs-notification',
-            array($this, 'menu_option_page'),
-            plugin_dir_url( __FILE__ ).'img/pi.svg',
-            6
-        );
+        $main_menu = get_option('pisol_affsw_move_to_submenu', 0);
+        if($main_menu){
+            $this->menu = add_submenu_page(
+                'woocommerce',
+                __( 'Flat Rate Shipping'),
+                __( 'Flat Rate Shipping'),
+                'manage_options',
+                'pisol-efrs-notification',
+                array($this, 'menu_option_page')
+            );
+        }else{
+            $this->menu = add_menu_page(
+                __( 'Flat Rate Shipping','advanced-free-flat-shipping-woocommerce'),
+                __( 'Flat Rate Shipping','advanced-free-flat-shipping-woocommerce'),
+                'manage_options',
+                'pisol-efrs-notification',
+                array($this, 'menu_option_page'),
+                plugin_dir_url( __FILE__ ).'img/pi.svg',
+                6
+            );
+        }
 
         add_action("load-".$this->menu, array($this,"bootstrap_style"));
         

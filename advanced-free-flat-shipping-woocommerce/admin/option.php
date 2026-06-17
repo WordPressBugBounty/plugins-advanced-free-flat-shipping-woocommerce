@@ -44,6 +44,8 @@ class pisol_affsw_options{
 
             array('field'=>'pisol_affsw_show_zero_cost', 'label'=>__('Show zero charge for shipping method','advanced-free-flat-shipping-woocommerce'), 'desc'=>__('When shipping method is free woocommerce will not show the charge, once this is enabled it will show $0 charge next to the shipping method that are free','advanced-free-flat-shipping-woocommerce'), 'type'=>'switch', 'default'=>"0"),
 
+            array('field'=>'pisol_affsw_move_to_submenu', 'label'=>__('Move to Woocommerce submenu'), 'desc'=>__('It will move the plugin options in the WooCommerce submenu'), 'type'=>'switch', 'default'=>"0"),
+
             array('field'=>'pi_affsw_moveto_top', 'label'=>__('Move the plugin methods to top','advanced-free-flat-shipping-woocommerce'), 'desc'=>__('When enabled it will move the plugin added shipping method to the top of the list of the shipping method ','advanced-free-flat-shipping-woocommerce'), 'type'=>'switch', 'default'=>"1", 'pro'=>true),
 
             array('field'=>'pi_affsw_show_desc_on_front', 'label'=>__('Show shipping description','advanced-free-flat-shipping-woocommerce'), 'desc'=>__('Show shipping method description below the shipping method name or as a tooltip on the checkout page','advanced-free-flat-shipping-woocommerce'), 'type'=>'select', 'default'=>"0", 'value' => [0 => "Dont show", '1' => 'Show below shipping method name', 'tooltip' => 'Show as tooltip'], 'pro'=>true),

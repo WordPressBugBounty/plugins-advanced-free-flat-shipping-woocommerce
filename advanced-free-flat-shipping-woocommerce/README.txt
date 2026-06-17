@@ -1,19 +1,19 @@
-===  PiWeb Flat rate / Conditional shipping for WooCommerce  ===
+===  PiWeb Advanced Flat rate / Conditional shipping for WooCommerce  ===
 Contributors: jyotsnasingh520, rajeshsingh520
-Tags: shipping rates,  woocommerce shipping plugin,  table rate, Flat rate shipping, WooCommerce shipping, Shipping method, shipping,  Free shipping WooCommerce, Advanced free shipping, Advanced flat shipping, conditional shipping
+Tags: shipping rates,  woocommerce shipping plugin,  table rate, Flat rate shipping, Role Based Shipping, Shipping method, shipping,  Free shipping WooCommerce, Advanced flat shipping, conditional shipping
 Requires at least: 3.0.1
 Tested up to: 7.0
-Stable Tag: 1.6.6.7
+Stable Tag: 1.6.6.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce conditional shipping & WooCommerce Advanced Flat rate shipping rates plugin to Create Advanced Flat rate shipping or Free shipping method, Table rate shipping for WooCommerce shipping plugin
+WooCommerce conditional shipping & WooCommerce Advanced shipping rates plugin to Create Advanced Flat rate shipping or Free shipping method, Table rate shipping for WooCommerce shipping plugin
 
 == Description ==
 
-With this Flat rate shipping plugin for WooCommerce, you can set up your own advanced rules to determine how much to charge the customer for shipping. This is a highly flexible WooCommerce shipping plugin; it even allows you to offer table rate shipping through additional charges, just like a WooCommerce table rate shipping plugin does.
+With this Advanced shipping plugin for WooCommerce, you can set up your own advanced rules to determine how much to charge the customer for shipping. This is a highly flexible WooCommerce shipping plugin; it even allows you to offer table rate shipping through additional charges, just like a WooCommerce table rate shipping plugin does.
 
-= Using Advanced Flat Rate Shipping for WooCommerce =
+= Using Advanced Shipping for WooCommerce =
 With our Advanced Flat Rate Shipping Method for WooCommerce, you can create your own rules. When these rules are satisfied, the Advanced Flat rate shipping method will be available to the buyer
 
 This is a highly flexible WooCommerce shipping plugin; it even allows you to offer table rate shipping through additional charges, just like a WooCommerce table rate shipping plugin does
@@ -70,7 +70,7 @@ Package 2: Non-fragile items → $10 × 3 = $30
  	<li><strong>Coupon based shipping method</strong>: Using this you can show a shipping method if the customer has applied some specific coupon code</li>
  	<li><strong>Shipping class-based shipping method</strong>: Show a specific shipping method, if the user buys a product that belongs to some specific category of shipping class</li>
  	<li><strong>Payment method based shipping method</strong>: Show a specific shipping method, if the user buys select a specific payment gateway, E.g: If you have a shipping method that also collects a payment, then you can show that shipping method when user select cash on the delivery payment method</li>
- 	<li><strong>User role-based shipping method</strong>: Using this you can assign a different shipping method as per the user role. E.g: you can offer a different shipping method to a registered customer and different shipping method to those who are doing a Guest checkout</li>
+ 	<li><strong>Role based shipping method</strong>: Using this you can assign a different shipping method as per the user role. E.g: you can offer a different shipping method to a registered customer and different shipping method to those who are doing a Guest checkout</li>
 	<li><strong>User city based method</strong>: You can offer method based on user city, it is string comparison or city name</li>
 	<li><strong>Shipping class total</strong> this rule applies when customer has purchased an x amount of product from specific shipping class</li> 
 	<li><strong>Shipping class total quantity of product in cart</strong> this rule applies when customer has added x unit of product from a specific shipping class in his cart</li> 
@@ -256,8 +256,11 @@ check out this video https://www.youtube.com/watch?v=MVPPdukqLp0
 
 == Changelog ==
 
+= 1.6.6.9 =
+* [added] Role-Based Payment / Shipping Methods for WooCommerce plugin compatibility added
+ 
 = 1.6.6.7 =
-* [fix] wp_kses issue in ip-country.php rule related to WP 7
+* [fix] not able to add condition in WP 7 fixed
 
 = 1.6.6.6 =
 * Tested for WP 7.0
