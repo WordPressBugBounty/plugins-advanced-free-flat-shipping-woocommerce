@@ -2,6 +2,9 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+/**
+ * @var array $data
+ */
 ?>
 <div class="row border-bottom bg-dark2 align-items-center">
     <div class="col-6 py-2 ">
@@ -15,8 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <form method="post" id="pisol-efrs-new-method">
     <div class="pi-step-container">
-        <div class="pi-step-content">
-            <div class="pi-step-header bg-primary text-light">
+        <details class="pi-step-content" open>
+            <summary class="pi-step-header bg-primary text-light">
                 <div>
                 <strong class="pi-step-title"><?php echo esc_html__('Step 1: Basic Settings','advanced-free-flat-shipping-woocommerce'); ?><small>(Required)</small></strong>
                 <p class="font-italic mb-0 text-light"><?php echo esc_html__('Basic setting of the shipping method','advanced-free-flat-shipping-woocommerce'); ?>  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_1_Basic_Settings_Required" target="_blank" class="text-light">(Know more about this ?)</a></p>
@@ -25,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
                     <span class="dashicons dashicons-minus mr-4"></span>
                 </div>
-            </div>
+            </summary>
             <div class="pi-step-description">
                 <!-- Basic start -->
                     <div class="row py-4 border-bottom align-items-center">
@@ -61,9 +64,9 @@ if ( ! defined( 'ABSPATH' ) ) {
                     
                 <!-- End of Basic -->
 
-                <div class="pi-step-container pi-closed">
-                        <div class="pi-step-content">
-                            <div class="pi-step-header bg-dark2 text-light">
+                <div class="pi-step-container">
+                        <details class="pi-step-content">
+                            <summary class="pi-step-header bg-dark2 text-light">
                                 <div>
                                 <strong class="pi-step-title"><?php echo esc_html__('Other Basic settings','advanced-free-flat-shipping-woocommerce'); ?><small>(Non required)</small></strong>
                                 <p class="font-italic mb-0 text-light"><?php echo esc_html__('These setting are not required but can help you fine-tune the shipping method.','advanced-free-flat-shipping-woocommerce'); ?></p>
@@ -72,7 +75,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
                                     <span class="dashicons dashicons-minus mr-4"></span>
                                 </div>
-                            </div>
+                            </summary>
                             <div class="pi-step-description">
                                 <!-- Non required start -->
                                     <div class="row py-4 border-bottom align-items-center">
@@ -121,16 +124,16 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
                                 <!-- End of Non required -->
                             </div>
-                        </div>
+                        </details>
                 </div>
 
             </div>
-        </div>
+        </details>
     </div>
 
     <div class="pi-step-container">
-        <div class="pi-step-content">
-            <div class="pi-step-header bg-primary text-light">
+        <details class="pi-step-content" open>
+            <summary class="pi-step-header bg-primary text-light">
                 <div>
                 <strong class="pi-step-title"><?php echo esc_html__('Step 2: Set Availability Conditions','advanced-free-flat-shipping-woocommerce'); ?><small>(Required)</small></strong>
                 <p class="font-italic mb-0 text-light"><?php echo esc_html__('Define when this shipping method should be visible at checkout. All selected conditions must be met.','advanced-free-flat-shipping-woocommerce'); ?>  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_2_Set_Availability_Conditions_Required" target="_blank" class="text-light">(Know more about this ?)</a></p>
@@ -139,7 +142,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
                     <span class="dashicons dashicons-minus mr-4"></span>
                 </div>
-            </div>
+            </summary>
             <div class="pi-step-description">
                 <!-- Conditions start -->
                 <div class="border-top">
@@ -153,12 +156,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                 </div>
                 <!-- Conditions end -->
 			</div>
-		</div>
+		</details>
     </div>
 
     <div class="pi-step-container">
-        <div class="pi-step-content">
-            <div class="pi-step-header bg-dark text-light">
+        <details class="pi-step-content" open>
+            <summary class="pi-step-header bg-dark text-light">
                 <div>
                 <strong class="pi-step-title"><?php echo esc_html__('Step 3: Adjust shipping charge','advanced-free-flat-shipping-woocommerce'); ?><small>(optional)</small></strong>
                 <p class="font-italic mb-0 text-light">Increment shipping charge by weight, quantity, subtotal etc. ranges. <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_3_Adjust_Shipping_Charge_Optional" target="_blank" class="text-light">(Know more about this ?)</a></p>
@@ -167,19 +170,19 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
                     <span class="dashicons dashicons-minus mr-4"></span>
                 </div>
-            </div>
+            </summary>
             <div class="pi-step-description">
                 <!-- extra charge setting start -->
                 <?php do_action('pi_efrs_extra_form_fields', $data); ?>
                 <!-- extra charge setting end -->
             </div>
-        </div>
+        </details>
     </div>
 
 
-    <div class="pi-step-container pi-closed">
-        <div class="pi-step-content">
-            <div class="pi-step-header bg-dark text-light">
+    <div class="pi-step-container">
+        <details class="pi-step-content">
+            <summary class="pi-step-header bg-dark text-light">
                 <div>
                 <strong class="pi-step-title"><?php echo esc_html__('Step 4: Other settings','advanced-free-flat-shipping-woocommerce'); ?><small>(optional)</small></strong>
                 <p class="font-italic mb-0 text-light">Hide other shipping methods, or shipping class based charges  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_4_Other_Settings_Optional" target="_blank" class="text-light">(Know more about this ?)</a></p>
@@ -188,7 +191,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
                     <span class="dashicons dashicons-minus mr-4"></span>
                 </div>
-            </div>
+            </summary>
             <div class="pi-step-description">
                 <!-- Extra start -->
                     <div class="row py-4 border-bottom align-items-center bg-dark2 text-light">
@@ -245,12 +248,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                         </div>
                 <!-- Extra end -->
             </div>
-        </div>
+        </details>
     </div>
-
-
-
-
 
 
 <input type="hidden" name="post_type" value="pi_shipping_method">

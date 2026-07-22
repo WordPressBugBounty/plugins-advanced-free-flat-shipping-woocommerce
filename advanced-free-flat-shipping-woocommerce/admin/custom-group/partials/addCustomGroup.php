@@ -2,6 +2,9 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+/**
+ * @var array $data
+ */
 ?>
 <div class="row border-bottom align-items-center">
     <div class="col-12 py-2 bg-dark2">
@@ -30,8 +33,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
  <div class="pi-step-container">
-        <div class="pi-step-content">
-            <div class="pi-step-header bg-primary text-light">
+        <details class="pi-step-content" open>
+            <summary class="pi-step-header bg-primary text-light">
                 <div>
                 <strong class="pi-step-title"><?php echo esc_html__('Step 1: Choose Product Scope','advanced-free-flat-shipping-woocommerce'); ?><small></small></strong>
                 <p class="font-italic text-light mb-0">Use filters below to include or exclude products  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_1_Choose_Product_Scope" target="_blank" class="text-light">(Know more about this ?)</a></p>
@@ -40,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
                     <span class="dashicons dashicons-minus mr-4"></span>
                 </div>
-            </div>
+            </summary>
             <div class="pi-step-description">
                 <!-- filtering type -->
                 <div class="row py-4 border-bottom align-items-center">
@@ -62,14 +65,14 @@ if ( ! defined( 'ABSPATH' ) ) {
                 </div>
                 <!-- End filtering type -->
             </div>
-        </div>
+        </details>
 </div>
 
 <div id="pi-selection-columns">
 
     <div class="pi-step-container" id="pi-include-product-group">
-        <div class="pi-step-content">
-            <div class="pi-step-header bg-dark text-light">
+        <details class="pi-step-content" open>
+            <summary class="pi-step-header bg-dark text-light">
                 <div>
                 <strong class="pi-step-title">Step <span id="pi-include-step-no">2</span>: <?php echo esc_html__('Add Products to This Virtual Category','advanced-free-flat-shipping-woocommerce'); ?><small></small></strong>
                 <p class="font-italic text-light mb-0">Include product to this virtual category using the given conditions  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_2_Add_Products_to_This_Virtual_Category" target="_blank" class="text-light">(Know more about this ?)</a></p>
@@ -78,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
                     <span class="dashicons dashicons-minus mr-4"></span>
                 </div>
-            </div>
+            </summary>
             <div class="pi-step-description">
                 <!-- include rule -->
                     <div class="row py-4 border-bottom align-items-center">
@@ -230,12 +233,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div>
                 <!-- end include rule -->
             </div>
-        </div>
+        </details>
     </div>
 
     <div class="pi-step-container" id="pi-exclude-product-group">
-        <div class="pi-step-content">
-            <div class="pi-step-header bg-dark text-light">
+        <details class="pi-step-content" open>
+            <summary class="pi-step-header bg-dark text-light">
                 <div>
                 <strong class="pi-step-title">Step <span id="pi-exclude-step-no">3</span>: <?php echo esc_html__('Exclude Products from This Category','advanced-free-flat-shipping-woocommerce'); ?><small></small></strong>
                 <p class="font-italic text-light mb-0">Exclude product from this virtual category using the given conditions  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_3_Exclude_Products_from_This_Category" target="_blank" class="text-light">(Know more about this ?)</a></p>
@@ -244,7 +247,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
                     <span class="dashicons dashicons-minus mr-4"></span>
                 </div>
-            </div>
+            </summary>
             <div class="pi-step-description">
                 <!-- include rule -->
                     <div class="row py-4 border-bottom align-items-center">
@@ -398,7 +401,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div>
                 <!-- end include rule -->
             </div>
-        </div>
+        </details>
     </div>
 
 </div>

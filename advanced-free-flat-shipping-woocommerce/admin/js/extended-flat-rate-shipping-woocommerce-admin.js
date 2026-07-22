@@ -129,16 +129,13 @@
 			$(this).toggleClass('open closed');
 		});
 
-		$(".pi-step-header").on('click', function() {
-			$(this).closest('.pi-step-container').toggleClass('pi-closed');
-		});
 
 		$("#open-all").on('click', function() {
-			$('.pi-step-container').removeClass('pi-closed');
+			$('.pi-step-content').attr('open', 'open');
 		});
 
 		$("#close-all").on('click', function() {
-			$('.pi-step-container').addClass('pi-closed');
+			$('.pi-step-content').removeAttr('open');
 		});
 	});
 
