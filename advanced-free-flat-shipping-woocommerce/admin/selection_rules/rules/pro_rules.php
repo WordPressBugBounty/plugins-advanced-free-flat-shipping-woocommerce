@@ -31,12 +31,26 @@ class pisol_efrs_pro_rules{
             'condition'=>'product_quantity',
             'pro'=>true
         );
+        $rules['product_quantity_range'] = array(
+            'name'=>__('Product Quantity Range (Available in PRO Version) 🔒','advanced-free-flat-shipping-woocommerce'),
+            'group'=>'product_related',
+            'condition'=>'product_quantity_range',
+            'pro'=>true
+        );
         $rules['product_tag'] = array(
             'name'=>__('Product Tag (Available in PRO Version) 🔒','advanced-free-flat-shipping-woocommerce'),
             'group'=>'product_related',
             'condition'=>'product_tag',
             'pro'=>true
         );
+
+        $rules['category_quantity_range'] = array(
+            'name'=>__('Category Quantity Range (Available in PRO Version) 🔒','advanced-free-flat-shipping-woocommerce'),
+            'group'=>'product_related',
+            'condition'=>'category_quantity_range',
+            'pro'=>true
+        );
+
         $rules['selected_nth_delivery_date'] = array(
             'name'=>__('Selected nth delivery date from today (Available in PRO Version) 🔒','advanced-free-flat-shipping-woocommerce'),
             'group'=>'order_date_time_plugin',
@@ -199,6 +213,13 @@ class pisol_efrs_pro_rules{
             'name'=>__('Has Subscription with status (Available in PRO Version) 🔒','advanced-free-flat-shipping-woocommerce'),
             'group'=>'woo_subscription',
             'condition'=>'woo_subs_status',
+            'pro'=>true
+        );
+
+        $rules['virtual_category_quantity_range'] = array(
+            'name'=>__('Virtual Category Quantity Range (Available in PRO Version) 🔒','advanced-free-flat-shipping-woocommerce'),
+            'group'=>'virtual_category',
+            'condition'=>'virtual_category_quantity_range',
             'pro'=>true
         );
 

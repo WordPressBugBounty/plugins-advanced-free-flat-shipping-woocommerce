@@ -43,7 +43,7 @@ if ( ! class_exists( 'Efrs_Shipping_Method' ) ) {
 				
 				$extra_class_cost = $this->classCostCalculation($package, $extra_cost, $extra_cost_type, $method->ID);
 
-				if($cost != "" & $cost > 0){
+				if($cost != "" && $cost > 0){
 					$cost = $cost + $extra_class_cost;
 				}else{
 					$cost = $extra_class_cost;
@@ -174,6 +174,11 @@ if ( ! class_exists( 'Efrs_Shipping_Method' ) ) {
 					
 					if($shipping_class != 'pi-no-shipping-class'){
 						$shipping_class_term = get_term_by( 'slug', $shipping_class, 'product_shipping_class' );
+
+						if ( ! $shipping_class_term ) {
+							// Term no longer exists — skip this group rather than fatal.
+							continue;
+						}
 
 						$default_lang = apply_filters('wpml_default_language', NULL );
 						$shipping_class_id = pisol_wpml_affsw_object($shipping_class_term->term_id, 'product_shipping_class', $default_lang);
