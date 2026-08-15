@@ -3,7 +3,7 @@ Contributors: jyotsnasingh520, rajeshsingh520
 Tags: shipping rates,  woocommerce shipping plugin,  table rate, Flat rate shipping, Role Based Shipping, Shipping method, shipping,  Free shipping WooCommerce, Advanced flat shipping, conditional shipping
 Requires at least: 5.6
 Tested up to: 7.0
-Stable Tag: 1.6.6.12
+Stable Tag: 1.6.6.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -255,6 +255,9 @@ you can divide the products of an order to be delivered in multiple shipping pac
 check out this video https://www.youtube.com/watch?v=MVPPdukqLp0
 
 == Changelog ==
+
+ = 1.6.6.13 =
+* sample shipping added on first isntallation of the plugin
 
 = 1.6.6.12 =
 * Tested for WC 11.0.0
