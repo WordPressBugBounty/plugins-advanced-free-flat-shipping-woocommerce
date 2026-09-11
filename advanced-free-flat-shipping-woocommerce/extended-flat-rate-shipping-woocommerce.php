@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              piwebsolution.com
- * @since             1.6.6.13
+ * @since             1.6.6.14
  * @package           Extended_Flat_Rate_Shipping_Woocommerce
  *
  * @wordpress-plugin
  * Plugin Name:       PiWeb Advanced Flat rate / Conditional shipping for WooCommerce
  * Plugin URI:        https://www.piwebsolution.com/advanced-free-flat-shipping-woocommerce
  * Description:       WooCommerce conditional shipping & WooCommerce Advanced Flat rate shipping plugin to Create Advanced Flat rate shipping or Free shipping method, with different advanced criteria to apply this shipping method
- * Version:           1.6.6.13
+ * Version:           1.6.6.14
  * Author:            PI Websolution
  * Author URI:        https://www.piwebsolution.com
  * License:           GPL-2.0+
@@ -80,12 +80,13 @@ if(is_plugin_active( 'advanced-free-flat-shipping-woocommerce-pro/extended-flat-
 
 /**
  * Currently plugin version.
- * Start at version 1.6.6.13 and use SemVer - https://semver.org
+ * Start at version 1.6.6.14 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'EXTENDED_FLAT_RATE_SHIPPING_WOOCOMMERCE_VERSION', '1.6.6.13' );
+define( 'EXTENDED_FLAT_RATE_SHIPPING_WOOCOMMERCE_VERSION', '1.6.6.14' );
 define('PI_EFRS_BUY_URL', 'https://www.piwebsolution.com/cart/?add-to-cart=2804&variation_id=2810&utm_campaign=advance-shipping-free-plugin&utm_source=website&utm_medium=direct-buy');
-define('PI_EFRS_PRICE', '$34');
+define('PI_EFRS_PRODUCT_PAGE_URL', 'https://www.piwebsolution.com/product/pro-woocommerce-advanced-free-shipping-advanced-flat-rate-shipping-for-woocommerce/?utm_campaign=advance-shipping-free-plugin&utm_source=website&utm_medium=direct-buy');
+define('PI_EFRS_PRICE', '34');
 define('PI_EFRS_DELETE_SETTING', false);
 
 /**
@@ -168,7 +169,7 @@ add_action('admin_init', function (){
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.6.6.13
+ * @since    1.6.6.14
  */
 function run_extended_flat_rate_shipping_woocommerce() {
 

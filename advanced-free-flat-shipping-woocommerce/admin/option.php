@@ -39,6 +39,7 @@ class pisol_affsw_options{
 
     function init(){
         $this->settings = array(
+            array('field'=>'pi_affsw_moveto_top', 'label'=>__('Advanced settings'), 'desc'=>'', 'type'=>'setting_category', 'default'=>"1"),
 
             array('field'=>'pi_efrs_show_only_one_method', 'label'=>__('Give only single shipping method option to customer','advanced-free-flat-shipping-woocommerce'), 'desc'=>__('If you only want to show one shipping method so user dont have to choose from multiple option then use this setting','advanced-free-flat-shipping-woocommerce'), 'type'=>'select', 'default'=>"", 'value' => ['' => "Select an option", 'lowest' => 'Minimum: Show the shipping method with lowest shipping charge', 'highest' => 'Maximum: Show the shipping method with highest shipping charge']),
 

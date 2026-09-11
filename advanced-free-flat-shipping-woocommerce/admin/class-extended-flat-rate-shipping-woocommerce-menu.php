@@ -57,10 +57,13 @@ class Pi_Efrs_Menu{
 
         // include the thickbox styles
         wp_enqueue_style('thickbox.css', '/'.WPINC.'/js/thickbox/thickbox.css', null, '1.0');
+
+        wp_enqueue_style( $this->plugin_name."_admin", plugin_dir_url( __FILE__ ) . 'css/admin.css', array(), $this->version, 'all' );
         
         wp_enqueue_style( $this->plugin_name."_bootstrap", plugin_dir_url( __FILE__ ) . 'css/bootstrap.css', array(), $this->version, 'all' );
 
-        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/extended-flat-rate-shipping-woocommerce-admin.css', array(), $this->version, 'all' );
+        //wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/extended-flat-rate-shipping-woocommerce-admin.css', array(), $this->version, 'all' );
+
 		
 	}
 
@@ -72,54 +75,29 @@ class Pi_Efrs_Menu{
 
     function menu_option_page(){
         ?>
-        <div class="bootstrap-wrapper">
-        <div class="pisol-container-fluid mt-2">
-            <div class="pisol-row">
-                    <div class="col-12">
-                        <div class='bg-dark'>
-                        <div class="pisol-row">
-                            <div class="col-12 col-sm-2 py-3 d-flex align-items-center justify-content-center">
-                                    <a href="https://www.piwebsolution.com/" target="_blank"><img id="pi-logo" class="img-fluid ml-2" src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ); ?>img/pi-web-solution.svg"></a>
-                            </div>
-                            <div class="col-12 col-sm-10 d-flex text-center small">
-                                <nav id="pisol-navbar" class="navbar navbar-expand-lg navbar-light mr-0 ml-auto">
-                                    <div>
-                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                            <?php do_action($this->plugin_name.'_tab'); ?>
-                                            <a class=" px-3 text-light d-flex align-items-center  border-left border-right  ml-auto mr-0" href="https://www.piwebsolution.com/advance-flat-rate-shipping/" target="_blank">
-                                            <span class="dashicons dashicons-editor-help"></span> Help & Docs
-                                            </a>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+        <div class="pisol-container bootstrap-wrapper">
+            <div class="pisol-header">
+                <div id="pisol-header-bar">
+                    <a href="https://www.piwebsolution.com/" target="_blank"><img id="pi-logo" class="pisol-img-fluid" src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ); ?>img/pi-web-solution.svg"></a>
+                </div>
             </div>
-            <div class="pisol-row">
-                <div class="col-12">
+
+            <div class="pisol-left-sidebar">
+                <div id="pisol-side-menu" class="mb-4 rounded">
+                    <?php do_action($this->plugin_name.'_tab'); ?>
+                    <a class="  px-3 py-2 text-light d-flex align-items-center  border-left border-right  bg-secondary" href="https://www.piwebsolution.com/advance-flat-rate-shipping/" target="_blank">
+                        <span class="dashicons dashicons-editor-help"></span> Help & Docs
+                    </a>
+                </div>
+                <?php do_action($this->plugin_name.'_promotion'); ?>
+            </div>
+
+            <div class="pisol-content">
+                <label for="pi-left-sidebar-controller" class="pi-left-sidebar-closing-circle"><input id="pi-left-sidebar-controller" type="checkbox"/></label>
                 <div id="pisol-efrs-notices"></div>
-                <div class="bg-light border pl-3 pr-3 pt-0">
-                    <div class="row">
-                        <div class="col">
-                            <div class="pi-efrs-arrow-circle closed" title="Open / Close sidebar">
-                                <svg class="pi-efrs-arrow-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- First arrow -->
-                                    <path d="M13 6l-6 6 6 6" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <!-- Second arrow (slightly right-shifted) -->
-                                    <path d="M17 6l-6 6 6 6" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <?php do_action($this->plugin_name.'_tab_content'); ?>
-                        </div>
-                        <?php do_action($this->plugin_name.'_promotion'); ?>
-                    </div>
-                </div>
-                </div>
+                <?php do_action($this->plugin_name.'_tab_content'); ?>
             </div>
-        </div>
-        </div>
+        </div>   
         <?php
         include_once 'help.php';
         $this->support();
@@ -127,43 +105,110 @@ class Pi_Efrs_Menu{
 
     function promotion(){
         ?>
-        <div class="col-12 col-sm-12 col-md-3 pt-3 pb-3 border-left" id="pi-efrs-sidebar-container">
+        <div id="pi-efrs-sidebar-container">
 
-                <div class="pi-shadow rounded px-2 py-3">
-                    <h2 id="pi-banner-tagline" class="mb-0" style="color:#ccc !important;">
-                        <span class="d-block mb-4">⭐️⭐️⭐️⭐️⭐️</span>
-                        <span class="d-block mb-2">🚀 Trusted by <span style="color:#fff;">3,000+</span> WooCommerce Stores</span>
-                        <span class="d-block mb-2">Rated <span style="color:#fff;">4.9/5</span> – Users love it</span>
-                    </h2>
-                    <div class="inside">
-                        <ul class="text-left pisol-pro-feature-list">
-                            <li><b><span style="color:white;">&#10003;</span> Location-based rules</b><br>
-                            <i>State, postcode, city, or zone</i></li>
+            <aside id="pefrs-side-banner" class="pefrs-banner">
+                <div class="pefrs-banner__orb pefrs-banner__orb--1"></div>
+                <div class="pefrs-banner__orb pefrs-banner__orb--2"></div>
+                <div class="pefrs-banner__grid"></div>
 
-                            <li><b><span style="color:white;">&#10003;</span> Product/cart conditions</b><br>
-                            <i>Subtotal, weight, dimensions, quantity</i></li>
+                <div class="pefrs-banner__inner">
 
-                            <li><b><span style="color:white;">&#10003;</span> Customer-specific logic</b><br>
-                            <i>User roles, coupons, payment methods</i></li>
+                <!-- Trust Header -->
+                <header class="pefrs-banner__head">
+                    <div class="pefrs-banner__stars">
+                    <svg class="pefrs-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="pefrs-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="pefrs-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="pefrs-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="pefrs-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="pefrs-banner__trust-main">Trusted by <strong>3,000+</strong> WooCommerce Stores</p>
+                    <p class="pefrs-banner__trust-sub">Rated 4.9/5 – Users love it</p>
+                </header>
 
-                            <li><b><span style="color:white;">&#10003;</span> Shipping method control</b><br>
-                            <i>Priorities, remove other methods, combine methods</i></li>
+                <div class="pefrs-banner__divider"><span>Pro Features</span></div>
 
-                            <li><b><span style="color:white;">&#10003;</span> Adjust shipping charge</b><br>
-                            <i>By product, category, or shipping class</i></li>
+                <!-- Features -->
+                <ul class="pefrs-banner__features">
+                    <li class="pefrs-feature">
+                    <span class="pefrs-feature__check">
+                        <svg viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>
+                    </span>
+                    <span class="pefrs-feature__body">
+                        <span class="pefrs-feature__name">Location-based rules</span>
+                        <span class="pefrs-feature__hint">State, Postcode, City, Zone, etc.</span>
+                    </span>
+                    </li>
+                    <li class="pefrs-feature">
+                    <span class="pefrs-feature__check">
+                        <svg viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>
+                    </span>
+                    <span class="pefrs-feature__body">
+                        <span class="pefrs-feature__name">Product/cart conditions</span>
+                        <span class="pefrs-feature__hint">Subtotal, Weight, Dimensions, Quantity, etc.</span>
+                    </span>
+                    </li>
+                    <li class="pefrs-feature">
+                    <span class="pefrs-feature__check">
+                        <svg viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>
+                    </span>
+                    <span class="pefrs-feature__body">
+                        <span class="pefrs-feature__name">Customer-specific logic</span>
+                        <span class="pefrs-feature__hint">User roles, Coupons, Payment methods, etc.</span>
+                    </span>
+                    </li>
+                    <li class="pefrs-feature">
+                    <span class="pefrs-feature__check">
+                        <svg viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>
+                    </span>
+                    <span class="pefrs-feature__body">
+                        <span class="pefrs-feature__name">Shipping method control</span>
+                        <span class="pefrs-feature__hint">Priorities, Remove other methods, Combine methods etc.</span>
+                    </span>
+                    </li>
+                    <li class="pefrs-feature">
+                    <span class="pefrs-feature__check">
+                        <svg viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>
+                    </span>
+                    <span class="pefrs-feature__body">
+                        <span class="pefrs-feature__name">Adjust shipping charge</span>
+                        <span class="pefrs-feature__hint">By product, Category, Shipping class etc.</span>
+                    </span>
+                    </li>
+                    <li class="pefrs-feature">
+                    <span class="pefrs-feature__check">
+                        <svg viewBox="0 0 20 20"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>
+                    </span>
+                    <span class="pefrs-feature__body">
+                        <span class="pefrs-feature__name">Smart features</span>
+                        <span class="pefrs-feature__hint">Virtual categories, day-based rules, unlimited combinations, etc.</span>
+                    </span>
+                    </li>
+                </ul>
 
-                            <li><b><span style="color:white;">&#10003;</span> Smart features</b><br>
-                            <i>Virtual categories, day-based rules, unlimited combinations</i></li>
-                        </ul>
-                        <h5 class="pi-bottom-banner text-light text-center">💰 <?php echo esc_html(PI_EFRS_PRICE); ?> <small>only</small></h5>
-                        <div class="text-center pb-3 pt-2">
-                            <a class="btn btn-primary btn-md" href="<?php echo esc_url( PI_EFRS_BUY_URL ); ?>&utm_ref=bottom_link" target="_blank">🔓 Unlock Pro Now – Limited Time Price!</a>
-                        </div>
+                <!-- Price -->
+                <div class="pefrs-banner__price-row">
+                    <div class="pefrs-banner__price">
+                    <span class="pefrs-banner__price-symbol">$</span>
+                    <span class="pefrs-banner__price-amount"><?php echo esc_html( PI_EFRS_PRICE ); ?></span>
+                    <span class="pefrs-banner__price-suffix">only</span>
                     </div>
                 </div>
 
+                <!-- CTA -->
+                <a href="<?php echo esc_url( PI_EFRS_PRODUCT_PAGE_URL ); ?>" class="pefrs-banner__cta" target="_blank">
+                    <span class="pefrs-banner__cta-shine"></span>
+                    <span class="pefrs-banner__cta-text">Unlock Pro Now</span>
+                    <span class="pefrs-banner__cta-sub">Limited Time Price!</span>
+                    <svg class="pefrs-banner__cta-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                </div>
+            </aside>
+            <!-- Banner HTML End -->
+
                 <div class="bg-dark text-light text-center mt-3 rounded overflow-hidden">
-                    <a href="<?php echo esc_url( PI_EFRS_BUY_URL ); ?>&utm_ref=discount_banner" target="_blank">
+                    <a href="<?php echo esc_url( PI_EFRS_PRODUCT_PAGE_URL ); ?>&utm_ref=discount_banner" target="_blank">
                     <?php  new pisol_promotion("pi_efrs_installation_date"); ?>
                     </a>
                 </div>

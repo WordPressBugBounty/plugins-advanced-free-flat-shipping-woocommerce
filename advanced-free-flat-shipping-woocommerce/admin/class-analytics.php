@@ -1,6 +1,6 @@
 <?php
 /**
- * v1.0.3
+ * v1.0.17
  */
 
 
@@ -30,7 +30,7 @@ class Pi_Efrs_Analytics{
 
         $this->analytics_start_date = 'pisol_analytics_'.$this->plugin_slug.'_start_date';
 
-        $this->show_after_this_days = 7;
+        $this->show_after_this_days = 30;
         
 
         $this->version = $version;

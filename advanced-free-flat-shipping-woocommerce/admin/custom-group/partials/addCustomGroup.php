@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var array $data
  */
 ?>
-<div class="row border-bottom align-items-center">
+<div class="row border-bottom align-items-center pi-primary-border-left">
     <div class="col-12 py-2 bg-dark2">
         <strong class="h5 text-light"><?php echo isset($_GET['action']) && $_GET['action'] === 'edit' ?  esc_html__('Edit Virtual Category','advanced-free-flat-shipping-woocommerce') : esc_html__('Add New Virtual Category','advanced-free-flat-shipping-woocommerce'); ?></strong>
     </div>
@@ -411,5 +411,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 <input type="hidden" name="post_type" value="pi_efrs_custom_group">
 <input type="hidden" name="post_id" value="<?php echo esc_attr( $data['post_id'] ); ?>">
 <input type="hidden" name="action" value="pisol_efrs_save_custom_group">
-<input type="submit" value="<?php esc_attr_e('Save Virtual Category','advanced-free-flat-shipping-woocommerce'); ?>" name="submit" class="my-3 btn btn-primary btn-md" id="pi-efrs-new-shipping-method-form">
+<input type="submit" value="<?php esc_attr_e('Save Virtual Category','advanced-free-flat-shipping-woocommerce'); ?>" name="submit" class="my-3 btn btn-primary btn-md" id="pi-efrs-new-shipping-method-form"  style="margin-left:0;">
 </form>

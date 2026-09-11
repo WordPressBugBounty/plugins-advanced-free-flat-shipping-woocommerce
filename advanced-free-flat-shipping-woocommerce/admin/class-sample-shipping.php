@@ -105,10 +105,9 @@ class pisol_efrs_sample_shipping {
     static function international_large_order_shipping() {
         $metabox = [];
 
-        $shop_country = get_option( 'woocommerce_store_country' );
-        if ( ! $shop_country ) {
-            $shop_country = 'US'; // Default to US if no country is set
-        }
+        $location = get_option( 'woocommerce_default_country', 'US:CA' );
+        $parts = explode( ':', $location );
+        $shop_country = $parts[0]; // 'US
 
         $metabox[] = array(
             'pi_condition' => 'country',

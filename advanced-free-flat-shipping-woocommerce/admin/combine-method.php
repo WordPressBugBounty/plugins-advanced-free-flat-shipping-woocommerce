@@ -70,7 +70,7 @@ class pisol_affsw_combine_methods{
 
     function tab_content(){
         ?>
-        <div class="alert alert-info my-3">Combine shipping method is available in PRO Version watch its working in below Video</div>
+        <div class="pisol-alert pisol-alert-info my-3">Combine shipping method is available in PRO Version watch its working in below Video</div>
         <div class="video-container">
         <iframe src="https://www.youtube.com/embed/xkL_YHwNcWo?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
