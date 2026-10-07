@@ -1,13 +1,13 @@
 ===  PiWeb Advanced Flat rate / Conditional shipping for WooCommerce  ===
 Contributors: jyotsnasingh520, rajeshsingh520
-Tags: shipping rates,  woocommerce shipping plugin,  table rate, Flat rate shipping, Role Based Shipping, Shipping method, shipping,  Free shipping WooCommerce, Advanced flat shipping, conditional shipping
+Tags: table rate, Flat rate shipping, Free shipping WooCommerce, Advanced flat shipping, conditional shipping
 Requires at least: 5.6
 Tested up to: 7.1
-Stable Tag: 1.6.6.14
+Stable Tag: 1.6.6.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce conditional shipping & WooCommerce Advanced shipping rates plugin to Create Advanced Flat rate shipping or Free shipping method, Table rate shipping for WooCommerce shipping plugin
+WooCommerce conditional shipping & WooCommerce Advanced shipping rates plugin to Create Advanced Flat rate shipping or Free shipping method or table rate shipping methods.
 
 == Description ==
 
@@ -255,6 +255,9 @@ you can divide the products of an order to be delivered in multiple shipping pac
 check out this video https://www.youtube.com/watch?v=MVPPdukqLp0
 
 == Changelog ==
+
+= 1.6.6.16 =
+* Review modified
 
 = 1.6.6.14 =
 * Admin ui change

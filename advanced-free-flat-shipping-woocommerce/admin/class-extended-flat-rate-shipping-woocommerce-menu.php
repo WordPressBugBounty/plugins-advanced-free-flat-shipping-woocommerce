@@ -207,11 +207,6 @@ class Pi_Efrs_Menu{
             </aside>
             <!-- Banner HTML End -->
 
-                <div class="bg-dark text-light text-center mt-3 rounded overflow-hidden">
-                    <a href="<?php echo esc_url( PI_EFRS_PRODUCT_PAGE_URL ); ?>&utm_ref=discount_banner" target="_blank">
-                    <?php  new pisol_promotion("pi_efrs_installation_date"); ?>
-                    </a>
-                </div>
 
         </div>
         <?php
