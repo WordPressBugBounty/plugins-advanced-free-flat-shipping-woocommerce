@@ -260,6 +260,9 @@
     width: 100%;
   }
 }
+.pisol-grid-row.align-items-center {
+  align-items: center;
+}
 
 /** Left sidebar closing circle */
 .pi-left-sidebar-closing-circle {
@@ -1187,8 +1190,17 @@ body:has(#pi-left-sidebar-controller:checked) .pi-left-sidebar-closing-circle::b
   min-height: 100px;
   resize: vertical;
 }
-.pisol-container select {
+.pisol-container select, .pisol-container select.pisol-field-select,
+.pisol-container select.pisol-field-multiselect {
   cursor: pointer;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" stroke="%23555" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 12px 8px !important;
+  padding-right: 32px !important; /* room for arrow so text doesn't overlap it */
 }
 .pisol-container input[type=checkbox],
 .pisol-container input[type=radio] {
@@ -1434,26 +1446,25 @@ table.table.table-striped tbody tr:nth-of-type(odd) {
 /* Step */
 .pi-step-container {
   padding: 20px 0px;
-  border-bottom: 1px solid #eee;
 }
 
 .pi-step-container.pi-closed .pi-step-description {
   display: none;
 }
 
-.pi-step-container .dashicons-minus {
-  display: block;
-}
-
-.pi-step-container .dashicons-plus-alt2 {
+.pi-step-content[open] .dashicons-plus-alt2 {
   display: none;
 }
 
-.pi-step-container.pi-closed .dashicons-plus-alt2 {
+.pi-step-content[open] .dashicons-minus {
   display: block;
 }
 
-.pi-step-container.pi-closed .dashicons-minus {
+.pi-step-content:not([open]) .dashicons-plus-alt2 {
+  display: block;
+}
+
+.pi-step-content:not([open]) .dashicons-minus {
   display: none;
 }
 
@@ -1482,7 +1493,7 @@ table.table.table-striped tbody tr:nth-of-type(odd) {
   border: 2px solid var(--primary);
 }
 
-.pi-step-content:has(.pi-step-header.bg-dark) {
+.pi-step-content:has(> .pi-step-header.bg-dark) {
   border: 2px solid var(--dark);
 }
 
@@ -1494,7 +1505,7 @@ table.table.table-striped tbody tr:nth-of-type(odd) {
   cursor: pointer;
 }
 
-.pi-step-content[open] .pi-step-header {
+.pi-step-content[open] > .pi-step-header {
   border-bottom: 1px solid #fff;
 }
 
@@ -1922,6 +1933,16 @@ a.additional-charges-tab.pi-active-tab:focus {
 }
 
 /* End */
+/* Processing msg in center of table */
+#pisol-efrs-shipping-method-list-view {
+  position: relative;
+}
+
+/* Pro option in condition shown lighter */
+select.pi_condition_rules option:disabled {
+  color: #ccc;
+}
+
 #pisol-license-page-content {
   padding: 20px;
 }

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Free - Flat shipping WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-06 11:55+0000\n"
+"POT-Creation-Date: 2026-10-12 05:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,95 +15,942 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.4.3; wp-5.7.2"
 
+#: admin/partials/addShippingMethod.php:201
+msgid "(This is only available in Pro)"
+msgstr ""
+
+#: admin/partials/listShippingMethod.php:25
+#: admin/custom-group/partials/listShippingMethod.php:27
+#: admin/package-manager/partials/listPackages.php:44
+msgid "Actions"
+msgstr ""
+
+#: admin/selection_rules/pisol_rule_form.php:17
+#: admin/selection_rules/pisol_rule_form.php:34
+msgid "Add Condition"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:11
+msgid "Add New Package"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:11
+msgid "Add new shipping method"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:11
+msgid "Add New Virtual Category"
+msgstr ""
+
+#: admin/package-manager/partials/listPackages.php:12
+msgid "Add Package"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:77
+msgid "Add Products to This Virtual Category"
+msgstr ""
+
+#: admin/partials/listShippingMethod.php:7
+msgid "Add shipping method"
+msgstr ""
+
+#: admin/custom-group/partials/listShippingMethod.php:10
+msgid "Add virtual category"
+msgstr ""
+
 #: extended-flat-rate-shipping-woocommerce.php:40
 msgid ""
 "Advanced Free - Flat shipping WooCommerce:: Please Install and Activate "
 "WooCommerce plugin, without that this plugin cant work"
 msgstr ""
 
-#: extended-flat-rate-shipping-woocommerce.php:52
-msgid "You have the PRO version of this plugin in your site"
+#: admin/option.php:76
+msgid "Advanced Settings"
 msgstr ""
 
-#: extended-flat-rate-shipping-woocommerce.php:114
-msgid "Settings"
+#: admin/custom-group/partials/addCustomGroup.php:56
+msgid "All Products"
 msgstr ""
 
-#: extended-flat-rate-shipping-woocommerce.php:115
+#: admin/selection_rules/pisol_rule_form.php:12
+msgid "All the below rules should match"
+msgstr ""
+
+#: admin/partials/listShippingMethod.php:23
+msgid "Amount"
+msgstr ""
+
+#: admin/selection_rules/pisol_rule_form.php:13
+msgid "Any one of the below rule should match"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:117
+msgid "Apply for currencies (useful for multi-currency websites only)"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:25
+msgid "Basic settings of the shipping method"
+msgstr ""
+
+#. Price
+#: includes/review.php:114
+#, php-format
+msgid "BUY PRO FOR %s"
+msgstr ""
+
+#: extended-flat-rate-shipping-woocommerce.php:147
 msgid "Buy PRO Version"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:240
+msgid "Calculation type"
+msgstr ""
+
+#: admin/selection_rules/rules/product.php:30
+msgid "Cart has Product"
+msgstr ""
+
+#: admin/selection_rules/rules/category_product.php:34
+msgid "Cart has product of category"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:23
+msgid "Cart has variable product (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:87
+msgid ""
+"Cart Subtotal (After Discount Excluding virtual product) (Available in PRO "
+"Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:80
+msgid "Cart Subtotal (After Discount) (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/cart-subtotal-before-discount.php:31
+msgid "Cart Subtotal (Before Discount)"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:255
+msgid "Categories to exclude"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:89
+msgid "Categories to include"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:48
+msgid "Category Quantity Range (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/package-manager/partials/listPackages.php:9
+msgid "Checkout this video to know more about Package manager"
+msgstr ""
+
+#: admin/selection_rules/rules/city.php:32
+msgid "City/Town"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:15
+msgid "Close All ▲"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:105
+msgid ""
+"Cost of this shipping method will become zero when the user applies a Free "
+"shipping coupon"
+msgstr ""
+
+#: admin/selection_rules/rules/country.php:34
+msgid "Country/Continent"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:122
+msgid "Coupons used (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:67
+msgid "Create a Virtual category first"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:110
+msgid ""
+"Create package when Virtual category product quantity satisfies the selected "
+"logic"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:91
+msgid ""
+"Create package when Virtual category product subtotal satisfies the selected "
+"logic"
+msgstr ""
+
+#: admin/selection_rules/rules/ip-country.php:35
+msgid "Customer IP address based country"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:164
+msgid "Day of the week (Available in PRO Version) 🔒"
+msgstr ""
+
+#: extended-flat-rate-shipping-woocommerce.php:59
+msgid "Deactivate Free Version"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:139
+msgid ""
+"Define when this shipping method should be visible at checkout. All selected "
+"conditions must be met."
+msgstr ""
+
+#: admin/partials/listShippingMethod.php:56
+msgid "Delete shipping method"
+msgstr ""
+
+#: admin/selection_rules/rules/delivery_type.php:119
+msgid "Delivery"
+msgstr ""
+
+#: admin/selection_rules/rules/delivery_type.php:40
+msgid "Delivery type (Delivery/Pickup/Dining)"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:83
+#: admin/custom-group/partials/addCustomGroup.php:26
+#: admin/custom-group/partials/listShippingMethod.php:26
+#: admin/package-manager/partials/addPackage.php:47
+#: admin/package-manager/partials/listPackages.php:41
+msgid "Description"
+msgstr ""
+
+#: admin/selection_rules/rules/delivery_type.php:119
+msgid "Dining"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:221
+#: admin/custom-group/partials/addCustomGroup.php:389
+msgid "Don't consider this rule"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:299
+msgid "Downloadable product will not be part of this virtual category"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:11
+msgid "Edit Package"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:11
+#: admin/partials/listShippingMethod.php:55
+msgid "Edit shipping method"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:11
+msgid "Edit Virtual Category"
+msgstr ""
+
+#: admin/partials/listShippingMethod.php:24
+msgid "Enabled"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:222
+#: admin/custom-group/partials/addCustomGroup.php:390
+#: admin/package-manager/partials/addPackage.php:100
+#: admin/package-manager/partials/addPackage.php:119
+msgid "Equal to"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:361
+msgid "Exclude product with Stock status"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:384
+msgid "Exclude Product with subtotal"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:243
+msgid "Exclude Products from This Category"
 msgstr ""
 
 #: public/class-efrs-shipping-methods.php:18
 msgid "Extended Flat Rate Shipping"
 msgstr ""
 
-#: admin/partials/addShippingMethod.php:9
-#: admin/partials/listShippingMethod.php:19
-msgid "Status"
+#: admin/selection_rules/rules/pro_rules.php:171
+msgid "First order (Available in PRO Version) 🔒"
 msgstr ""
 
-#: admin/partials/addShippingMethod.php:21
-msgid "Shipping Method Name"
+#: admin/class-extended-flat-rate-shipping-woocommerce-menu.php:31
+#: admin/class-extended-flat-rate-shipping-woocommerce-menu.php:32
+msgid "Flat Rate Shipping"
 msgstr ""
 
-#: admin/partials/addShippingMethod.php:30
-msgid "Shipping Charges"
+#: admin/option.php:44
+msgid "Give only single shipping method option to customer"
 msgstr ""
 
-#: admin/partials/addShippingMethod.php:39
-msgid "Description"
+#: admin/custom-group/partials/addCustomGroup.php:226
+#: admin/custom-group/partials/addCustomGroup.php:394
+#: admin/package-manager/partials/addPackage.php:96
+#: admin/package-manager/partials/addPackage.php:115
+msgid "Greater than"
 msgstr ""
 
-#: admin/partials/addShippingMethod.php:48
-msgid "Taxable"
+#: admin/package-manager/partials/addPackage.php:97
+#: admin/package-manager/partials/addPackage.php:116
+msgid "Greater than equal to"
 msgstr ""
 
-#: admin/partials/addShippingMethod.php:61
-msgid "Minimum Delivery days"
+#: admin/custom-group/partials/addCustomGroup.php:225
+#: admin/custom-group/partials/addCustomGroup.php:393
+msgid "Greater than or equal to"
 msgstr ""
 
-#: admin/partials/addShippingMethod.php:69
-msgid "Maximum Delivery days"
+#: admin/custom-group/rules/virtual_category_product.php:34
+msgid "Has product of Virtual category"
 msgstr ""
 
-#: admin/partials/addShippingMethod.php:80
-msgid "Shipping Classes"
+#: admin/selection_rules/rules/pro_rules.php:213
+msgid "Has Subscription with status (Available in PRO Version) 🔒"
 msgstr ""
 
-#: admin/partials/addShippingMethod.php:101
-msgid "Calculation type"
+#: admin/class-analytics.php:62
+msgid "Hi, your support can make a big difference!"
 msgstr ""
 
-#: admin/partials/addShippingMethod.php:114
-msgid "Selection Rules"
+#: admin/partials/addShippingMethod.php:210
+msgid "Hide all methods except the one added by this plugin (PRO)"
 msgstr ""
 
-#: admin/partials/addShippingMethod.php:123
+#: admin/partials/addShippingMethod.php:209
+msgid ""
+"Hide all methods except the one added by this plugin and WC Local Pickup "
+"(PRO)"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:208
+msgid "Hide all other methods (excluding WC Local Pickup method) (PRO)"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:207
+msgid "Hide all other methods (PRO)"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:211
+msgid "Hide all plugin methods with lower priority (PRO)"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:212
+msgid "Hide selected shipping method (PRO)"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.piwebsolution.com"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://www.piwebsolution.com/advanced-free-flat-shipping-woocommerce"
+msgstr ""
+
+#: admin/class-analytics.php:70
+msgid "I Don't Help"
+msgstr ""
+
+#: admin/class-analytics.php:75
+msgid "I Will Help"
+msgstr ""
+
+#: admin/option.php:44
+msgid ""
+"If you only want to show one shipping method so users don't have to choose "
+"from multiple options then use this setting"
+msgstr ""
+
+#: admin/additional-charges/additional-charges.php:224
+#: admin/selection_rules/pisol_selection_rule_main.php:167
+msgid "In Cart"
+msgstr ""
+
+#: admin/additional-charges/additional-charges.php:223
+#: admin/selection_rules/pisol_selection_rule_main.php:166
+msgid "In Package"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:200
+#: admin/custom-group/partials/addCustomGroup.php:368
+msgid "In stock"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:51
+msgid "Include"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:193
+msgid "Include product with Stock status"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:216
+msgid "Include Product with subtotal"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:231
+#: admin/custom-group/partials/addCustomGroup.php:399
+msgid "Insert subtotal"
+msgstr ""
+
+#: admin/package-manager/partials/listPackages.php:9
+msgid "Know more about the package manager"
+msgstr ""
+
+#: admin/additional-charges/additional-charges.php:56
+msgid "Largest of the matched charges"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:178
+msgid "Last order total (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:117
+msgid ""
+"Leave empty if you want to apply for all currencies OR you have a single "
+"currency"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:224
+#: admin/custom-group/partials/addCustomGroup.php:392
+#: admin/package-manager/partials/addPackage.php:98
+#: admin/package-manager/partials/addPackage.php:117
+msgid "Less than"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:99
+#: admin/package-manager/partials/addPackage.php:118
+msgid "Less than equal to"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:223
+#: admin/custom-group/partials/addCustomGroup.php:391
+msgid "Less than or equal to"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:104
+msgid "Make free when free shipping coupon is applied"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:108
+msgid "Max Height in cart (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:115
+msgid "Max Length in cart (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:101
+msgid "Max Width in cart (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:199
+msgid "Membership plan (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:199
 msgid "Modify other shipping methods when this method is applied"
 msgstr ""
 
-#: admin/partials/listShippingMethod.php:17
-msgid "Shipping Method"
+#: admin/option.php:50
+msgid "Move the plugin methods to top"
 msgstr ""
 
-#: admin/partials/listShippingMethod.php:18
-msgid "Amount"
+#: admin/package-manager/partials/addPackage.php:120
+msgid "Multiple of"
 msgstr ""
 
-#: admin/partials/listShippingMethod.php:20
-msgid "Actions"
+#: admin/class-extended-flat-rate-shipping-woocommerce-add-shipping-method.php:96
+msgid "No shipping class"
 msgstr ""
 
-#: admin/partials/listShippingMethod.php:58
-msgid "There are no shipping methods added yet, add them first"
+#: includes/review.php:109
+msgid "No thanks"
 msgstr ""
 
-#: admin/selection_rules/pisol_rule_form.php:12
-msgid "Add Rule"
+#: admin/custom-group/partials/addCustomGroup.php:227
+#: admin/custom-group/partials/addCustomGroup.php:395
+msgid "Not equal to"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:121
+msgid "Not Multiple of"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:185
+msgid "Number of orders during a period (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:201
+#: admin/custom-group/partials/addCustomGroup.php:369
+msgid "On backorder"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:14
+msgid "Open All ▼"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:71
+msgid "Other basic settings"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:38
+#: admin/package-manager/partials/listPackages.php:40
+msgid "Package name"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:29
+msgid "Package priority"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:157
+msgid "Payment Method (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:244
+msgid "Per class: Charge shipping for each shipping class individually"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:245
+msgid "Per order: Charge shipping for the most expensive shipping class"
 msgstr ""
 
 #. Name of the plugin
-msgid "Advanced Free - Flat shipping WooCommerce"
+msgid "PI Advanced Flat rate / Conditional shipping for WooCommerce"
+msgstr ""
+
+#. Author of the plugin
+msgid "PI Websolution"
+msgstr ""
+
+#: admin/selection_rules/rules/delivery_type.php:119
+msgid "Pickup"
+msgstr ""
+
+#: admin/selection_rules/rules/postcode.php:32
+msgid "Postcode"
+msgstr ""
+
+#: admin/package-manager/partials/listPackages.php:42
+msgid "Priority"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:57
+msgid ""
+"Product belonging to this virtual category will be grouped as one shipping "
+"package"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:255
+msgid ""
+"Product directly belonging to this category will be excluded from virtual "
+"category"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:89
+msgid ""
+"Product directly belonging to this category will be part of virtual category,"
+" products belonging to the child category of the included category will not "
+"be part of virtual category."
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:29
+msgid "Product Quantity (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:35
+msgid "Product Quantity Range (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:194
+#: admin/custom-group/partials/addCustomGroup.php:362
+msgid ""
+"Product stock status will decide if product can be part of this virtual "
+"category or not"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:41
+msgid "Product Tag (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:132
+msgid "Product tags to include"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:217
+#: admin/custom-group/partials/addCustomGroup.php:385
+msgid ""
+"Product with subtotal matching the logic will be excluded from the group"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:143
+#: admin/custom-group/partials/addCustomGroup.php:311
+msgid "Product with this similar dimension will be considered"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:159
+#: admin/custom-group/partials/addCustomGroup.php:327
+msgid ""
+"Product with volume matching the logic will be selected, volume of a product "
+"is length x width x height"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:105
+msgid ""
+"Products belonging to this shipping class will be part of this virtual "
+"category"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:271
+msgid ""
+"Products belonging to this shipping class will not be part of virtual "
+"category"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:348
+msgid "Products having this attribute will be excluded from virtual category"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:180
+msgid "Products having this attribute will be part of this virtual category"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:288
+msgid ""
+"Products that you want to be excluded from this virtual category, you can "
+"even include a variation of a product"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:122
+msgid ""
+"Products that you want to be part of this virtual category, you can even "
+"include a variation of a product"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:287
+msgid "Products to exclude"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:122
+msgid "Products to include"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:132
+msgid "Products with these tags will be part of this virtual category"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:125
+#: admin/selection_rules/rules/quantity.php:31
+msgid "Quantity"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:258
+msgid "Save Method"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:133
+msgid "Save Package"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:414
+msgid "Save Virtual Category"
+msgstr ""
+
+#: admin/class-analytics.php:227
+msgid "Security check failed"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:206
+msgid "Select an option"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:95
+#: admin/package-manager/partials/addPackage.php:114
+msgid "Select Logic"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:204
+#: admin/custom-group/partials/addCustomGroup.php:372
+msgid "Select product (In Stock / On Back Order)"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:117
+msgid ""
+"Select the currency for which to apply the rule, if left blank it will apply "
+"for all currencies"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:71
+msgid "Select Virtual Category"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:57
+msgid "Select Virtual category"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:61
+msgid "Selected delivery date (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/selected_delivery_day.php:40
+msgid "Selected delivery day"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:55
+msgid "Selected nth delivery date from today (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:60
+msgid "Selected Products"
+msgstr ""
+
+#: extended-flat-rate-shipping-woocommerce.php:146
+msgid "Settings"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:57
+msgid "Shipping Charges"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:129
+msgid "Shipping class (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:271
+msgid "Shipping class to exclude"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:105
+msgid "Shipping class to include"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:136
+msgid "Shipping class total (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:150
+msgid "Shipping class total quantity in cart (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:143
+msgid "Shipping class weight (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:219
+msgid "Shipping Classes"
+msgstr ""
+
+#: admin/partials/listShippingMethod.php:22
+msgid "Shipping Method"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:151
+msgid "Shipping Method Availability Conditions"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:48
+msgid "Shipping Method Name"
+msgstr ""
+
+#: admin/option.php:52
+msgid "Show shipping description"
+msgstr ""
+
+#: admin/option.php:52
+msgid ""
+"Show shipping method description below the shipping method name or as a "
+"tooltip on the checkout page"
+msgstr ""
+
+#: admin/option.php:46
+msgid "Show zero charge for shipping method"
+msgstr ""
+
+#: admin/additional-charges/additional-charges.php:57
+msgid "Smallest of the matched charges"
+msgstr ""
+
+#: admin/package-manager/class-custom-package-list.php:48
+msgid "Split Orders"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:67
+msgid "Start & End time (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/state.php:35
+msgid "State"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:36
+#: admin/package-manager/partials/addPackage.php:17
+#: admin/package-manager/partials/listPackages.php:43
+msgid "Status"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:24
+msgid "Step 1: Basic Settings"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:39
+msgid "Step 1: Choose Product Scope"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:138
+msgid "Step 2: Set Availability Conditions"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:166
+msgid "Step 3: Adjust shipping charge"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:187
+msgid "Step 4: Other settings"
+msgstr ""
+
+#: admin/selection_rules/rules/stock-status.php:31
+msgid "Stock status of product in cart"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:206
+msgid "Subscription product present in cart (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/additional-charges/additional-charges.php:55
+msgid "Sum of all matched charges"
+msgstr ""
+
+#: includes/review.php:105
+msgid "Sure, I'll review"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:92
+msgid "Taxable"
+msgstr ""
+
+#: admin/custom-group/partials/listShippingMethod.php:53
+msgid "There are no custom group added yet, add them"
+msgstr ""
+
+#: admin/package-manager/partials/listPackages.php:81
+msgid "There are no package created"
+msgstr ""
+
+#: admin/partials/listShippingMethod.php:63
+msgid "There are no shipping methods added yet, add them first"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:219
+msgid ""
+"These costs can optionally be added to shipping charge based on the product "
+"shipping class."
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:72
+msgid ""
+"These settings are not required but can help you fine-tune the shipping "
+"method."
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:26
+#: admin/package-manager/partials/addPackage.php:47
+msgid "This description is for your own reference"
+msgstr ""
+
+#: admin/custom-group/rules/virtual_category_total.php:136
+#: admin/package-manager/partials/addPackage.php:104
+msgid "Total"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:192
+msgid "Total amount spend during a period (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:94
+msgid "Total Product Weight in Cart (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/custom-group/rules/virtual_category_qty.php:136
+msgid "Total Qty"
+msgstr ""
+
+#: admin/selection_rules/rules/user.php:30
+msgid "User"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:17
+msgid "User address matches with Zones (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:73
+msgid "User role (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/custom-group/partials/listShippingMethod.php:25
+msgid "Virtual Category"
+msgstr ""
+
+#: admin/custom-group/partials/addCustomGroup.php:17
+msgid "Virtual category name"
+msgstr ""
+
+#: admin/custom-group/rules/virtual_category_qty.php:34
+msgid "Virtual category quantity"
+msgstr ""
+
+#: admin/selection_rules/rules/pro_rules.php:220
+msgid "Virtual Category Quantity Range (Available in PRO Version) 🔒"
+msgstr ""
+
+#: admin/custom-group/rules/virtual_category_total.php:34
+msgid "Virtual category total"
+msgstr ""
+
+#: includes/review.php:107
+msgid "Want to suggest improvement"
+msgstr ""
+
+#: admin/class-analytics.php:63
+msgid ""
+"We collect only technical data — including the plugin version, WordPress "
+"version, WooCommerce version, and site url — solely to improve compatibility "
+"and enhance plugin features."
+msgstr ""
+
+#: admin/selection_rules/pisol_rule_form.php:8
+msgid ""
+"When a customer satisfies this set of conditions, then only this shipping "
+"method will be available to them"
+msgstr ""
+
+#: admin/option.php:50
+msgid ""
+"When enabled it will move the plugin added shipping method to the top of the "
+"list of the shipping methods"
+msgstr ""
+
+#: admin/option.php:46
+msgid ""
+"When shipping method is free WooCommerce will not show the charge, once this "
+"is enabled it will show $0 charge next to the shipping methods that are free"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:110
+msgid "When virtual category products quantity"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:91
+msgid "When virtual category products total"
+msgstr ""
+
+#: admin/selection_rules/rules/zone.php:34
+msgid "WooCommerce Assigned Zone"
 msgstr ""
 
 #. Description of the plugin
@@ -113,14 +960,56 @@ msgid ""
 "different advanced criteria to apply this shipping method"
 msgstr ""
 
-#. URI of the plugin
-msgid "piwebsolution.com/advanced-free-flat-shipping-woocommerce"
+#: admin/custom-group/partials/addCustomGroup.php:51
+msgid ""
+"You can add all the products in this virtual category and then exclude "
+"products or you can only add selected products to the virtual category"
 msgstr ""
 
-#. Author of the plugin
-msgid "PI Websolution"
+#: admin/custom-group/partials/listShippingMethod.php:25
+msgid ""
+"You can club multiple categories and product and exclude certain product to "
+"form a Virtual category, and you can use this Virtual category in shipping "
+"method rules"
 msgstr ""
 
-#. Author URI of the plugin
-msgid "piwebsolution.com"
+#: admin/custom-group/partials/addCustomGroup.php:17
+msgid ""
+"You can club multiple categories and products to form a virtual category of "
+"products and later on use that inside the Shipping method rules"
+msgstr ""
+
+#: admin/package-manager/partials/addPackage.php:38
+msgid ""
+"You can club products in multiple shipping packages within one order and "
+"user can select different shipping method for each such package"
+msgstr ""
+
+#: admin/partials/addShippingMethod.php:83
+msgid ""
+"You can show this description below the shipping method name on the front "
+"end of the website by enabling the option present in the Extra settings tab."
+msgstr ""
+
+#: admin/package-manager/partials/listPackages.php:40
+msgid ""
+"you club product in one shipping package and ship them together and other "
+"product in different shipping package withing single order "
+msgstr ""
+
+#: admin/class-analytics.php:246
+msgid "You do not have permission to deactivate a network plugin."
+msgstr ""
+
+#: extended-flat-rate-shipping-woocommerce.php:72
+msgid "You have the PRO version of this plugin in your site"
+msgstr ""
+
+#. Plugin title
+#: includes/review.php:100
+#, php-format
+msgid ""
+"You've been using <strong>%s</strong> for a few weeks now <br>— hope it's "
+"been working well for you! Would you like to leave a review to help spread "
+"the word?"
 msgstr ""

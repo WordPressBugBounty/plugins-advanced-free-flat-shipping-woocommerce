@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <summary class="pi-step-header bg-primary text-light">
                 <div>
                 <strong class="pi-step-title"><?php echo esc_html__('Step 1: Basic Settings','advanced-free-flat-shipping-woocommerce'); ?><small>(Required)</small></strong>
-                <p class="font-italic mb-0 text-light"><?php echo esc_html__('Basic setting of the shipping method','advanced-free-flat-shipping-woocommerce'); ?>  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_1_Basic_Settings_Required" target="_blank" class="text-light">(Know more about this ?)</a></p>
+                <p class="font-italic mb-0 text-light"><?php echo esc_html__('Basic settings of the shipping method','advanced-free-flat-shipping-woocommerce'); ?>  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_1_Basic_Settings_Required" target="_blank" class="text-light">(Know more about this?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -54,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="row py-4 border-bottom align-items-center">
                         <div class="col-12 col-sm-5">
-                            <label for="pi_cost" class="h6"><?php echo esc_html__('Shipping Charges','advanced-free-flat-shipping-woocommerce'); ?> <?php echo '(' . esc_html( get_woocommerce_currency_symbol() ) . ')' ?> <span class="text-primary">*</span></label> <?php pisol_help::inline('shipping_charge_short_code_help','Creating complex shipping charges using short code'); ?>
+                            <label for="pi_cost" class="h6"><?php echo esc_html__('Shipping Charges','advanced-free-flat-shipping-woocommerce'); ?> <?php echo '(' . esc_html( get_woocommerce_currency_symbol() ) . ')' ?> <span class="text-primary">*</span></label> <?php pisol_help::inline('shipping_charge_short_code_help','Creating complex shipping charges using shortcode'); ?>
                         </div>
                         <div class="col-12 col-sm">
                             <input type="number" required value="<?php echo esc_attr($data['pi_cost']); ?>" class="form-control" name="pi_cost" id="pi_cost" step="any" min="0">
@@ -66,10 +66,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                 <div class="pi-step-container">
                         <details class="pi-step-content">
-                            <summary class="pi-step-header bg-dark2 text-light">
+                            <summary class="pi-step-header bg-dark text-light">
                                 <div>
-                                <strong class="pi-step-title"><?php echo esc_html__('Other Basic settings','advanced-free-flat-shipping-woocommerce'); ?><small>(Non required)</small></strong>
-                                <p class="font-italic mb-0 text-light"><?php echo esc_html__('These setting are not required but can help you fine-tune the shipping method.','advanced-free-flat-shipping-woocommerce'); ?></p>
+                                <strong class="pi-step-title"><?php echo esc_html__('Other basic settings','advanced-free-flat-shipping-woocommerce'); ?><small>(Not required)</small></strong>
+                                <p class="font-italic mb-0 text-light"><?php echo esc_html__('These settings are not required but can help you fine-tune the shipping method.','advanced-free-flat-shipping-woocommerce'); ?></p>
                                 </div>
                                 <div>
                                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -80,7 +80,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 <!-- Non required start -->
                                     <div class="row py-4 border-bottom align-items-center">
                                         <div class="col-12 col-sm-5">
-                                            <label for="pi_desc" class="h6"><?php echo esc_html__('Description','advanced-free-flat-shipping-woocommerce'); ?></label> <?php pisol_help::tooltip(esc_html__('You can show this description below the shipping method name on the front end of the website by enabling the option present in the Extra settings tab','advanced-free-flat-shipping-woocommerce')); ?>
+                                            <label for="pi_desc" class="h6"><?php echo esc_html__('Description','advanced-free-flat-shipping-woocommerce'); ?></label> <?php pisol_help::tooltip(esc_html__('You can show this description below the shipping method name on the front end of the website by enabling the option present in the Extra settings tab.','advanced-free-flat-shipping-woocommerce')); ?>
                                         </div>
                                         <div class="col-12 col-sm">
                                             <textarea type="text"  class="form-control" name="pi_desc" id="pi_desc"><?php echo esc_html($data['pi_desc']); ?></textarea>
@@ -102,7 +102,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     <div class="row py-4 border-bottom align-items-center">
                                         <div class="col-12 col-sm-5">
                                             <label for="pi_free_when_free_shipping_coupon" class="h6"><?php echo esc_html__('Make free when free shipping coupon is applied','advanced-free-flat-shipping-woocommerce'); ?></label>
-                                            <p><?php echo esc_html__('Cost of this shipping method will become zero when user will apply Free shipping coupon','advanced-free-flat-shipping-woocommerce'); ?></p>
+                                            <p><?php echo esc_html__('Cost of this shipping method will become zero when the user applies a Free shipping coupon','advanced-free-flat-shipping-woocommerce'); ?></p>
                                         </div>
                                         <div class="col-12 col-sm">
                                             <div class="custom-control custom-switch">
@@ -114,7 +114,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                                     <div class="row py-4 border-bottom align-items-center">
                                         <div class="col-12 col-sm-5">
-                                            <label for="pi_currency" class="h6"><?php echo esc_html__('Apply for currency (useful for multi currency website only)','advanced-free-flat-shipping-woocommerce'); ?></label><br><strong><?php echo esc_html__('Leave empty if you want to apply for all currency OR you have single currency','advanced-free-flat-shipping-woocommerce'); ?></strong><?php pisol_help::tooltip(esc_html__('Select the currency for which to apply the rule, if left blank it will apply for all the currency','advanced-free-flat-shipping-woocommerce')); ?>
+                                            <label for="pi_currency" class="h6"><?php echo esc_html__('Apply for currencies (useful for multi-currency websites only)','advanced-free-flat-shipping-woocommerce'); ?></label><br><strong><?php echo esc_html__('Leave empty if you want to apply for all currencies OR you have a single currency','advanced-free-flat-shipping-woocommerce'); ?></strong><?php pisol_help::tooltip(esc_html__('Select the currency for which to apply the rule, if left blank it will apply for all currencies','advanced-free-flat-shipping-woocommerce')); ?>
                                         </div>
                                         <div class="col-12 col-sm">
                                             <select name="pi_currency[]" id="pi_currency" multiple="multiple">
@@ -136,7 +136,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <summary class="pi-step-header bg-primary text-light">
                 <div>
                 <strong class="pi-step-title"><?php echo esc_html__('Step 2: Set Availability Conditions','advanced-free-flat-shipping-woocommerce'); ?><small>(Required)</small></strong>
-                <p class="font-italic mb-0 text-light"><?php echo esc_html__('Define when this shipping method should be visible at checkout. All selected conditions must be met.','advanced-free-flat-shipping-woocommerce'); ?>  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_2_Set_Availability_Conditions_Required" target="_blank" class="text-light">(Know more about this ?)</a></p>
+                <p class="font-italic mb-0 text-light"><?php echo esc_html__('Define when this shipping method should be visible at checkout. All selected conditions must be met.','advanced-free-flat-shipping-woocommerce'); ?> <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_2_Set_Availability_Conditions_Required" target="_blank" class="text-light">(Know more about this?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -163,8 +163,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <details class="pi-step-content" open>
             <summary class="pi-step-header bg-dark text-light">
                 <div>
-                <strong class="pi-step-title"><?php echo esc_html__('Step 3: Adjust shipping charge','advanced-free-flat-shipping-woocommerce'); ?><small>(optional)</small></strong>
-                <p class="font-italic mb-0 text-light">Increment shipping charge by weight, quantity, subtotal etc. ranges. <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_3_Adjust_Shipping_Charge_Optional" target="_blank" class="text-light">(Know more about this ?)</a></p>
+                <strong class="pi-step-title"><?php echo esc_html__('Step 3: Adjust shipping charge','advanced-free-flat-shipping-woocommerce'); ?><small>(Optional)</small></strong>
+                <p class="font-italic mb-0 text-light">Increment shipping charge by weight, quantity, subtotal, etc. ranges. <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_3_Adjust_Shipping_Charge_Optional" target="_blank" class="text-light">(Know more about this?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -184,8 +184,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         <details class="pi-step-content">
             <summary class="pi-step-header bg-dark text-light">
                 <div>
-                <strong class="pi-step-title"><?php echo esc_html__('Step 4: Other settings','advanced-free-flat-shipping-woocommerce'); ?><small>(optional)</small></strong>
-                <p class="font-italic mb-0 text-light">Hide other shipping methods, or shipping class based charges  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_4_Other_Settings_Optional" target="_blank" class="text-light">(Know more about this ?)</a></p>
+                <strong class="pi-step-title"><?php echo esc_html__('Step 4: Other settings','advanced-free-flat-shipping-woocommerce'); ?><small>(Optional)</small></strong>
+                <p class="font-italic mb-0 text-light">Hide other shipping methods or shipping-class-based charges. <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_4_Other_Settings_Optional" target="_blank" class="text-light">(Know more about this?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -196,9 +196,9 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <!-- Extra start -->
                     <div class="row py-4 border-bottom align-items-center bg-dark2 text-light">
                         <div class="col-12 col-md-5">
-                                <label for="pi_enable_other_method_modification" class="h6 text-light"><?php echo esc_html__('Modify other shipping methods when this method is applied','advanced-free-flat-shipping-woocommerce'); ?><?php pisol_help::tooltip('What happens to other shipping method when this shipping method becomes available for selection'); ?>
+                                <label for="pi_enable_other_method_modification" class="h6 text-light"><?php echo esc_html__('Modify other shipping methods when this method is applied','advanced-free-flat-shipping-woocommerce'); ?><?php pisol_help::tooltip('What happens to other shipping methods when this shipping method becomes available for selection.'); ?>
                                 <br>
-                                <span class="text-warning"><?php esc_html_e('(This is only available in pro)','advanced-free-flat-shipping-woocommerce'); ?></span>
+                                <span class="text-warning"><?php esc_html_e('(This is only available in Pro)','advanced-free-flat-shipping-woocommerce'); ?></span>
                                 </label>
                         </div>
                         <div class="col-12 col-md">
@@ -206,7 +206,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <option value="" selected="selected" ><?php esc_html_e('Select an option','advanced-free-flat-shipping-woocommerce'); ?></option>
                             <option value="hide-all-other-methods" disabled><?php esc_html_e('Hide all other methods (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
                             <option value="hide-all-other-methods-exclude-local-pickup" disabled><?php esc_html_e('Hide all other methods (excluding WC Local Pickup method) (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
-                            <option value="hide-all-non-plugin-methods-exclude-local-pickup" disabled><?php esc_html_e('Hide all methods except the one added by this plugin and WC Local pickup (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
+                            <option value="hide-all-non-plugin-methods-exclude-local-pickup" disabled><?php esc_html_e('Hide all methods except the one added by this plugin and WC Local Pickup (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
                             <option value="hide-all-non-plugin-methods" disabled><?php esc_html_e('Hide all methods except the one added by this plugin (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
                             <option value="hide-all-plugin-method-with-lower-priority" disabled><?php esc_html_e('Hide all plugin methods with lower priority (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
                             <option value="hide-selected-method" disabled title="Insert system name of the shipping methods that should be hidden when this shipping method is available"><?php esc_html_e('Hide selected shipping method (PRO)','advanced-free-flat-shipping-woocommerce'); ?></option>
@@ -216,7 +216,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                         <div class="row py-4 border-bottom align-items-center bg-dark2 text-light">
                             <div class="col-12">
-                                <strong class="h6 text-light"><?php echo esc_html__("Shipping Classes",'advanced-free-flat-shipping-woocommerce'); ?></strong><?php pisol_help::tooltip(esc_html__('These costs can optionally be added to shipping charge based on the product shipping class','advanced-free-flat-shipping-woocommerce')); ?>
+                                <strong class="h6 text-light"><?php echo esc_html__("Shipping Classes",'advanced-free-flat-shipping-woocommerce'); ?></strong><?php pisol_help::tooltip(esc_html__('These costs can optionally be added to shipping charge based on the product shipping class.','advanced-free-flat-shipping-woocommerce')); ?>
                             </div>
                         </div>
                         <?php if(!empty($data['present_shipping_classes'])){ ?>

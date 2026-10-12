@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <form method="post" id="pisol-efrs-new-method">
 <div class="row py-4 border-bottom align-items-center">
     <div class="col-12 col-sm-5">
-        <label for="pi_title" class="h6"><?php echo esc_html__('Virtual category name','advanced-free-flat-shipping-woocommerce'); ?> <span class="text-primary">*</span></label><?php pisol_help::tooltip(esc_html__('You can club multiple categories and product to form a virtual category of products and latter on use that inside the Shipping method rules','advanced-free-flat-shipping-woocommerce')); ?>
+        <label for="pi_title" class="h6"><?php echo esc_html__('Virtual category name','advanced-free-flat-shipping-woocommerce'); ?> <span class="text-primary">*</span></label><?php pisol_help::tooltip(esc_html__('You can club multiple categories and products to form a virtual category of products and later on use that inside the Shipping method rules','advanced-free-flat-shipping-woocommerce')); ?>
     </div>
     <div class="col-12 col-sm">
         <input type="text" required value="<?php echo esc_attr( $data['pi_title'] ); ?>" class="form-control" name="pi_title" id="pi_title">
@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <summary class="pi-step-header bg-primary text-light">
                 <div>
                 <strong class="pi-step-title"><?php echo esc_html__('Step 1: Choose Product Scope','advanced-free-flat-shipping-woocommerce'); ?><small></small></strong>
-                <p class="font-italic text-light mb-0">Use filters below to include or exclude products  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_1_Choose_Product_Scope" target="_blank" class="text-light">(Know more about this ?)</a></p>
+                <p class="font-italic text-light mb-0">Use filters below to include or exclude products  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_1_Choose_Product_Scope" target="_blank" class="text-light">(Know more about this?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -48,13 +48,13 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <!-- filtering type -->
                 <div class="row py-4 border-bottom align-items-center">
                     <div class="col-12 col-sm-4">
-                        <label class="h6"><?php echo esc_html__('Include','advanced-free-flat-shipping-woocommerce'); ?></label><?php pisol_help::tooltip(esc_html__('You can add all the product in this virtual category and then exclude product or you can only add selected product to the virtual category','advanced-free-flat-shipping-woocommerce')); ?>
+                        <label class="h6"><?php echo esc_html__('Include','advanced-free-flat-shipping-woocommerce'); ?></label><?php pisol_help::tooltip(esc_html__('You can add all the products in this virtual category and then exclude products or you can only add selected products to the virtual category','advanced-free-flat-shipping-woocommerce')); ?>
                     </div>
                     <div class="col-12 col-sm align-items-center">
                         <div class="row align-items-center">
                         <div class="col-12">
                         <input type="radio" name="pi_match_type" value="all" id="match-type-all" <?php checked($data['pi_match_type'], 'all'); ?>> <label for="match-type-all" class="my-0"><?php esc_html_e('All Products','advanced-free-flat-shipping-woocommerce'); ?></label><br>
-                        <div class="mt-1"><i>Start from all products, then exclude the product you dont want to be part of this virtual category</i></div>
+                        <div class="mt-1"><i>Start from all products, then exclude the product you don't want to be part of this virtual category</i></div>
                         </div>
                         <div class="col-12 mt-4">
                         <input type="radio" name="pi_match_type" value="selected" id="match-type-selected" <?php checked($data['pi_match_type'], 'selected'); ?>> <label for="match-type-selected"  class="my-0"><?php esc_html_e('Selected Products','advanced-free-flat-shipping-woocommerce'); ?></label><br>
@@ -75,7 +75,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <summary class="pi-step-header bg-dark text-light">
                 <div>
                 <strong class="pi-step-title">Step <span id="pi-include-step-no">2</span>: <?php echo esc_html__('Add Products to This Virtual Category','advanced-free-flat-shipping-woocommerce'); ?><small></small></strong>
-                <p class="font-italic text-light mb-0">Include product to this virtual category using the given conditions  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_2_Add_Products_to_This_Virtual_Category" target="_blank" class="text-light">(Know more about this ?)</a></p>
+                <p class="font-italic text-light mb-0">Include products to this virtual category using the given conditions  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_2_Add_Products_to_This_Virtual_Category" target="_blank" class="text-light">(Know more about this?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -86,7 +86,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <!-- include rule -->
                     <div class="row py-4 border-bottom align-items-center">
                         <div class="col-12 col-sm-5">
-                            <label for="pi_categories" class="h6"><?php echo esc_html__('Categories to include','advanced-free-flat-shipping-woocommerce'); ?></label><?php pisol_help::tooltip(esc_html__('Product directly belonging to this category will be part of virtual category, product belonging to the child category of the included category will not be part of virtual category.','advanced-free-flat-shipping-woocommerce')); ?>
+                            <label for="pi_categories" class="h6"><?php echo esc_html__('Categories to include','advanced-free-flat-shipping-woocommerce'); ?></label><?php pisol_help::tooltip(esc_html__('Product directly belonging to this category will be part of virtual category, products belonging to the child category of the included category will not be part of virtual category.','advanced-free-flat-shipping-woocommerce')); ?>
                         </div>
                         <div class="col-12 col-sm">
                             <select type="text" class="pi_efrs_custom_group_search_category form-control" name="pi_categories[]" multiple="multiple">
@@ -119,7 +119,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="row py-4 border-bottom align-items-center free-version">
                         <div class="col-12 col-sm-5">
-                            <label for="pi_products" class="h6"><?php echo esc_html__('Products to include','advanced-free-flat-shipping-woocommerce'); ?></label><p class="font-italic"><?php esc_html_e('Product that you want to be part of this virtual category, you can even include a variation of a product','advanced-free-flat-shipping-woocommerce'); ?></p>
+                            <label for="pi_products" class="h6"><?php echo esc_html__('Products to include','advanced-free-flat-shipping-woocommerce'); ?></label><p class="font-italic"><?php esc_html_e('Products that you want to be part of this virtual category, you can even include a variation of a product','advanced-free-flat-shipping-woocommerce'); ?></p>
                         </div>
                         <div class="col-12 col-sm">
                             <select type="text" class="pi_efrs_custom_group_search_product form-control" name="pi_products[]" multiple="multiple">
@@ -129,7 +129,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <div class="row py-4 border-bottom align-items-center free-version">
                         <div class="col-12 col-sm-5">
-                            <label for="pi_product_tags" class="h6"><?php echo esc_html__('Product tags to include','advanced-free-flat-shipping-woocommerce'); ?></label><p class="font-italic"><?php esc_html_e('Product with this tags will be part of this virtual category','advanced-free-flat-shipping-woocommerce'); ?></p>
+                            <label for="pi_product_tags" class="h6"><?php echo esc_html__('Product tags to include','advanced-free-flat-shipping-woocommerce'); ?></label><p class="font-italic"><?php esc_html_e('Products with these tags will be part of this virtual category','advanced-free-flat-shipping-woocommerce'); ?></p>
                         </div>
                         <div class="col-12 col-sm">
                             <select type="text" class="pi_efrs_custom_group_search_tag form-control" name="pi_product_tags[]" multiple="multiple">
@@ -162,10 +162,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <select type="text" class="form-control" name="pi_product_volume_logic">
                                 <option value="" selected="selected">Don't consider this rule</option>
                                 <option value="equal_to">Equal to</option>
-                                <option value="less_equal_to">Less then equal to</option>
-                                <option value="less_then">Less then</option>
-                                <option value="greater_equal_to">Grater then equal to</option>
-                                <option value="greater_then">Grater then</option>
+                                <option value="less_equal_to">Less than or equal to</option>
+                                <option value="less_then">Less than</option>
+                                <option value="greater_equal_to">Greater than or equal to</option>
+                                <option value="greater_then">Greater than</option>
                                 <option value="not_equal_to">Not equal to</option>
                             </select>
                         </div>
@@ -220,10 +220,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <select type="text" class="form-control" name="pi_product_subtotal_logic">
                                 <option value=""><?php echo esc_html_e('Don\'t consider this rule','advanced-free-flat-shipping-woocommerce'); ?></option>
                                 <option value="equal_to"><?php echo esc_html_e('Equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
-                                <option value="less_equal_to"><?php echo esc_html_e('Less then equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
-                                <option value="less_then"><?php echo esc_html_e('Less then','advanced-free-flat-shipping-woocommerce'); ?></option>
-                                <option value="greater_equal_to"><?php echo esc_html_e('Grater then equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
-                                <option value="greater_then"><?php echo esc_html_e('Grater then','advanced-free-flat-shipping-woocommerce'); ?></option>
+                                <option value="less_equal_to"><?php echo esc_html_e('Less than or equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
+                                <option value="less_then"><?php echo esc_html_e('Less than','advanced-free-flat-shipping-woocommerce'); ?></option>
+                                <option value="greater_equal_to"><?php echo esc_html_e('Greater than or equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
+                                <option value="greater_then"><?php echo esc_html_e('Greater than','advanced-free-flat-shipping-woocommerce'); ?></option>
                                 <option value="not_equal_to"><?php echo esc_html_e('Not equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
                             </select>
                         </div>
@@ -241,7 +241,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <summary class="pi-step-header bg-dark text-light">
                 <div>
                 <strong class="pi-step-title">Step <span id="pi-exclude-step-no">3</span>: <?php echo esc_html__('Exclude Products from This Category','advanced-free-flat-shipping-woocommerce'); ?><small></small></strong>
-                <p class="font-italic text-light mb-0">Exclude product from this virtual category using the given conditions  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_3_Exclude_Products_from_This_Category" target="_blank" class="text-light">(Know more about this ?)</a></p>
+                <p class="font-italic text-light mb-0">Exclude products from this virtual category using the given conditions  <a href="https://www.piwebsolution.com/advance-flat-rate-shipping/#Step_3_Exclude_Products_from_This_Category" target="_blank" class="text-light">(Know more about this?)</a></p>
                 </div>
                 <div>
                     <span class="dashicons dashicons-plus-alt2 mr-4"></span>
@@ -285,7 +285,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div class="row py-4 border-bottom align-items-center free-version">
                         <div class="col-12 col-sm-5">
                             <label for="pi_excluded_products" class="h6"><?php echo esc_html__('Products to exclude','advanced-free-flat-shipping-woocommerce'); ?></label>
-                            <p class="font-italic"><?php esc_html_e('Product that you want to be excluded from this virtual category, you can even include a variation of a product','advanced-free-flat-shipping-woocommerce'); ?></p>
+                            <p class="font-italic"><?php esc_html_e('Products that you want to be excluded from this virtual category, you can even include a variation of a product','advanced-free-flat-shipping-woocommerce'); ?></p>
                         </div>
                         <div class="col-12 col-sm">
                             <select type="text" class="pi_efrs_custom_group_search_product form-control" name="pi_excluded_products[]" multiple="multiple">
@@ -296,7 +296,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div class="row py-4 border-bottom align-items-center free-version">
                         <div class="col-12 col-sm-5">
                             <label for="pi_excluded_product_vir_down" class="h6">Downloadable product to exclude</label>
-                            <p class="font-italic"><?php esc_html_e('Downloadable product not be part of this virtual category','advanced-free-flat-shipping-woocommerce'); ?></p>                 
+                            <p class="font-italic"><?php esc_html_e('Downloadable product will not be part of this virtual category','advanced-free-flat-shipping-woocommerce'); ?></p>                 
                         </div>
                         <div class="col-12 col-sm">
                             <select type="text" class="pi-efrs-custom-group-simple-select form-control select2-hidden-accessible" name="pi_excluded_product_vir_down[]" multiple="" tabindex="-1" aria-hidden="true">
@@ -330,10 +330,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <select type="text" class="form-control" name="pi_excluded_product_volume_logic">
                                 <option value="" selected="selected">Don't consider this rule</option>
                                 <option value="equal_to">Equal to</option>
-                                <option value="less_equal_to">Less then equal to</option>
-                                <option value="less_then">Less then</option>
-                                <option value="greater_equal_to">Grater then equal to</option>
-                                <option value="greater_then">Grater then</option>
+                                <option value="less_equal_to">Less than or equal to</option>
+                                <option value="less_then">Less than</option>
+                                <option value="greater_equal_to">Greater than or equal to</option>
+                                <option value="greater_then">Greater than</option>
                                 <option value="not_equal_to">Not equal to</option>
                             </select>
                         </div>
@@ -388,10 +388,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <select type="text" class="form-control" name="pi_excluded_product_subtotal_logic">
                                 <option value=""><?php echo esc_html__('Don\'t consider this rule','advanced-free-flat-shipping-woocommerce'); ?></option>
                                 <option value="equal_to"><?php echo esc_html__('Equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
-                                <option value="less_equal_to"><?php echo esc_html__('Less then equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
-                                <option value="less_then"><?php echo esc_html__('Less then','advanced-free-flat-shipping-woocommerce'); ?></option>
-                                <option value="greater_equal_to"><?php echo esc_html__('Grater then equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
-                                <option value="greater_then"><?php echo esc_html__('Grater then','advanced-free-flat-shipping-woocommerce'); ?></option>
+                                <option value="less_equal_to"><?php echo esc_html__('Less than or equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
+                                <option value="less_then"><?php echo esc_html__('Less than','advanced-free-flat-shipping-woocommerce'); ?></option>
+                                <option value="greater_equal_to"><?php echo esc_html__('Greater than or equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
+                                <option value="greater_then"><?php echo esc_html__('Greater than','advanced-free-flat-shipping-woocommerce'); ?></option>
                                 <option value="not_equal_to"><?php echo esc_html__('Not equal to','advanced-free-flat-shipping-woocommerce'); ?></option>
                             </select>
                         </div>

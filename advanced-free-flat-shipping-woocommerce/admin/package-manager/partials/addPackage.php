@@ -2,6 +2,9 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+/**
+ * @var array $data
+ */
 ?>
 <div class="row border-bottom align-items-center pi-primary-border-left">
     <div class="col-12 py-2 bg-dark2">
@@ -32,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="row py-4 border-bottom align-items-center">
     <div class="col-12 col-sm-5">
-        <label for="pi_title" class="h6"><?php echo esc_html__('Package name','advanced-free-flat-shipping-woocommerce'); ?> <span class="text-primary">*</span></label><?php pisol_help::tooltip(esc_html__('You can club product in multiple shipping package withing one order and user can select different shipping method for each such package','advanced-free-flat-shipping-woocommerce')); ?>
+        <label for="pi_title" class="h6"><?php echo esc_html__('Package name','advanced-free-flat-shipping-woocommerce'); ?> <span class="text-primary">*</span></label><?php pisol_help::tooltip(esc_html__('You can club products in multiple shipping packages within one order and user can select different shipping method for each such package','advanced-free-flat-shipping-woocommerce')); ?>
     </div>
     <div class="col-12 col-sm">
         <input type="text" required value="<?php echo esc_attr( $data['pi_title'] ); ?>" class="form-control" name="pi_title" id="pi_title">
