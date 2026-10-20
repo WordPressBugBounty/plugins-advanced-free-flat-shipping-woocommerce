@@ -65,7 +65,7 @@ foreach($custom_groups as $method){
     echo '</td>';
     echo '<td class="text-center">';
     echo '<div class="custom-control custom-switch">
-    <input type="checkbox" value="1" '.checked($status,'on', false).' class="custom-control-input pi-affsw-package-manager-status-change" name="pi_status" id="pi_status_'.esc_attr($method->ID).'" data-id="'.esc_attr($method->ID).'">
+    <input type="checkbox" value="1" '.checked($status,'on', false).' class="custom-control-input pi-affsw-package-manager-status-change" name="pi_status" id="pi_status_'.esc_attr($method->ID).'" data-id="'.esc_attr($method->ID).'"  data-nonce="'.esc_attr(wp_create_nonce('pisol-efrs-action-status')).'">
     <label class="custom-control-label" for="pi_status_'.esc_attr($method->ID).'"></label>
     </div>';
     echo '</td>';

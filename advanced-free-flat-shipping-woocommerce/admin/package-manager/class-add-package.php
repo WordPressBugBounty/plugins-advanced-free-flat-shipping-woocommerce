@@ -271,6 +271,10 @@ class Class_Pi_Efrs_Add_Edit_Package{
     static function enableDisable(){
         $post_id = sanitize_text_field(filter_input(INPUT_POST,'id'));
         $status = sanitize_text_field(filter_input(INPUT_POST,'status'));
+        $nonce = sanitize_text_field(filter_input(INPUT_POST,'nonce'));
+        
+        if(!wp_verify_nonce($nonce,'pisol-efrs-action-status')) return;
+
         $cap = Pi_Efrs_Menu::getCapability();
         if(!current_user_can($cap) || empty($post_id)) return;
         
