@@ -122,20 +122,30 @@ class Pi_efrs_selection_rule_selected_delivery_day{
     }
 
     function selectedDayOfTheWeek(){
-        if(!isset($_POST['post_data']) && !isset($_POST['pi_system_delivery_date'])) return false;
+
+        if(!isset($_POST['post_data']) && !isset($_POST['pi_system_delivery_date'])){
+            $get_from_session = WC()->session->get('pi_selected_date');
+            if(!empty($get_from_session)){
+                $selected_day = date("w", strtotime($get_from_session));
+                return $selected_day;
+            }
+
+            return false;
+        } 
         
         if(isset($_POST['pi_system_delivery_date'])){
-            $values['pi_system_delivery_date'] = sanitize_text_field( wp_unslash( $_POST['pi_system_delivery_date'] ));
+            $values['pi_system_delivery_date'] = $_POST['pi_system_delivery_date'];
         }else{
             parse_str($_POST['post_data'], $values);
         }
         
         if(!empty($values['pi_system_delivery_date'])){
-            $selected_day = wp_date("w", strtotime($values['pi_system_delivery_date']));
+            $selected_day = date("w", strtotime($values['pi_system_delivery_date']));
             return $selected_day;
         }
         return false;
     }
+
 
     function conditionCheck($result, $package, $logic, $values){
         

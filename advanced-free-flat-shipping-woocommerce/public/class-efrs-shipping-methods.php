@@ -5,12 +5,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'Efrs_Shipping_Method' ) ) {
 	class Efrs_Shipping_Method extends WC_Shipping_Method {
+
 		public function __construct() {
-			$get_id     = sanitize_text_field(filter_input( INPUT_GET, 'id'));
-			$post_title = isset( $get_id ) ? get_the_title( $get_id ) : '';
 			
-			$method_id    = isset( $get_id ) && ! empty( $get_id ) ? $get_id : 'pisol_extended_flat_shipping';
-			$method_title = ! empty( $post_title ) ? $post_title : 'Extended Flat Rate Shipping';
+			$method_id    = 'pisol_extended_flat_shipping';
+			$method_title = 'Extended Flat Rate Shipping';
 			
 			$this->id                 = $method_id;
 			$this->method_title       =  $method_title; 
@@ -26,7 +25,6 @@ if ( ! class_exists( 'Efrs_Shipping_Method' ) ) {
 		function init() {
 			$this->init_form_fields(); 
 			$this->init_settings(); 
-			
 		}
 
 		public function calculate_shipping( $package=array() ) {

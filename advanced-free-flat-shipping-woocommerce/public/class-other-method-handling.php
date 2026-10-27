@@ -35,22 +35,21 @@ class pisol_efrs_handle_other_methods{
     }
 
     function get_lowest_shipping_method($rates){
-        $lowest = 0;
-        $lowest_rate = '';
+       if(!is_array($rates) || count($rates) < 2) return $rates;
+
+        $lowest = null;
+        $lowest_rate = null;
+
         foreach($rates as $name => $rate){
-            $cost = $rate->get_cost();
-            if($lowest === 0){
+            $cost = (float) $rate->get_cost();
+
+            if($lowest === null || $cost < $lowest){
                 $lowest = $cost;
                 $lowest_rate = $name;
-            }else{
-                if($cost < $lowest){
-                    $lowest = $cost;
-                    $lowest_rate = $name;
-                }
             }
         }
 
-        if(!empty($lowest_rate)){
+        if($lowest_rate !== null){
             $rates = array($lowest_rate => $rates[$lowest_rate]);
         }
 
@@ -58,22 +57,21 @@ class pisol_efrs_handle_other_methods{
     }
 
     function get_highest_shipping_method($rates){
-        $highest = 0;
-        $highest_rate = '';
+        if(!is_array($rates) || count($rates) < 2) return $rates;
+
+        $highest = null;
+        $highest_rate = null;
+
         foreach($rates as $name => $rate){
-            $cost = $rate->get_cost();
-            if($highest === 0){
+            $cost = (float) $rate->get_cost();
+
+            if($highest === null || $cost > $highest){
                 $highest = $cost;
                 $highest_rate = $name;
-            }else{
-                if($cost > $highest){
-                    $highest = $cost;
-                    $highest_rate = $name;
-                }
             }
         }
 
-        if(!empty($highest_rate)){
+        if($highest_rate !== null){
             $rates = array($highest_rate => $rates[$highest_rate]);
         }
 

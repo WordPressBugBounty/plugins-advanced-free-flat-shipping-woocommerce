@@ -14,23 +14,26 @@ class pisol_efrs_disable_shipping_method_cache{
     }
 
     function __construct(){
-        add_action('wp_loaded', array(__CLASS__, 'clear_wc_shipping_rates_cache'));
+        //add_action('wp_loaded', array(__CLASS__, 'clear_wc_shipping_rates_cache'));
+        add_filter( 'woocommerce_cart_shipping_packages', array( $this, 'bust_package_hash' ), 999 );
         add_filter( "option_woocommerce_shipping_cost_requires_address", array(__CLASS__, 'disableHideUntilAddress') );
     }
 
-    static function clear_wc_shipping_rates_cache(){
-        if(!function_exists('WC') || !isset(WC()->cart)) return;
-        
-        if ( !WC()->customer ) return; // this allows it to work with woocommerce point of sales plugin
-        
-        $packages = WC()->cart->get_shipping_packages();
-
-        foreach ($packages as $key => $value) {
-            $shipping_session = "shipping_for_package_$key";
-            WC()->session->__unset( $shipping_session );
+    /**
+     * New cache busting for shipping package 
+     */
+    public function bust_package_hash( $packages ) {
+        // Same token for the whole request, new token on the next request.
+        static $token = null;
+        if ( null === $token ) {
+            $token = wp_generate_uuid4();
         }
-        
-   }
+
+        foreach ( $packages as $key => $package ) {
+            $packages[ $key ]['pisol_cache_buster'] = $token;
+        }
+        return $packages;
+    }
 
    static function disableHideUntilAddress($val){
        if(function_exists('is_admin') && is_admin()) return $val;

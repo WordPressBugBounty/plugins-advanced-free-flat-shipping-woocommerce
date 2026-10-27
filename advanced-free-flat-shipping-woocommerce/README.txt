@@ -3,7 +3,7 @@ Contributors: jyotsnasingh520, rajeshsingh520
 Tags: table rate, Flat rate shipping, Free shipping WooCommerce, Advanced flat shipping, conditional shipping
 Requires at least: 5.6
 Tested up to: 7.1
-Stable Tag: 1.6.6.19
+Stable Tag: 1.6.6.20
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -255,6 +255,11 @@ You can divide the products of an order to be delivered in multiple shipping pac
 Check out this video https://www.youtube.com/watch?v=MVPPdukqLp0
 
 == Changelog ==
+
+= 1.6.6.20 =
+* single shipping method option code improved
+* delivery day rule now work with block 
+* cache busting with packge filter rather then from session
 
 = 1.6.6.19 =
 * Code improvement
