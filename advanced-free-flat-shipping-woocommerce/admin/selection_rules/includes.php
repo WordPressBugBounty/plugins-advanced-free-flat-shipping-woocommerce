@@ -19,4 +19,5 @@ require_once 'rules/stock-status.php';
 require_once 'rules/state.php';
 require_once 'rules/city.php';
 require_once 'rules/postcode.php';
+require_once 'rules/coupon_discount_amount.php';
 require_once 'rules/pro_rules.php';

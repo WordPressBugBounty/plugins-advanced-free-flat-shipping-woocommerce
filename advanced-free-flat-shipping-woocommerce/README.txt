@@ -3,7 +3,7 @@ Contributors: jyotsnasingh520, rajeshsingh520
 Tags: table rate, Flat rate shipping, Free shipping WooCommerce, Advanced flat shipping, conditional shipping
 Requires at least: 5.6
 Tested up to: 7.1
-Stable Tag: 1.6.6.20
+Stable Tag: 1.6.6.21
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,7 @@ This is a highly flexible WooCommerce shipping plugin; it even allows you to off
 	<li>Give only single shipping method option to customer: If you have several shipping options available at a time based on their conditions but prefer not to display them all, you can utilize this feature to present only one shipping method. This single shipping method can be selected from the available options based on either the maximum or minimum shipping charge.</li>
 	<li>If your site is a multi-currency website then you can apply a shipping method based on the currency selected by the customer</li>
 	<li>You can make a shipping method that will be shown for more than one shipping zone</li>
+	<li>show free shipping method when the applied discount in user cart is less then $20, using our "Coupon discount amount" rule</li>
 </ul>
 
 == Package Manager (Multiple Shipping Packages per Order) ==
@@ -255,6 +256,9 @@ You can divide the products of an order to be delivered in multiple shipping pac
 Check out this video https://www.youtube.com/watch?v=MVPPdukqLp0
 
 == Changelog ==
+
+= 1.6.6.21 =
+* coupon discount amount rule added
 
 = 1.6.6.20 =
 * single shipping method option code improved

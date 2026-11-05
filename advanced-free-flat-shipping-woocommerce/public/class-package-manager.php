@@ -24,16 +24,15 @@ class pisol_efrs_package_manager{
 
     function custom_shipping_packages($packages){
 
-        $final_packages = [];
-        if(count($packages) > 1) return $packages;
+        if ( ! is_array($packages) || count($packages) !== 1 || empty($packages) ) {
+            return $packages;
+        }
 
-        $final_packages = $this->get_final_packages($packages[0]);
+        $package = reset($packages);
 
-        if(count($final_packages) > 0){
-            return $final_packages;
-        }   
+        $final_packages = $this->get_final_packages($package);
 
-        return $packages;
+        return ! empty($final_packages) ? $final_packages : $packages;
     }
 
     function get_final_packages($package){
@@ -80,7 +79,7 @@ class pisol_efrs_package_manager{
                 ),
                 array(
                     'key' => 'pi_status', 
-                    'compare' => '==',
+                    'compare' => '=',
                     'value' => 'on'
                 )
             ),
